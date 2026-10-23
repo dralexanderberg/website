@@ -26,7 +26,6 @@ kramdown:
   smart_quotes: ["apos", "apos", "quot", "quot"]
 
 exclude:
-  - AUFTRAG.md
   - README.md
   - LICENSE
   - Gemfile
