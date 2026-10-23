@@ -1,0 +1,22 @@
+---
+layout: default
+title: Work Diary
+description: >-
+  Alexander Berg’s work diary – work in progress, texts under review or in press,
+  recent publications and talks, with an archive of earlier entries.
+---
+<h1>Work Diary</h1>
+<p class="lead">What I am working on, what is under review or in press, and what has recently appeared. Each entry shows the date of its last change.</p>
+
+{% include diary.html more=true %}
+
+{%- assign published = site.data.diary | where: "stage", "published" | sort: "date" | reverse %}
+{%- if published.size > site.diary_recent_count %}
+<section class="archive" aria-labelledby="archive">
+  <h2 id="archive">Archive</h2>
+  <p class="lead">Earlier entries from “Recently published”. The complete record is under <a href="{{ '/publications/' | relative_url }}">Publications</a> and <a href="{{ '/talks/' | relative_url }}">Talks</a>.</p>
+  <ul class="archive-list">
+  {%- for e in published offset: site.diary_recent_count %}{% include diary-entry.html entry=e more=true %}{% endfor %}
+  </ul>
+</section>
+{%- endif %}

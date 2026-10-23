@@ -5,7 +5,7 @@
 # delete lines you do not need):
 #
 # - id: short-unique-name          # lowercase, no spaces; used by diary.yml
-#   type: article                  # monograph | edited | article | translation
+#   type: article                  # monograph | edited | article | translation | online
 #   title: Title of the text
 #   author: Name of the author     # translations only: the author of the original text
 #   editors: First Editor & Second Editor
@@ -17,10 +17,13 @@
 #   pages: 1–20
 #   status: forthcoming            # forthcoming | planned | (leave out once published)
 #   note: any additional remark
+#   isbn: "3689110300"             # optional
 #   url: https://doi.org/…         # publisher page or DOI, never Amazon
+#   reviews:                       # optional: reviews of this book
+#     - Reviewer (University), Journal 12 (1), 2027, pp. 1–5.
 #
 # Groups appear on the Publications page in this order: monograph, edited,
-# article, translation. Within each group, newest first (top of the list).
+# article, translation, online. Within each group, newest first (top of the list).
 
 # ---------------------------------------------------------------- Monographs
 
@@ -40,7 +43,6 @@
   publisher: Bautz
   date: April 2025
   isbn: "3689110300"
-  url: "[PLACEHOLDER: publisher page Bautz]"
 
 - id: wittgensteins-hegel
   type: monograph
@@ -59,7 +61,6 @@
   publisher: Bautz
   date: 2012
   isbn: "3883097365"
-  url: "[PLACEHOLDER: publisher page Bautz]"
 
 # ------------------------------------------------------------ Edited volumes
 
@@ -290,3 +291,18 @@
   publisher: De Gruyter
   date: 2019
   url: https://doi.org/10.1515/9783110572780-006
+
+# ------------------------------------------------------------ Online edition
+
+- id: wittgenstein-nachlass-idp
+  type: online
+  title: Proofreading of the normalized transcription of Wittgenstein’s Nachlass, coded in XML
+  in: "Wittgenstein, Ludwig: Interactive Dynamic Presentation (IDP) of Ludwig Wittgenstein’s philosophical Nachlass [wittgensteinonline.no]"
+  publisher: Wittgenstein Archives at the University of Bergen (WAB) under the direction of Alois Pichler
+  date: 2016–
+  manuscripts:
+    - "Ms-115: XI, Philosophische Bemerkungen"
+    - Ms-139b [so-called Lecture on Ethics] (ÖNB, Cod.Ser.n.37.936)
+    - Ms-148 [C4], Ms-149 [C5], Ms-150 [C6], Ms-152 [C8]
+    - "Ms-153a: Anmerkungen; Ms-153b; Ms-154; Ms-155; Ms-156a"
+    - Ts-213 [so-called Big Typescript]

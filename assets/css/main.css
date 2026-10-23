@@ -69,7 +69,7 @@ main.wrap { padding-top: 2.5rem; padding-bottom: 4rem; }
 
 /* Home: intro */
 .intro { display: grid; grid-template-columns: 11rem 1fr; gap: 1.5rem 2.5rem; align-items: start; }
-.portrait img { display: block; width: 100%; height: auto; border-radius: 2px; background: var(--accent); }
+.portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; border-radius: 2px; background: var(--accent); }
 .intro-text { max-width: var(--measure); }
 .subtitle { color: var(--muted); font-size: 1.05rem; margin-bottom: 1.4rem; letter-spacing: 0.02em; }
 .intro-links { margin-top: 1.4rem; font-size: 0.95rem; }
@@ -104,6 +104,48 @@ main.wrap { padding-top: 2.5rem; padding-bottom: 4rem; }
 .site-footer p { margin: 0.2rem 0; }
 .site-footer a { color: var(--muted); }
 
+
+/* Inner pages */
+.lead + .diary { margin-top: 1rem; }
+.prose { max-width: var(--measure); }
+.toc { font-size: 0.9rem; color: var(--muted); margin: 0.5rem 0 1rem; line-height: 1.9; }
+.biblio { list-style: none; margin: 0; padding: 0; max-width: 46rem; }
+.biblio li { padding-left: 1.2rem; text-indent: -1.2rem; margin: 0 0 0.7rem; }
+.biblio a { word-break: break-word; }
+h2.year { font-size: 1.15rem; margin-top: 2.2rem; }
+cite { font-style: italic; }
+.archive { margin-top: 1rem; }
+.archive-list { list-style: none; margin: 0; padding: 0; max-width: var(--measure); }
+.contact-mail { font-size: 1.2rem; }
+
+/* Conferences */
+.conf { margin-top: 3.5rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); max-width: 46rem; }
+.conf h2 { margin-top: 0; }
+.conf-city { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 0.3rem; }
+.conf-meta { color: var(--muted); }
+.conf-facts { display: grid; grid-template-columns: 1fr; gap: 0.1rem 1.2rem; margin: 1rem 0; font-size: 0.95rem; }
+.conf-facts dt { color: var(--accent); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.5rem; }
+.conf-facts dd { margin: 0; }
+details.talks { border: 1px solid var(--rule); border-radius: 3px; background: var(--bg-tint); }
+details.talks summary { cursor: pointer; padding: 0.6rem 0.9rem; color: var(--accent); }
+details.talks ul { list-style: none; margin: 0; padding: 0.2rem 0.9rem 0.9rem; font-size: 0.95rem; }
+details.talks li { margin: 0 0 0.5rem; }
+.talk-day { color: var(--accent); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1rem !important; }
+.talk-speaker { font-weight: 700; }
+.talk-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+
+/* Selected texts */
+.texts { list-style: none; margin: 1rem 0 0; padding: 0; max-width: var(--measure); }
+.text-entry { margin-bottom: 1.4rem; }
+.text-entry > span { display: block; }
+.text-version, .text-cite { color: var(--muted); font-size: 0.9rem; margin-top: 0.2rem; }
+.text-links { margin-top: 0.3rem; font-size: 0.95rem; }
+
+@media (min-width: 48rem) {
+  .conf-facts { grid-template-columns: 9rem 1fr; }
+  .conf-facts dt { margin-top: 0.15rem; }
+}
+
 @media (min-width: 48rem) {
   .intro { grid-template-columns: 15rem 1fr; gap: 3rem; }
   h1 { font-size: 2.8rem; margin-top: 0.4rem; }
@@ -124,5 +166,8 @@ main.wrap { padding-top: 2.5rem; padding-bottom: 4rem; }
   main { padding: 0; }
   a { color: inherit; text-decoration: none; }
   .diary { grid-template-columns: repeat(3, 1fr); }
-  .stage, .entry { break-inside: avoid; }
+  .stage, .entry, .biblio li { break-inside: avoid; }
+  details.talks { border: 0; background: none; }
+  details.talks summary { padding-left: 0; }
+  .toc { display: none; }
 }

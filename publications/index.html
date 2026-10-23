@@ -1,0 +1,46 @@
+---
+layout: default
+title: Publications
+description: >-
+  Publications of Alexander Berg: monographs, edited volumes, articles and
+  translations on Hegel, Wittgenstein and the literary form of philosophy.
+---
+<h1>Publications</h1>
+<nav class="toc" aria-label="Sections">
+  <a href="#monographs">Monographs</a> · <a href="#edited">Edited volumes</a> · <a href="#articles">Articles</a> · <a href="#translations">Translations</a> · <a href="#online">Online edition</a> · <a href="#reviews">Reviews of my books</a>
+</nav>
+
+{%- assign groups = "monograph|monographs|Monographs,edited|edited|Edited volumes,article|articles|Articles,translation|translations|Translations" | split: "," %}
+{%- for group in groups %}
+{%- assign g = group | split: "|" %}
+{%- assign items = site.data.publications | where: "type", g[0] %}
+<section aria-labelledby="{{ g[1] }}">
+  <h2 id="{{ g[1] }}">{{ g[2] }}</h2>
+  <ul class="biblio">
+  {%- for p in items %}
+    <li id="{{ p.id }}">{% include pub-cite.html pub=p %}</li>
+  {%- endfor %}
+  </ul>
+</section>
+{%- endfor %}
+
+{%- assign online = site.data.publications | where: "type", "online" %}
+<section aria-labelledby="online">
+  <h2 id="online">Online edition</h2>
+  {%- for p in online %}
+  <p>{{ p.title }}, for: {{ p.in }}, {{ p.publisher }}, {{ p.date }}. Manuscripts:</p>
+  <ul class="biblio">
+    {%- for m in p.manuscripts %}<li>{{ m }}</li>{% endfor %}
+  </ul>
+  {%- endfor %}
+</section>
+
+<section aria-labelledby="reviews">
+  <h2 id="reviews">Reviews of my books</h2>
+  {%- for p in site.data.publications %}{% if p.reviews %}
+  <h3><cite>{{ p.title }}</cite> ({{ p.publisher | split: "," | first }} {{ p.date }})</h3>
+  <ul class="biblio">
+    {%- for r in p.reviews %}<li>{{ r }}</li>{% endfor %}
+  </ul>
+  {%- endif %}{% endfor %}
+</section>

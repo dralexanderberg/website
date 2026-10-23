@@ -1,4 +1,5 @@
-{%- assign nav = "Home|/,Work Diary|/diary/,Publications|/publications/,Talks|/talks/,Conferences|/conferences/,About|/about/,Contact|/contact/" | split: "," -%}
+{%- capture nav -%}Home|/,Work Diary|/diary/,Publications|/publications/,{% if site.data.selected_texts and site.data.selected_texts.size > 0 %}Selected Texts|/texts/,{% endif %}Talks|/talks/,Conferences|/conferences/,About|/about/,Contact|/contact/{%- endcapture -%}
+{%- assign nav = nav | split: "," -%}
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="site-name" href="{{ '/' | relative_url }}">Alexander Berg</a>

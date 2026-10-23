@@ -1,0 +1,232 @@
+# TALKS – newest first (add new talks at the top).
+#
+# Template for a new entry (copy, paste directly below this comment block, fill in;
+# delete lines you do not need):
+#
+# - title: Title of the talk
+#   venue: Conference or institution, City – Month Year   # as it should appear
+#   year: 2026                     # used for the year headings
+#   url: https://…                 # optional: event page
+#   video: https://youtu.be/…      # optional: recording (linked, never embedded)
+
+- title: Goethe’s Artistic Influence on the Phenomenology of Spirit
+  venue: XXXVI International Hegel Congress, Rome III – Sept. 2026
+  year: 2026
+
+- title: "Book presentation: Wittgenstein and Hegel on Normativity and Rationality, special issue of Synthesis Philosophica"
+  venue: XXXVI International Hegel Congress, Rome – Sept. 2026
+  year: 2026
+
+- title: "Wittgenstein Introduces Frege to Soviet Russia: Possibility, Probability, and the Curious Case of the Yellow Book"
+  venue: SSHAP Congress, University of Jena – July 2025
+  year: 2025
+
+- title: On the Literary Form of the Phenomenology of Spirit – Method and Meaning
+  venue: University of Turin – May 2025
+  year: 2025
+
+- title: Die Bedeutung der literarischen Form des Herr-Knecht-Kapitels als Schlüssel für Anerkennung und Freiheit
+  venue: XXXV International Hegel Congress, University of Tbilisi – Oct. 2024
+  year: 2024
+
+- title: Introduction to Wittgenstein and Classical German Philosophy – Book Presentation
+  venue: University of Zagreb – Sept. 2024 / Charles University Prague – Dec. 2024 / University of Bergen – Sept. 2025
+  year: 2024
+
+- title: "Traduttore, Traditore: On the Translations of the Works of Ludwig Wittgenstein"
+  venue: round table with René J. Campis, Jesús Padilla Gálvez, Luca Oliva, Eduardo Bermúdez Barrera; XXV World Congress of Philosophy, Rome – Aug. 2024
+  year: 2024
+  url: https://wcprome2024.com/round-tables/
+
+- title: Methods for a Literary History of Philosophy
+  venue: XXV World Congress of Philosophy, Rome – Aug. 2024 / XXVI German Congress of Philosophy, Münster – Sept. 2024
+  year: 2024
+
+- title: Methoden für eine Literaturgeschichte der Philosophie
+  venue: University of Zurich – April 2024
+  year: 2024
+  url: https://www.ds.uzh.ch/apps/_files/uploads/agenda/1483.pdf
+
+- title: Grundzüge einer Literaturgeschichte der Philosophie
+  venue: University of Konstanz – Dec. 2023
+  year: 2023
+
+- title: Ludwig Wittgenstein and the Photography of Everyday Life
+  venue: 8th Annual Conference of the Kulturwissenschaftliche Gesellschaft, Saarland University – Sept. 2023
+  year: 2023
+  url: https://kwg-ev.org/populaere-kulturen-2023/
+
+- title: The Method of Absolute Negativity as a Foundation of Logic in Wittgenstein and Hegel
+  venue: University of Vienna – Sept. 2023
+  year: 2023
+  url: /conferences/#vienna-2023
+
+- title: The Method of Absolute Negativity and the Tractatus Logico-Philosophicus – Wittgenstein, William James and Hegel
+  venue: Wittgenstein Symposium, Kirchberg – Aug. 2023
+  year: 2023
+
+- title: ‘Saying and Showing’ as Literary Form and Philosophical Content of the Tractatus
+  venue: eikones Forum, University of Basel – Oct. 2022
+  year: 2022
+
+- title: Three Types of the Self in Wittgenstein and Hegel
+  venue: University of Barcelona – Sept. 2022
+  year: 2022
+  url: /conferences/#barcelona-2022
+
+- title: The Art of Philosophy – On the Significance of Literary Form in Hegel’s Phenomenology of Spirit
+  venue: 34th International Hegel Congress, Zadar – Sept. 2022
+  year: 2022
+
+- title: Wittgensteins Übersichtliche Darstellung und Hegels Spekulative Philosophie
+  venue: Wittgenstein Symposium, Kirchberg – Aug. 2022
+  year: 2022
+
+- title: On Intertextuality in Hegel’s Phenomenology of Spirit
+  venue: Charles University Prague – June 2022
+  year: 2022
+
+- title: "Book presentation: Wittgensteins Hegel"
+  venue: University of Bergen / University of Helsinki – June 2022
+  year: 2022
+
+- title: Der Blick des Philosophen – Wittgenstein und die Photographie als Kulturtechnik in den 1920er und 30er Jahren
+  venue: Workshop Die Zeit der Unkultur. Ludwig Wittgenstein im Österreich der Zwischenkriegszeit, University of Vienna – Oct. 2021
+  year: 2021
+
+- title: Eine philosophische Literaturgeschichte als Brücke zwischen Idee und Text – Konstellation, Intertextualität, Literarizität
+  venue: XXV Congress of the German Society for Philosophy, section Metaphilosophy & Methodology – Sept. 2021
+  year: 2021
+
+- title: Wittgenstein’s Synoptic View and Hegel’s Speculative Philosophy
+  venue: University of Warsaw – Sept. 2021 / University of Zagreb – Dec. 2021 / University of Venice – Sept. 2022
+  year: 2021
+  url: /conferences/#warsaw-2021
+
+- title: "Live Talk, Burgtheater Vienna: On the traces of Ludwig Wittgenstein"
+  venue: on the occasion of the premiere of ALLES, WAS DER FALL IST, with ensemble member Philipp Hauß (as Ludwig Wittgenstein) and dramaturge Andreas Karlaganis; moderated by Anne Aschenbrenner – June 2021
+  year: 2021
+
+- title: Hegels Phänomenologie des Geistes in einer Literaturgeschichte der Philosophie
+  venue: 33rd International Hegel Congress, Warsaw, panel Contexts and Discussions. Classical German Philosophy – June 2021
+  year: 2021
+
+- title: Identity in Difference – Wittgenstein’s Hegel
+  venue: Workshop Ludwig Wittgenstein and German Philosophy, University of Zurich – Nov. 2020
+  year: 2020
+
+- title: Philosophy in Captivity – Respondent to Alfred Nordmann
+  venue: Wittgenstein’s Philosophy in Times of Crisis, online – June 2020
+  year: 2020
+  video: https://youtu.be/hv0JRR4U7kA
+
+- title: Wittgenstein’s ‘Übersichtliche Darstellung’ and Hegel’s System
+  venue: Tokyo Metropolitan University – April 2020, postponed
+  year: 2020
+
+- title: Identity in Difference – Wittgenstein’s Hegel
+  venue: Kyoto University – April 2020, postponed
+  year: 2020
+
+- title: The Role of Leo Tolstoy for Wittgenstein’s Tractatus
+  venue: Jagiellonian University Kraków – Nov. 2019
+  year: 2019
+
+- title: Hegel and Wittgenstein – Idea and Text
+  venue: Charles University Prague – June 2019
+  year: 2019
+  url: /conferences/#prague-2019
+
+- title: Ernste Spiele – Wittgenstein und Schiller
+  venue: Victoria University of Wellington – Nov. 2018
+  year: 2018
+
+- title: The Influence of William James’ Varieties of Religious Experience on Wittgenstein’s Pictorial Thinking
+  venue: SoPheRE Congress, Prague – Nov. 2018
+  year: 2018
+
+- title: Psyche, Seele, Geist – Wittgenstein und Hegel
+  venue: 5th Wittgenstein Forum of the International Ludwig Wittgenstein Society – Oct. 2018
+  year: 2018
+
+- title: Wittgenstein, die Grundlagen der Mathematik, und Hegel
+  venue: Wittgenstein Symposium, Kirchberg – Aug. 2018
+  year: 2018
+
+- title: Wittgenstein and Photography – The Early Picture Theory and the Late Photo Album
+  venue: Masaryk University Brno – Nov. 2017
+  year: 2017
+
+- title: Hegel’s “Good Nose” – the Law of Contradiction in Wittgenstein and Hegel
+  venue: DGPhil Congress, Berlin – Sept. 2017
+  year: 2017
+
+- title: Vom Wissen zum Denken – Wittgensteins dialektische Methode am Beispiel der Seminarnotizen G. E. Moores
+  venue: Wittgenstein Symposium, Kirchberg – Aug. 2017
+  year: 2017
+
+- title: Wittgensteins Hegel – vom Wortspiel zum Sprachspiel
+  venue: Conference Wittgenstein and Hegel, TU Dresden – June 2017
+  year: 2017
+  url: /conferences/#dresden-2017
+  video: https://youtu.be/GqSvvLgsv20
+
+- title: Wittgenstein und Fotografie – von Bildtheorie bis Fotoalbum
+  venue: Charles University Prague – April 2017
+  year: 2017
+
+- title: Serious Games – Wittgenstein and Schiller
+  venue: Masaryk University Brno – Nov. 2016
+  year: 2016
+
+- title: Vom „pun“ zum Sprachspiel – Wittgenstein, Russell, Bradley, Hegel und der Streit um das concrete universal
+  venue: Charles University Prague – May 2016 / Wittgenstein Symposium, Kirchberg – Aug. 2016
+  year: 2016
+
+- title: Traces of Speculative Philosophy in Wittgenstein’s Thinking
+  venue: University of Chicago – Feb. 2016 / University of Peradeniya – March 2016
+  year: 2016
+
+- title: Spuren der spekulativen Philosophie in Wittgensteins Denken
+  venue: TU Dresden – Oct. 2015 / University of Leipzig – Feb. 2016
+  year: 2015
+
+- title: Probleme in der historischen Wittgenstein-Forschung – Wunsch, Wirklichkeit und Russische Philosophie
+  venue: Wittgenstein Symposium, Kirchberg – Aug. 2015 / Charles University Prague – Oct. 2015
+  year: 2015
+
+- title: What Wittgenstein Thought of Hegel’s Philosophy
+  venue: University of Bergen – May 2015
+  year: 2015
+
+- title: Farben – Flüssige Zeit
+  venue: Laudatio for Weg ins Grüne – Lucia Fischer, painting & drawing, Berlin – Oct. 2014
+  year: 2014
+
+- title: Absolutes Wissen und Grundlose Gewissheit – Hegel und Wittgenstein
+  venue: Charles University Prague – April 2014 / TU Berlin – May 2014
+  year: 2014
+
+- title: Heideggers System
+  venue: 5th Meßkirch Heidegger Conference Freiheit und Geschick, Meßkirch – May 2014
+  year: 2014
+
+- title: Hegels Transzendenz
+  venue: I Congreso Germano-Latinoamericano sobre la Filosofía de Hegel, Buenos Aires – May 2014
+  year: 2014
+
+- title: Absolutes Wissen und grundlose Gewissheit
+  venue: Werkstatt Philosophie, TU Dresden – Dec. 2013
+  year: 2013
+
+- title: Philosophie des Nichts
+  venue: Werkstatt Philosophie, TU Dresden – June 2012
+  year: 2012
+
+- title: Philosophie des Nichts
+  venue: Symposium nichts-in-Pieschen, Dresden – June 2012
+  year: 2012
+
+- title: Implikationen zu einer Theorie der Säkularisation bei Charles Taylor
+  venue: Werkstatt Philosophie, TU Dresden – April 2010
+  year: 2010

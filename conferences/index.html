@@ -1,0 +1,60 @@
+---
+layout: default
+title: Conference Series “Wittgenstein & Hegel” (2017–2024)
+description: >-
+  Documentation of the international conference series “Wittgenstein & Hegel”
+  (Dresden 2017, Prague 2019, Warsaw 2021, Barcelona 2022, Vienna 2023,
+  Zagreb 2024): programmes, abstracts, talks, recordings and resulting volumes.
+structured_data: events-jsonld.html
+---
+<h1>Conference Series “Wittgenstein &amp; Hegel”, 2017–2024</h1>
+
+<div class="prose">
+<p>“Hegel seems to me to be always wanting to say that things which look different are really the same. Whereas my interest is in showing that things which look the same are really different.” Wittgenstein made this remark in a conversation with Maurice O’C. Drury (Rush Rhees, ed., <cite>Recollections of Wittgenstein</cite>, Oxford 1981, p. 157).</p>
+<p>The difference between the two thinkers has seldom been examined in its own right, although it is particularly illuminating today. The division into analytic and continental philosophy is widely regarded as outdated, and the traditions meet in the philosophy of mind, in logic and in the philosophy of science, among other fields. The aim of the series was that the study of Hegel should deepen our understanding of Wittgenstein – and that Wittgenstein scholarship should in turn open up new answers to Hegelian problems.</p>
+<p>The conferences addressed Wittgensteinian motifs in Hegel; Hegelian motifs in Wittgenstein; Wittgenstein’s reception of Hegel; the role of Neo-Hegelianism and British Idealism in the emergence of analytic philosophy; and the difference between the two approaches with regard to the analytic–continental divide.</p>
+<p>Between 2017 and 2024, six conferences took place – in Dresden, Prague, Warsaw, Barcelona, Vienna and Zagreb – and three volumes have come out of them. I initiated the series and was its main organizer; the co-organizers of each conference are named below.</p>
+</div>
+
+<nav class="toc" aria-label="Conferences">
+{%- for c in site.data.conferences.series %}<a href="#{{ c.id }}">{{ c.city }} {{ c.start | date: "%Y" }}</a> · {% endfor %}<a href="#volumes">Volumes</a>
+</nav>
+
+{%- for c in site.data.conferences.series %}
+{%- assign talks = c.talks | where_exp: "t", "t.speaker" %}
+{%- assign videos = c.talks | where_exp: "t", "t.video" %}
+<section class="conf" id="{{ c.id }}" aria-labelledby="{{ c.id }}-h">
+  <h2 id="{{ c.id }}-h"><span class="conf-city">{{ c.city }} {{ c.start | date: "%Y" }}</span> {{ c.title }}</h2>
+  <p class="conf-meta">{{ c.dates }} · {{ c.place }}</p>
+  <dl class="conf-facts">
+    <dt>Organizers</dt><dd>{{ c.organizers }}</dd>
+    {%- if c.keynotes %}<dt>Keynotes</dt><dd>{{ c.keynotes }}</dd>{% endif %}
+    {%- if c.led_by %}<dt>Led by</dt><dd>{{ c.led_by }}</dd>{% endif %}
+    {%- if c.partners %}<dt>Partners</dt><dd>{{ c.partners }}</dd>{% endif %}
+    {%- if c.support %}<dt>Support</dt><dd>{{ c.support }}</dd>{% endif %}
+    {%- if c.files %}<dt>Documents</dt><dd>{% for f in c.files %}<a href="{{ f.file | relative_url }}">{{ f.label }}</a> (PDF){% unless forloop.last %} · {% endunless %}{% endfor %}</dd>{% endif %}
+    {%- if videos.size > 0 %}<dt>Recordings</dt><dd>{{ videos.size }} talks on YouTube, linked in the list of talks</dd>{% endif %}
+    {%- if c.volume %}{% assign v = site.data.publications | where: "id", c.volume | first %}<dt>Volume</dt><dd>{% include pub-cite.html pub=v %}</dd>{% endif %}
+  </dl>
+  {%- if talks.size > 0 %}
+  <details class="talks">
+    <summary>Talks ({{ talks.size }})</summary>
+    <ul>
+    {%- for t in c.talks %}
+      {%- if t.day %}<li class="talk-day">{{ t.day }}</li>
+      {%- else %}<li><span class="talk-speaker">{{ t.speaker }}</span>: {{ t.title }}{% if t.keynote %} <span class="talk-tag">keynote</span>{% endif %}{% if t.video %} – <a href="{{ t.video }}">Video (YouTube)</a>{% endif %}</li>{% endif %}
+    {%- endfor %}
+    </ul>
+  </details>
+  {%- endif %}
+</section>
+{%- endfor %}
+
+<section id="volumes" aria-labelledby="volumes-h">
+  <h2 id="volumes-h">Volumes from the series</h2>
+  <ul class="biblio">
+  {%- for id in site.data.conferences.volumes %}{% assign v = site.data.publications | where: "id", id | first %}
+    <li>{% include pub-cite.html pub=v %}</li>
+  {%- endfor %}
+  </ul>
+</section>

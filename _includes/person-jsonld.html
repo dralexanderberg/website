@@ -4,11 +4,10 @@
   "@type": "Person",
   "name": "Alexander Berg",
   "honorificSuffix": "M.A., Ph.D.",
-  "jobTitle": "Feodor Lynen Research Fellow of the Alexander von Humboldt Foundation",
   "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Zurich" },
   "knowsAbout": ["German Idealism", "Hegel", "Ludwig Wittgenstein", "Literary form of philosophy"],
   "email": "mailto:{{ site.email }}",
   "url": "{{ '/' | absolute_url }}",
-  "image": "{{ '/images/portrait-800.jpg' | absolute_url }}"
+  "image": "{% if site.portrait_crops %}{{ '/images/portrait-800.jpg' | absolute_url }}{% else %}{{ '/images/portrait.jpg' | absolute_url }}{% endif %}"
 }
 </script>

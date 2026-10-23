@@ -4,7 +4,8 @@
 #   stage: progress    ->  "In progress"
 #   stage: review      ->  "Under review / in press"
 #   stage: published   ->  "Recently published"
-# Entries under "published" move to the archive automatically twelve months after their date.
+# Under "Recently published" the home page shows only the three newest entries;
+# older ones move to the archive on the Work Diary page automatically.
 # To remove an entry completely, delete its block (from "- stage" to the next "- stage").
 #
 # Template for a new entry (copy, paste below, fill in; delete lines you do not need):

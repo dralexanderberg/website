@@ -9,17 +9,21 @@ structured_data: person-jsonld.html
 ---
 <section class="intro" aria-labelledby="name">
   <picture class="portrait">
+    {%- if site.portrait_crops %}
     <img src="{{ '/images/portrait-600.jpg' | relative_url }}"
          srcset="{{ '/images/portrait-400.jpg' | relative_url }} 400w, {{ '/images/portrait-600.jpg' | relative_url }} 600w, {{ '/images/portrait-800.jpg' | relative_url }} 800w"
          sizes="(min-width: 48rem) 15rem, 11rem"
          width="800" height="1000"
-         alt="Portrait of Alexander Berg: a man with short fair hair, a reddish beard and wire-rimmed glasses, in a dark shirt against a dark blue background.">
+    {%- else %}
+    <img src="{{ '/images/portrait.jpg' | relative_url }}"
+    {%- endif %}
+         alt="Portrait photograph of Alexander Berg">
   </picture>
   <div class="intro-text">
     <h1 id="name">Alexander Berg</h1>
     <p class="subtitle">M.A., Ph.D. · Philosopher</p>
     <p>I work on German Idealism – above all Hegel – and on Wittgenstein, and on the literary form of philosophy: how philosophical works are written, and why their form matters for what they say.</p>
-    <p>I am a Feodor Lynen Research Fellow of the Alexander von Humboldt Foundation at the University of Zurich, with the research project <i>On the Literary Form of Philosophy</i>.</p>
+    <p>Until recently, I was a Feodor Lynen Research Fellow of the Alexander von Humboldt Foundation at the University of Zurich, where I am completing my habilitation.</p>
     <p class="intro-links"><a href="mailto:{{ site.email }}">{{ site.email }}</a> · <a href="{{ '/publications/' | relative_url }}">Publications</a> · <a href="{{ '/talks/' | relative_url }}">Talks</a></p>
   </div>
 </section>
@@ -34,7 +38,9 @@ structured_data: person-jsonld.html
 {%- if site.data.selected_texts and site.data.selected_texts.size > 0 %}
 <section class="home-texts" aria-labelledby="selected-texts">
   <h2 id="selected-texts">Selected Texts</h2>
-  {%- comment %} filled in once texts are chosen {% endcomment %}
+  <ul class="texts">
+  {%- for t in site.data.selected_texts limit: 3 %}{% include text-entry.html text=t %}{% endfor %}
+  </ul>
   <p class="more"><a href="{{ '/texts/' | relative_url }}">All selected texts</a></p>
 </section>
 {%- endif %}

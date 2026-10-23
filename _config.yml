@@ -4,14 +4,18 @@ author: Alexander Berg
 email: alexander@alexanderberg.ch
 description: >-
   Alexander Berg, philosopher. German Idealism, Wittgenstein and the literary
-  form of philosophy. Feodor Lynen Research Fellow at the University of Zurich.
+  form of philosophy.
 url: https://alexanderberg.ch
 baseurl: ""
 lang: en
 
-# Entries under "Recently published" in the Work Diary move to the archive
-# after this many days.
-diary_recent_days: 365
+# Portrait on the home page. true = use the prepared sizes portrait-400/600/800.jpg;
+# false = use images/portrait.jpg directly (after uploading a new photo).
+portrait_crops: true
+
+# Number of entries shown under "Recently published" in the Work Diary;
+# older ones move to the archive on the Work Diary page.
+diary_recent_count: 3
 
 plugins:
   - jekyll-sitemap
