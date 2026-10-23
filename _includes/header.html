@@ -1,0 +1,17 @@
+{%- assign nav = "Home|/,Work Diary|/diary/,Publications|/publications/,Talks|/talks/,Conferences|/conferences/,About|/about/,Contact|/contact/" | split: "," -%}
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="site-name" href="{{ '/' | relative_url }}">Alexander Berg</a>
+    <nav aria-label="Main">
+      <ul>
+      {%- for item in nav %}
+        {%- assign parts = item | split: "|" %}
+        {%- assign current = false %}
+        {%- if parts[1] == "/" %}{% if page.url == "/" %}{% assign current = true %}{% endif %}
+        {%- else %}{% assign start = page.url | slice: 0, parts[1].size %}{% if start == parts[1] %}{% assign current = true %}{% endif %}{% endif %}
+        <li><a href="{{ parts[1] | relative_url }}"{% if current %} aria-current="page"{% endif %}>{{ parts[0] }}</a></li>
+      {%- endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

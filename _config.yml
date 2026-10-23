@@ -1,0 +1,29 @@
+# Site settings. Changes here take effect after the next build (about one minute).
+title: Alexander Berg
+author: Alexander Berg
+email: alexander@alexanderberg.ch
+description: >-
+  Alexander Berg, philosopher. German Idealism, Wittgenstein and the literary
+  form of philosophy. Feodor Lynen Research Fellow at the University of Zurich.
+url: https://alexanderberg.ch
+baseurl: ""
+lang: en
+
+# Entries under "Recently published" in the Work Diary move to the archive
+# after this many days.
+diary_recent_days: 365
+
+plugins:
+  - jekyll-sitemap
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+
+exclude:
+  - AUFTRAG.md
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock

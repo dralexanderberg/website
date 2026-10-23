@@ -1,0 +1,47 @@
+---
+layout: default
+title: Home
+description: >-
+  Alexander Berg, philosopher – German Idealism, Wittgenstein and the literary
+  form of philosophy. Work in progress, recent publications and the conference
+  series “Wittgenstein & Hegel” (2017–2024).
+structured_data: person-jsonld.html
+---
+<section class="intro" aria-labelledby="name">
+  <picture class="portrait">
+    <img src="{{ '/images/portrait-600.jpg' | relative_url }}"
+         srcset="{{ '/images/portrait-400.jpg' | relative_url }} 400w, {{ '/images/portrait-600.jpg' | relative_url }} 600w, {{ '/images/portrait-800.jpg' | relative_url }} 800w"
+         sizes="(min-width: 48rem) 15rem, 11rem"
+         width="800" height="1000"
+         alt="Portrait of Alexander Berg: a man with short fair hair, a reddish beard and wire-rimmed glasses, in a dark shirt against a dark blue background.">
+  </picture>
+  <div class="intro-text">
+    <h1 id="name">Alexander Berg</h1>
+    <p class="subtitle">M.A., Ph.D. · Philosopher</p>
+    <p>I work on German Idealism – above all Hegel – and on Wittgenstein, and on the literary form of philosophy: how philosophical works are written, and why their form matters for what they say.</p>
+    <p>I am a Feodor Lynen Research Fellow of the Alexander von Humboldt Foundation at the University of Zurich, with the research project <i>On the Literary Form of Philosophy</i>.</p>
+    <p class="intro-links"><a href="mailto:{{ site.email }}">{{ site.email }}</a> · <a href="{{ '/publications/' | relative_url }}">Publications</a> · <a href="{{ '/talks/' | relative_url }}">Talks</a></p>
+  </div>
+</section>
+
+<section class="home-diary" aria-labelledby="work-diary">
+  <h2 id="work-diary">Work Diary</h2>
+  <p class="lead">What I am working on, what is under review or in press, and what has recently appeared.</p>
+  {% include diary.html %}
+  <p class="more"><a href="{{ '/diary/' | relative_url }}">Full Work Diary and archive</a></p>
+</section>
+
+{%- if site.data.selected_texts and site.data.selected_texts.size > 0 %}
+<section class="home-texts" aria-labelledby="selected-texts">
+  <h2 id="selected-texts">Selected Texts</h2>
+  {%- comment %} filled in once texts are chosen {% endcomment %}
+  <p class="more"><a href="{{ '/texts/' | relative_url }}">All selected texts</a></p>
+</section>
+{%- endif %}
+
+<section class="home-series" aria-labelledby="series">
+  <h2 id="series">Conference Series “Wittgenstein &amp; Hegel”, 2017–2024</h2>
+  <p>“Hegel seems to me to be always wanting to say that things which look different are really the same. Whereas my interest is in showing that things which look the same are really different.” Starting from this remark of Wittgenstein’s, I initiated a series of six international conferences – Dresden, Prague, Warsaw, Barcelona, Vienna and Zagreb – which I organized together with colleagues from across Europe. Three volumes have come out of it.</p>
+  <p>The documentation is kept here: programmes, abstracts, lists of talks, recordings and the resulting volumes.</p>
+  <p class="more"><a href="{{ '/conferences/' | relative_url }}">To the conference series</a></p>
+</section>

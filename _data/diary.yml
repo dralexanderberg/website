@@ -1,0 +1,103 @@
+# WORK DIARY – what I am working on, what is under review or in press, what has just appeared.
+#
+# To move an entry one stage further: change its "stage" line and its "date" line.
+#   stage: progress    ->  "In progress"
+#   stage: review      ->  "Under review / in press"
+#   stage: published   ->  "Recently published"
+# Entries under "published" move to the archive automatically twelve months after their date.
+# To remove an entry completely, delete its block (from "- stage" to the next "- stage").
+#
+# Template for a new entry (copy, paste below, fill in; delete lines you do not need):
+#
+# - stage: progress                # progress | review | published
+#   date: 2026-11-15               # date of the last change (for "published": date of publication)
+#   label: Up next                 # optional small label before the title
+#   pub: id-from-publications      # EITHER the id of an entry in publications.yml …
+#   title: Title of the work       # … OR a title written here
+#   note: One short sentence.      # shown on the home page
+#   more: A longer description.    # shown only on the Work Diary page
+#   status: submitted, under review
+#   link: https://…
+#
+# "In progress" and "Under review / in press" appear in the order given here;
+# "Recently published" is sorted by date automatically, newest first.
+
+# ---------------------------------------------------------------- In progress
+
+- stage: progress
+  date: 2026-10-23
+  title: Zur literarischen Form von Philosophie – Grundlinien eines Systems der Literatur
+  note: Habilitation thesis, University of Zurich. The part on Hegel’s Phenomenology of Spirit is largely complete; I am now writing the part on the literary form of Wittgenstein’s Philosophical Investigations.
+  more: >-
+    A book that systematizes and integrates the different methods of
+    literary-philosophical research to make them more productive for
+    philosophical inquiry and problem-solving. It is grounded in the idea of a
+    “system of literature” as a methodological foundation for understanding
+    philosophical writings, and demonstrates the method on two exemplary works:
+    Hegel’s Phenomenology of Spirit and Wittgenstein’s Philosophical Investigations.
+
+- stage: progress
+  date: 2026-10-23
+  label: Up next
+  title: Die Liebe zum Wissen ablegen. Hegel und Wittgenstein als gegenläufige Weisheitskritiken
+  note: For the new series Weisheit und Weisheitskritik. Philosophische Erkundungen, ed. Moritz R. Pretzsch & Jan Kerkmann (Velbrück Wissenschaft).
+
+- stage: progress
+  date: 2026-10-23
+  label: Planned
+  pub: wittgenstein-and-hegel-elements
+  note: Elements in the Philosophy of Ludwig Wittgenstein, ed. David G. Stern (Cambridge University Press).
+  more: >-
+    It will bring together what five conferences, two anthologies, one monograph
+    and a series of articles and talks on Wittgenstein and Hegel have yielded,
+    in a compact yet narratively accessible form.
+
+# ---------------------------------------------------- Under review / in press
+
+- stage: review
+  date: 2026-10-23
+  pub: goethe-influence-phenomenology
+  note: For Goethe and Philosophy, ed. Jan Kerkmann & Moritz Pretzsch (Springer, 2026).
+  status: submitted, under review
+
+- stage: review
+  date: 2026-10-23
+  pub: literarische-form-phaenomenologie
+  note: Hegel-Jahrbuch 2024, ed. Brady Bowman, Myriam Gerhard & Jure Zovko (Duncker & Humblot).
+  status: accepted, awaiting publication
+
+- stage: review
+  date: 2026-10-23
+  pub: synthesis-philosophica-41-1
+  title: "Special issue: Wittgenstein and Hegel on Normativity and Rationality"
+  note: Ed. Alexander Berg & Kenan Šljivo, Synthesis Philosophica 41/1, with my article Possibility and Probability – Wittgenstein in Russia, and the Curious Case of the Yellow Book. Presented at the XXXVI International Hegel Congress, Rome, Sept. 2026.
+  status: completed, awaiting publication
+
+# --------------------------------------------------------- Recently published
+
+- stage: published
+  date: 2026-07-01
+  pub: photography-of-everyday-life
+  note: In Wittgenstein and Popular Culture (Anthem Press).
+
+- stage: published
+  date: 2026-09-01
+  label: Talk
+  title: Goethe’s Artistic Influence on the Phenomenology of Spirit
+  note: XXXVI International Hegel Congress, Rome.
+
+- stage: published
+  date: 2026-09-01
+  label: Book presentation
+  title: Wittgenstein and Hegel on Normativity and Rationality
+  note: Synthesis Philosophica special issue. XXXVI International Hegel Congress, Rome.
+
+- stage: published
+  date: 2025-10-01
+  pub: wittgenstein-classical-german-philosophy
+  note: Ed. with Denys Kaidalov (De Gruyter).
+
+- stage: published
+  date: 2025-04-01
+  pub: studien-zur-transzendenz
+  note: Bautz.
