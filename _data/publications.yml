@@ -135,12 +135,13 @@
 
 - id: photography-of-everyday-life
   type: article
-  title: Ludwig Wittgenstein and the Photography of Everyday Life
+  title: Wittgenstein and the Photography of Everyday Life
   in: Wittgenstein and Popular Culture
   in_editors: Bernhard Stricker & Martin Urschel (eds.)
   series: Anthem Studies in Wittgenstein, Konstantin Sandis (ed.)
   publisher: Anthem Press, London
   date: July 2026
+  pages: 111–134
   url: https://anthempress.com/wittgenstein-and-popular-culture-hb
 
 - id: uebersichtliche-darstellung-2025
@@ -175,7 +176,7 @@
   in_editors: Károly Kókai (ed.)
   publisher: NoPress, Vienna
   date: 2022
-  pages: 204–220
+  pages: 203–220
 
 - id: uebersichtliche-darstellung-2022
   type: article

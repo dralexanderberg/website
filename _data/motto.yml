@@ -1,0 +1,13 @@
+# MOTTO on the home page, shown between the introduction and the Work Diary.
+# To show only one quotation, delete the other entry (from "- text" to the next "- text").
+# To show no motto at all, delete both entries.
+
+- text: Die wahre Gestalt, in welcher die Wahrheit existiert, kann allein das wissenschaftliche System derselben sein.
+  translation: The true shape in which truth exists can only be the scientific system of that truth.
+  author: Hegel
+  source: Phänomenologie des Geistes, Vorrede
+
+- text: Philosophie dürfte man eigentlich nur dichten.
+  translation: Philosophy ought really to be written only as poetry.
+  author: Wittgenstein
+  source: Vermischte Bemerkungen

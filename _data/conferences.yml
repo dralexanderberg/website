@@ -1,9 +1,8 @@
-# CONFERENCE SERIES "Wittgenstein & Hegel" and other conferences organized.
+# CONFERENCES – shown on /conferences/.
 #
-# series:    the six conferences of the series, newest first. Shown on /conferences/.
-# organized: all conferences and workshops organized, newest first. Shown on /talks/.
-#            Entries of the series only name their id ("series: zagreb-2024");
-#            everything else is taken from the series entry.
+# in_preparation: conferences being prepared (shown first).
+# series:         the six conferences of the series "Wittgenstein & Hegel", newest first.
+# further:        other conferences and workshops organized, newest first.
 #
 # Template for a talk in a talk list:
 #     - speaker: Name (Affiliation)
@@ -11,12 +10,16 @@
 #       video: https://youtu.be/…        # optional
 #     - day: Monday, 9 Sept.             # optional heading inside the list
 #
-# Template for a new entry under "organized":
+# Template for a new entry under "in_preparation" or "further":
 # - title: Title of the conference or workshop
-#   dates: 1–3 Sept. 2027
-#   place: University of …
-#   with: Co-organizer, Co-organizer
+#   dates: 1–3 Sept. 2027                # leave out if not yet known
+#   place: University of …               # leave out if not yet known
+#   with: Co-organizer, Co-organizer     # leave out if not yet known
 #   url: https://…                       # optional
+
+in_preparation:
+
+- title: A conference on the literary form of philosophy
 
 series:
 
@@ -37,6 +40,7 @@ series:
       file: /files/conferences/programme.abstracts_wh_zagreb_2024.pdf
     - label: Poster
       file: /files/conferences/poster_wh_zagreb_2024.pdf
+  poster: /images/posters/zagreb-2024.jpg
   volume: synthesis-philosophica-41-1
   talks:
     - day: Monday, 9 Sept. 2024
@@ -216,6 +220,7 @@ series:
       file: /files/conferences/2022_09_abstracts_wittgenstein_and_classical_german_philosophy.pdf
     - label: Poster
       file: /files/conferences/conference_wittgenstein_and_the_german_philosophical_tradition_self-consciousness_and_self-reference-def.pdf
+  poster: /images/posters/barcelona-2022.jpg
   talks:
     - day: Wednesday, 21 Sept. 2022
     - speaker: Bruna Picas (University of Barcelona)
@@ -401,6 +406,7 @@ series:
     - speaker: Thomas Rentsch (Dresden)
       title: Hegel und Wittgenstein, drei systematische Thesen
       keynote: true
+      video: https://youtu.be/XuHaoDlnwTI
     - speaker: Pirmin Stekeler-Weithofer (Leipzig)
       title: Das metaphysische Weltbild der Analytischen Philosophie. Kritik atomarer Monaden und Pixel bei Hegel und dem späteren Wittgenstein
       keynote: true
@@ -486,31 +492,13 @@ volumes:
   - wittgenstein-classical-german-philosophy
   - synthesis-philosophica-41-1
 
-organized:
-
-- series: zagreb-2024
-  with: Denys Kaidalov, Karlo Gardavski and Bruna Picas
+further:
 
 - title: Reading Philosophy – On the Literary Forms of Philosophy
   dates: 12 April 2024
   place: University of Zurich
   with: Frauke Berndt
   url: https://www.ds.uzh.ch/apps/_files/uploads/agenda/1483.pdf
-
-- series: vienna-2023
-  with: Denys Kaidalov, Daniel Kuran, Bruna Picas
-
-- series: barcelona-2022
-  with: Denys Kaidalov, Jakub Mácha, Bruna Picas, Ricard Sapena, Thomas Spiegel
-
-- series: warsaw-2021
-  with: Denys Kaidalov
-
-- series: prague-2019
-  with: Vojtěch Kolman
-
-- series: dresden-2017
-  with: Jakub Mácha, Louisa Herzfeld, Alexander Romahn and Marco Kleber
 
 - title: "Georg Friedrich Wilhelm Hegel: Rationalität und christlicher Glaube"
   dates: 18 Nov. 2016

@@ -2,11 +2,11 @@
 layout: default
 title: Talks
 description: >-
-  Talks by Alexander Berg since 2010, and the conferences and workshops he has
-  organized, including the conference series “Wittgenstein & Hegel”.
+  Talks by Alexander Berg since 2010 on Wittgenstein, Hegel and the literary
+  form of philosophy.
 ---
 <h1>Talks</h1>
-<nav class="toc" aria-label="Sections"><a href="#organized">Conferences organized</a></nav>
+<p class="lead">Conferences and workshops I have organized are listed under <a href="{{ '/conferences/' | relative_url }}">Conferences</a>.</p>
 
 {%- assign years = site.data.talks | group_by: "year" %}
 {%- for y in years %}
@@ -19,17 +19,3 @@ description: >-
   </ul>
 </section>
 {%- endfor %}
-
-<section aria-labelledby="organized">
-  <h2 id="organized">Conferences and workshops organized</h2>
-  <ul class="biblio">
-  {%- for o in site.data.conferences.organized %}
-    {%- if o.series %}
-      {%- assign c = site.data.conferences.series | where: "id", o.series | first %}
-    <li><a href="{{ '/conferences/' | relative_url }}#{{ c.id }}">{{ c.title }}</a>, {{ c.dates }}, {{ c.place | split: "," | first }} [with {{ o.with }}] – part of the series “Wittgenstein &amp; Hegel”</li>
-    {%- else %}
-    <li>{% if o.url %}<a href="{{ o.url }}">{{ o.title }}</a>{% else %}{{ o.title }}{% endif %}, {{ o.dates }}, {{ o.place }} [with {{ o.with }}]</li>
-    {%- endif %}
-  {%- endfor %}
-  </ul>
-</section>

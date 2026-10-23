@@ -1,0 +1,3 @@
+{%- comment -%} One conference or workshop from conferences.yml (in_preparation or further). {%- endcomment -%}
+{%- assign o = include.conf -%}
+{% if o.url %}<a href="{{ o.url }}">{{ o.title }}</a>{% else %}{{ o.title }}{% endif %}{% if o.dates %}, {{ o.dates }}{% endif %}{% if o.place %}, {{ o.place }}{% endif %}{% if o.with %} [with {{ o.with }}]{% endif %}
