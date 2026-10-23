@@ -1,0 +1,308 @@
+# PUBLICATIONS – every publication appears here exactly once.
+# The Publications page, the Work Diary and the Conferences page are built from this file.
+#
+# Template for a new entry (copy, paste at the top of the right group, fill in;
+# delete lines you do not need):
+#
+# - id: short-unique-name          # lowercase, no spaces; used by diary.yml
+#   type: article                  # monograph | edited | article | translation | online
+#   title: Title of the text
+#   author: Name of the author     # translations only: the author of the original text
+#   editors: First Editor & Second Editor
+#   in: Title of the book or journal
+#   in_editors: Editors of the book or journal (eds.)
+#   series: Series name, Series editor (ed.)
+#   publisher: Publisher, City
+#   date: 2026                     # as it should appear, e.g. 2026 or July 2026
+#   pages: 1–20
+#   status: forthcoming            # forthcoming | planned | (leave out once published)
+#   note: any additional remark
+#   isbn: "3689110300"             # optional
+#   url: https://doi.org/…         # publisher page or DOI, never Amazon
+#   reviews:                       # optional: reviews of this book
+#     - Reviewer (University), Journal 12 (1), 2027, pp. 1–5.
+#
+# Groups appear on the Publications page in this order: monograph, edited,
+# article, translation, online. Within each group, newest first (top of the list).
+
+# ---------------------------------------------------------------- Monographs
+
+- id: wittgenstein-and-hegel-elements
+  type: monograph
+  title: Wittgenstein and Hegel
+  series: Elements in the Philosophy of Ludwig Wittgenstein, David G. Stern (ed.)
+  publisher: Cambridge University Press
+  date: 2027
+  status: planned
+  url: https://www.cambridge.org/core/publications/elements/philosophy-of-ludwig-wittgenstein
+
+- id: studien-zur-transzendenz
+  type: monograph
+  title: Studien zur Transzendenz – Säkularisierungstheorie bei Charles Taylor und Falk Wagner
+  series: Libri Nigri, Hans Rainer Sepp (ed.)
+  publisher: Bautz
+  date: April 2025
+  isbn: "3689110300"
+
+- id: wittgensteins-hegel
+  type: monograph
+  title: Wittgensteins Hegel
+  publisher: Wilhelm Fink Verlag, Paderborn
+  date: 2021
+  note: with the support of the VG Wort Science Promotion Fund
+  url: https://brill.com/display/title/54766
+  reviews:
+    - Peter Eschweiler, Bibliographie zur Symbolik, Ikonographie und Mythologie 54/2021, pp. 22–23.
+
+- id: transzendenz-hegel-heidegger
+  type: monograph
+  title: Transzendenz bei Hegel und Heidegger
+  series: Libri Virides, Hans Rainer Sepp (ed.)
+  publisher: Bautz
+  date: 2012
+  isbn: "3883097365"
+
+# ------------------------------------------------------------ Edited volumes
+
+- id: synthesis-philosophica-41-1
+  type: edited
+  title: "Special Issue: Wittgenstein and Hegel on Normativity and Rationality"
+  editors: Alexander Berg & Kenan Šljivo
+  in: Synthesis Philosophica, vol. 41, no. 1
+  publisher: Filozofski Fakultet, Zagreb
+  date: 2026
+  status: forthcoming
+  url: https://hrcak.srce.hr/en/synthesis-philosophica
+
+- id: wittgenstein-classical-german-philosophy
+  type: edited
+  title: Wittgenstein and Classical German Philosophy – Logic, Language, Life
+  editors: Alexander Berg & Denys Kaidalov
+  publisher: De Gruyter, Berlin/New York
+  date: Oct. 2025
+  url: https://www.degruyter.com/document/isbn/9783110698442/html
+
+- id: wittgenstein-hegel-reevaluation
+  type: edited
+  title: Wittgenstein and Hegel – Reevaluation of Difference
+  editors: Jakub Mácha & Alexander Berg
+  series: On Wittgenstein (5), James Conant, Wolfgang Kienzler, Stefan Majetschak, Volker Munz, Josef Rothhaupt, David Stern, Wilhelm Vossenkuhl (eds.)
+  publisher: De Gruyter, Berlin/New York
+  date: 2019
+  url: https://doi.org/10.1515/9783110572780
+  toc: /files/conferences/toc.pdf
+  reviews:
+    - Stany Mazurkiewicz (Université de Liège), Bulletin de littérature hégélienne XXX, 2020, pp. 182–183.
+    - Guido Tana (University of Pavia), Verifiche XLIX (1–2), 2020, pp. 333–346.
+    - Diogo Ferrer (University of Coimbra), Wittgenstein-Studien 14 (1), 2023, pp. 277–283.
+
+- id: ambivalenzen-des-heiligen
+  type: edited
+  title: Ambivalenzen des Heiligen
+  editors: Alexander Berg, Friedrich Hausen, René Kaufmann, Beatrix Kersten, Martin Krebs, Anna Maria Martini
+  series: Journal für Religionsphilosophie (3), Arbeitsgemeinschaft Religionsphilosophie Dresden e. V. (ed.)
+  publisher: Verlag Text & Dialog, Dresden
+  date: 2014
+
+# ------------------------------------------------------------------ Articles
+
+- id: goethe-influence-phenomenology
+  type: article
+  title: Goethe’s Influence on Hegel’s Phenomenology of Spirit
+  in: Goethe and Philosophy
+  in_editors: Jan Kerkmann & Moritz Pretzsch (eds.)
+  publisher: Springer, Berlin
+  date: 2026
+  status: forthcoming
+
+- id: literarische-form-phaenomenologie
+  type: article
+  title: Zur literarischen Form der Phänomenologie des Geistes – Methode und Bedeutung
+  in: Hegel-Jahrbuch 2024
+  in_editors: Brady Bowman, Myriam Gerhard & Jure Zovko (eds.)
+  publisher: Duncker & Humblot, Berlin
+  date: 2026
+  status: forthcoming
+
+- id: possibility-and-probability
+  type: article
+  title: Possibility and Probability – Wittgenstein in Russia, and the Curious Case of the Yellow Book
+  in: "Wittgenstein and Hegel on Normativity and Rationality, Synthesis Philosophica, vol. 41, no. 1"
+  in_editors: Alexander Berg & Kenan Šljivo (eds.)
+  publisher: Filozofski Fakultet, Zagreb
+  date: 2026
+  status: forthcoming
+
+- id: photography-of-everyday-life
+  type: article
+  title: Ludwig Wittgenstein and the Photography of Everyday Life
+  in: Wittgenstein and Popular Culture
+  in_editors: Bernhard Stricker & Martin Urschel (eds.)
+  series: Anthem Studies in Wittgenstein, Konstantin Sandis (ed.)
+  publisher: Anthem Press, London
+  date: July 2026
+  url: https://anthempress.com/wittgenstein-and-popular-culture-hb
+
+- id: uebersichtliche-darstellung-2025
+  type: article
+  title: Wittgenstein’s ‘Übersichtliche Darstellung’ and Hegel’s ‘Speculative Philosophy’
+  in: Wittgenstein and Classical German Philosophy
+  in_editors: Alexander Berg & Denys Kaidalov (eds.)
+  publisher: De Gruyter
+  date: Oct. 2025
+
+- id: peculiar-nature-of-philosophy
+  type: article
+  title: Wittgenstein and Classical German Philosophy – or the Peculiar Nature of Philosophy
+  in: International Conference Wittgenstein and Hegel on Normativity and Rationality, Zagreb, 9–11 Sept. 2024
+  in_editors: Hrvoje Jurić & Karlo Gardavski (eds.)
+  publisher: Croatian Philosophical Society
+  date: 2024
+
+- id: absolute-negativity-tractatus
+  type: article
+  title: The Method of Absolute Negativity and the Tractatus Logico-Philosophicus – Wittgenstein, William James and Hegel
+  in: 100 Years of Tractatus Logico-Philosophicus – 70 Years after Wittgenstein’s Death. A Critical Assessment. Contributions of the 44th International Wittgenstein Symposium, vol. XXIX
+  in_editors: Esther Heinrich-Ramharter, Alois Pichler, Friedrich Stadler (eds.)
+  publisher: Kirchberg a. W.
+  date: 2023
+  url: https://symposium.alws.at/api/content/volume/2023.pdf
+
+- id: photo-album-experiment
+  type: article
+  title: Wittgenstein’s Photo Album as a Philosophical Experiment
+  in: Zeit der Unkultur – Ludwig Wittgenstein im Österreich der Zwischenkriegszeit
+  in_editors: Károly Kókai (ed.)
+  publisher: NoPress, Vienna
+  date: 2022
+  pages: 204–220
+
+- id: uebersichtliche-darstellung-2022
+  type: article
+  title: Wittgensteins Übersichtliche Darstellung und Hegels Spekulative Philosophie
+  in: Wittgenstein and Platonism. Contributions of the 43rd International Wittgenstein Symposium, vol. XXVIII
+  in_editors: Herbert Hrachovec & Jakub Mácha (eds.)
+  publisher: Kirchberg a. W.
+  date: 2022
+
+- id: philosophisches-photoalbum
+  type: article
+  title: Wittgensteins philosophisches Photoalbum
+  in: Fotografische Differenz. Interkulturelle Theorien zum fotografischen Bild
+  in_editors: Hans Rainer Sepp (ed.)
+  publisher: Bautz
+  date: 2022
+  pages: 194–239
+
+- id: begriffe-des-psychischen
+  type: article
+  title: Wittgenstein und die Begriffe des Psychischen bei Hegel
+  in: Special section Wittgenstein über das Psychische, Wittgenstein-Studien, vol. 11
+  in_editors: Richard Raatzsch (ed.)
+  publisher: Walter de Gruyter, Berlin/New York
+  date: 2019
+  pages: 137–168
+  url: https://doi.org/10.1515/witt-2020-0008
+
+- id: identity-in-difference
+  type: article
+  title: Identity in Difference – Wittgenstein’s Hegel
+  in: Wittgenstein and Hegel – Reevaluation of Difference
+  in_editors: Jakub Mácha & Alexander Berg (eds.)
+  publisher: De Gruyter
+  date: 2019
+  pages: 349–364
+
+- id: grundlagen-der-mathematik
+  type: article
+  title: Wittgenstein, die Grundlagen der Mathematik, und Hegel
+  in: Philosophie der Logik und Mathematik. Beiträge zum 41. Internationalen Wittgenstein Symposium, vol. XXVI
+  in_editors: Gabriele M. Mras, Paul Weingartner, Bernhard Ritter (eds.)
+  publisher: Kirchberg a. W.
+  date: 2018
+  pages: 15 f.
+
+- id: vom-wissen-zum-denken
+  type: article
+  title: Vom Wissen zum Denken – Wittgensteins dialektische Methode am Beispiel der Seminarnotizen G. E. Moores
+  in: Contributions of the 40th International Wittgenstein Symposium, vol. XXV
+  in_editors: Christoph Limbeck-Lilienau, Friedrich Stadler (eds.)
+  publisher: Kirchberg a. W.
+  date: 2017
+  pages: 20 f.
+  url: https://www.alws.at/alws/wp-content/uploads/2020/03/papers-2017.pdf
+
+- id: ernste-spiele
+  type: article
+  title: Ernste Spiele – eine kleine Erzählung von Wittgenstein bis Schiller und zurück
+  in: Ernste Spiele, Journal für Religionsphilosophie (5)
+  in_editors: Arbeitsgemeinschaft Religionsphilosophie Dresden e. V. (ed.)
+  publisher: Verlag Text & Dialog, Dresden
+  date: 2016
+  pages: 57 f.
+
+- id: vom-pun-zum-sprachspiel
+  type: article
+  title: Vom „pun“ zum Sprachspiel – Wittgenstein, Russell, Bradley, Hegel und der Streit um das concrete universal
+  in: Contributions of the 39th International Wittgenstein Symposium, vol. XXIV
+  in_editors: Stefan Majetschak & Anja Weiberg (eds.)
+  publisher: Kirchberg a. W.
+  date: 2016
+  pages: 20 f.
+  url: https://www.alws.at/alws/wp-content/uploads/2019/01/papers-2016.pdf
+
+- id: historische-wittgenstein-forschung
+  type: article
+  title: Probleme in der historischen Wittgenstein-Forschung – Wunsch, Wirklichkeit und Russische Philosophie
+  in: Contributions of the 38th International Wittgenstein Symposium, vol. XXIII
+  in_editors: Christian Kanzian, Josef Mitterer, Katharina Neges (eds.)
+  publisher: Kirchberg a. W.
+  date: 2015
+  pages: 23 f.
+  url: https://www.alws.at/alws/wp-content/uploads/2018/06/papers-2015.pdf
+
+- id: grundlose-gewissheit
+  type: article
+  title: Grundlose Gewissheit und Absolutes Wissen – Wittgenstein und Hegel
+  in: Contributions of the 37th International Wittgenstein Symposium, vol. XXII
+  in_editors: Sonja Rinofner-Kreidl, Harald A. Wiltsche (eds.)
+  publisher: Kirchberg a. W.
+  date: 2014
+  pages: 24 f.
+  url: https://www.alws.at/alws/wp-content/uploads/2018/06/papers-2014.pdf
+
+# -------------------------------------------------------------- Translations
+
+- id: demmerling-translation
+  type: translation
+  author: Christoph Demmerling
+  title: Hegel, the Pragmatic Turn, and the Later Wittgenstein
+  in: Wittgenstein and Classical German Philosophy
+  in_editors: Alexander Berg & Denys Kaidalov (eds.)
+  publisher: De Gruyter
+  date: Oct. 2025
+
+- id: rentsch-translation
+  type: translation
+  author: Thomas Rentsch
+  title: Three Key Hypotheses regarding Hegel and Wittgenstein
+  in: Wittgenstein and Hegel – Reevaluation of Difference
+  in_editors: Jakub Mácha & Alexander Berg (eds.)
+  publisher: De Gruyter
+  date: 2019
+  url: https://doi.org/10.1515/9783110572780-006
+
+# ------------------------------------------------------------ Online edition
+
+- id: wittgenstein-nachlass-idp
+  type: online
+  title: Proofreading of the normalized transcription of Wittgenstein’s Nachlass, coded in XML
+  in: "Wittgenstein, Ludwig: Interactive Dynamic Presentation (IDP) of Ludwig Wittgenstein’s philosophical Nachlass [wittgensteinonline.no]"
+  publisher: Wittgenstein Archives at the University of Bergen (WAB) under the direction of Alois Pichler
+  date: 2016–
+  manuscripts:
+    - "Ms-115: XI, Philosophische Bemerkungen"
+    - Ms-139b [so-called Lecture on Ethics] (ÖNB, Cod.Ser.n.37.936)
+    - Ms-148 [C4], Ms-149 [C5], Ms-150 [C6], Ms-152 [C8]
+    - "Ms-153a: Anmerkungen; Ms-153b; Ms-154; Ms-155; Ms-156a"
+    - Ts-213 [so-called Big Typescript]

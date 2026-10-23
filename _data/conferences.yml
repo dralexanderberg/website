@@ -1,0 +1,524 @@
+# CONFERENCE SERIES "Wittgenstein & Hegel" and other conferences organized.
+#
+# series:    the six conferences of the series, newest first. Shown on /conferences/.
+# organized: all conferences and workshops organized, newest first. Shown on /talks/.
+#            Entries of the series only name their id ("series: zagreb-2024");
+#            everything else is taken from the series entry.
+#
+# Template for a talk in a talk list:
+#     - speaker: Name (Affiliation)
+#       title: Title of the talk
+#       video: https://youtu.be/…        # optional
+#     - day: Monday, 9 Sept.             # optional heading inside the list
+#
+# Template for a new entry under "organized":
+# - title: Title of the conference or workshop
+#   dates: 1–3 Sept. 2027
+#   place: University of …
+#   with: Co-organizer, Co-organizer
+#   url: https://…                       # optional
+
+series:
+
+- id: zagreb-2024
+  city: Zagreb
+  title: Wittgenstein and Hegel on Normativity and Rationality
+  dates: 9–11 Sept. 2024
+  start: 2024-09-09
+  end: 2024-09-11
+  place: University of Zagreb, Faculty of Humanities and Social Sciences
+  locality: Zagreb
+  country: HR
+  organizers: Alexander Berg (Konstanz), Karlo Gardavski (Zagreb), Denys Kaidalov (Charles University Prague), Bruna Picas (Barcelona)
+  keynotes: Hans-Johann Glock (Zurich), Elena Ficara (Paderborn)
+  support: Croatian Philosophical Society; Department of Philosophy, University of Zagreb; Faculty of Philosophy, University of Sarajevo
+  files:
+    - label: Programme and abstracts
+      file: /files/conferences/programme.abstracts_wh_zagreb_2024.pdf
+    - label: Poster
+      file: /files/conferences/poster_wh_zagreb_2024.pdf
+  volume: synthesis-philosophica-41-1
+  talks:
+    - day: Monday, 9 Sept. 2024
+    - speaker: Elena Ficara (Paderborn)
+      title: "Hegel and Wittgenstein: Forerunners of Paraconsistency?"
+      keynote: true
+    - speaker: Alexander Berg (Zurich)
+      title: Wittgenstein and Classical German Philosophy or the Peculiar Nature of Philosophy (Book Presentation)
+    - speaker: Davor Lauc (Zagreb)
+      title: Identity, Similarity, and Contextuality in Hegel’s Logic and Wittgenstein’s Investigations
+    - speaker: Konrad Wyszkowski (Warsaw)
+      title: "Knowledge of Truth and Cognition of Verisimilitude: Hegel and the Problem of the Ground for Cognitive Norms"
+    - speaker: Carla Carmona (Seville)
+      title: A Performative Hinge Epistemology at the Intersection of Wittgenstein and Hegel
+    - speaker: Mate Penava (Zadar)
+      title: Normativity of Forms of Life
+    - speaker: Matija Vigato (Zagreb)
+      title: Hegel’s and Wittgenstein’s Influence on Sellars’ Critique of the Myth of the Given
+    - speaker: Kwing-Yui Wong (Soochow University, Taiwan)
+      title: "Unraveling the Connections: Wittgenstein’s and Hegel’s Perspectives on Rule-Following"
+    - speaker: Martin Hergouth (Ljubljana)
+      title: Failure of Immediacy, Necessity of Immediacy and the Function of Writing
+    - speaker: Simone Nota (Trinity College Dublin)
+      title: Wittgenstein the Naturalist?
+    - speaker: Iben Bollaert & Cato Andriessen (Ghent)
+      title: "The Absolute System of Definitions: On Hegel’s and Frege’s Notion of Definitions"
+    - speaker: Nicolas Cuevas (Bayreuth)
+      title: "Truth-Conditions as Conditions of Correct Application: Semantic Normativity and Pragmatic Guidelines"
+    - day: Tuesday, 10 Sept. 2024
+    - speaker: Hans-Johann Glock (Zurich)
+      title: Was Wittgenstein a Rulesian?
+      keynote: true
+    - speaker: Denys Kaidalov (Charles University Prague)
+      title: On Logical Psychologism
+    - speaker: Gurpreet Rattan (Toronto)
+      title: Disagreement and Notational Advantage in a Solipsistic Language
+    - speaker: Luca Morelli Fonseca (Boston College)
+      title: "Wittgenstein’s Language Games: An Investigation of the Non-Representational Capacity of Language"
+    - speaker: Florian Rieger (Basel)
+      title: The Idea of Practice in Wittgenstein
+    - speaker: Ramesh Dheeravath (Hyderabad)
+      title: "Methodological Differences in Hegel’s Dialectics and Wittgenstein’s Language Games: Implications for Normativity and Rationality"
+    - speaker: Nikola Jandrić (Belgrade)
+      title: "Expressive Rationality in Later Wittgenstein: A Novel, Socratic Reading of the Rule-following Considerations"
+    - speaker: Lucas Sanzey (Lorraine)
+      title: On Reception and Use of Wittgenstein in Philosophy of Law
+    - speaker: David Lindeman (Georgetown University)
+      title: "Hegel, Heidegger, Wittgenstein – Identity and Difference: A Note on the Culmination"
+    - speaker: David Palme (Frankfurt)
+      title: "Contradiction as a Form of Life: 20th Century Moral Philosophy through the Lens of Wittgenstein’s Work"
+    - speaker: Virginia Soro (Lausanne)
+      title: "Intellect in Action: McDowell reading Hegel after Wittgenstein"
+    - speaker: Dominik Müller (ETH Zürich)
+      title: Wittgenstein, Science, and the Law of Causality
+    - day: Wednesday, 11 Sept. 2024
+    - speaker: Karlo Gardavski (Zagreb) & Kenan Šljivo (Sarajevo)
+      title: "Norms We Live By: Temporality and Rule Following in Wittgenstein’s Philosophical Investigations"
+    - speaker: Paolo Tripodi (Turin)
+      title: Wittgenstein, Dialectics, and ‘Bourgeois’ Thought
+    - speaker: Krystian Bogucki (Polish Academy of Sciences, Warsaw)
+      title: How I Learned to Stop Worrying and Love the Saying-Showing Distinction
+    - speaker: Lorenzo Cammi (Verona)
+      title: "Logic of Madness in Hegel and Wittgenstein: The Struggle between Mind and World"
+    - speaker: Andrew Bridges (California State University, Fullerton)
+      title: A Hegelian Reflection of the Expansive Nature of the Concept of the Placebo Effect in the Context of Coherent Rationalities and Public Health
+    - speaker: Qinyi Luo (University of California, Riverside)
+      title: "Finding Justifications in Practices: Hegel and Wittgenstein on Normativity"
+    - speaker: Giuseppa Bella (Catania)
+      title: Überlegungen zur logischen Normativität bei Hegel und Wittgenstein
+
+- id: vienna-2023
+  city: Vienna
+  title: Wittgenstein and Hegel on the Foundations of Logic
+  dates: 11–13 Sept. 2023
+  start: 2023-09-11
+  end: 2023-09-13
+  place: University of Vienna
+  locality: Vienna
+  country: AT
+  organizers: Alexander Berg (Zurich), Denys Kaidalov (Prague), Daniel Kuran (Vienna), Bruna Picas (Barcelona)
+  partners: Vojtěch Kolman (Prague), Michał Dobrzański (Warsaw), Kurt Appel (Vienna)
+  support: CENTRAL Workshops (CENTRAL network)
+  files:
+    - label: Programme
+      file: /files/conferences/2023_08_program_for_vienna_8.pdf
+    - label: Abstracts
+      file: /files/conferences/2023_08__abstracts_vienna_4.pdf
+  talks:
+    - day: Monday, 11 Sept. 2023
+    - speaker: Denys Kaidalov (Charles University)
+      title: Truth and (Un)Provability
+    - speaker: Nikolay Milkov (University of Paderborn)
+      title: Wittgenstein and Hegel as Idealistic Philosophers
+    - speaker: Shuhei Kimoto (Tokyo Metropolitan University)
+      title: Elucidation and Therapy in Hegel’s Logic
+    - speaker: Lorenzo Cammi (University of Pittsburgh)
+      title: Logic as Foundation of Knowledge. Hegel’s Conceptual Realism and Wittgenstein’s Solipsistic Realism
+    - speaker: Marco Rienzi (Vita-Salute San Raffaele University)
+      title: The Critique of the Propositional Form in Hegelian Philosophy
+    - speaker: Chen Yang (Purdue University)
+      title: On the Formalization of Hegel’s Dialectic Logic
+    - speaker: David F. Hoinski (West Virginia University)
+      title: "Irrational Remainders: Transcendence in Hegel and Wittgenstein"
+    - speaker: Ivo Pezlar (Masaryk University)
+      title: Wittgenstein’s notion of contradiction as a hint to act and not to consider
+    - speaker: David Lindeman (Georgetown University)
+      title: Hegel and Wittgenstein on Logic as First Philosophy
+    - speaker: Saori Makino (Tokyo Metropolitan University)
+      title: Logical Notation and Everyday Language; Salvaging the Conception of Logic
+    - speaker: João Esteves da Silva (University of Lisbon)
+      title: "Philosophy: Therapy or Self-Science?"
+    - speaker: Giuseppa Bella (University of Catania)
+      title: Hegel und Wittgenstein über Form und Inhalt der Logik
+    - day: Tuesday, 12 Sept. 2023
+    - speaker: Alexander Berg (University of Zurich)
+      title: The Method of Absolute Negativity as a Foundation of Logic in Wittgenstein and Hegel
+    - speaker: Thomas Auinger (University of Vienna)
+      title: "Logische Gestalten: Wittgenstein und Hegel in widersprüchlicher Einigkeit. Zur Fundierung der weltspiegelnden und spekulativen Logizität"
+    - speaker: Christina Weiss (University of Darmstadt)
+      title: Towards a Homogeneity of Logical Pictures in Hegel’s Logic of Being
+    - speaker: Samuel Vitel (Université de Poitiers)
+      title: What identity theory of truth does Hegel hold in his Logic?
+    - speaker: Filip Gołaszewski (University of Warsaw)
+      title: Logic and metaphysics – remarks on Hegel and early Wittgenstein
+    - speaker: Vincent Vincke (University of Brussels)
+      title: The Arbitrariness of Ethics. Pursuing Wittgenstein’s Suggested Analogy to Logic and Mathematics
+    - speaker: Marcus Döller (University of Erfurt)
+      title: Reflections on the Status on Representation and Articulation of the Logical Form in Wittgenstein and Hegel
+    - speaker: Lucian Ionel (University of Leipzig)
+      title: Logic and Natural History
+    - speaker: Bangrui Chen (University of Chicago)
+      title: "Critique of Additive Theory of Logic: Variations in Hegel and Early Wittgenstein"
+    - speaker: Manuel Zelger (University of Tübingen)
+      title: Universality and Self-Reference of Logic in Wittgenstein and Hegel
+    - speaker: Silvia Locatelli (University of Lisbon)
+      title: "Logic as dance: an Analysis of Movement in the Logic of Hegel and the later Wittgenstein"
+    - speaker: Ramesh Dheeravath (University of Hyderabad)
+      title: In Defense of the Inexpressible – Wittgenstein and Hegel on the Unspeakable
+    - day: Wednesday, 13 Sept. 2023
+    - speaker: Bruna Picas (University of Barcelona)
+      title: "Hinge Propositions as Groundless Grounds: Wittgenstein and Hegel on the Nature of Logical Principles"
+    - speaker: Herbert Hrachovec (University of Vienna)
+      title: Twice is better? 2 x 2 foundations of logic
+    - speaker: Øystein Daae Gjertsen (Tromsø)
+      title: Logical form in the Philosophical Investigations
+    - speaker: Karlo Gardavski
+      title: Wittgenstein’s (Methodo)logical Nihilism
+    - speaker: Pavel Arazim (Czech Academy of Sciences)
+      title: Implicit rules and their expressibility by means of logic
+    - speaker: Zoheir Bagheri Noaparast (University of Eichstätt-Ingolstadt)
+      title: Examining the Logic of the Language Game of Religion in Wittgenstein’s Later Philosophy
+    - speaker: Juan Andrés Vargas (Diego Portales University)
+      title: The Prevalence of the Rule-Following Problem in Kant and Hegel
+    - speaker: Michael Wee (Durham University)
+      title: Wittgenstein on the Practical Foundations of Logic
+    - speaker: Timur Uçan (Bordeaux Montaigne University)
+      title: Contemporary Readings and Problematics of Private Language in the Works of Hegel and Wittgenstein
+    - speaker: Anirban Mukherjee (North Bengal University)
+      title: "Dialectics and Progress: A Comparative Examination of Hegel and Wittgenstein"
+    - speaker: Daniel Kuran (University of Vienna)
+      title: Hegel on Logic and the “Original Word”
+
+- id: barcelona-2022
+  city: Barcelona
+  title: "Wittgenstein and Classical German Philosophy: Self-consciousness and Self-reference"
+  dates: 21–23 Sept. 2022
+  start: 2022-09-21
+  end: 2022-09-23
+  place: University of Barcelona, Faculty of Philosophy
+  locality: Barcelona
+  country: ES
+  organizers: Alexander Berg (Zurich), Denys Kaidalov (Prague), Jakub Mácha (Brno), Bruna Picas, Ricard Sapena, Adrià Montalbán Figueroa (Barcelona), Thomas Spiegel (Potsdam)
+  keynotes: Román Cuartango (Barcelona), Hans-Johann Glock (Zurich), Luca Illetterati (Padua), Edgar Maraguat (Valencia), Sebastian Rödl (Leipzig)
+  support: Spanish research council (project PGC2018-093363-B-I00); Hegel en perspectiva (Valencia); Forschungskolleg Analytic German Idealism (Leipzig); German Philosophy Lab (Warsaw)
+  files:
+    - label: Programme and abstracts
+      file: /files/conferences/2022_09_abstracts_wittgenstein_and_classical_german_philosophy.pdf
+    - label: Poster
+      file: /files/conferences/conference_wittgenstein_and_the_german_philosophical_tradition_self-consciousness_and_self-reference-def.pdf
+  talks:
+    - day: Wednesday, 21 Sept. 2022
+    - speaker: Bruna Picas (University of Barcelona)
+      title: "Wittgenstein and Classical German Philosophy: Self-consciousness and Self-reference"
+    - speaker: Edgar Maraguat (University of Valencia)
+      title: Idealism in Hegel and Wittgenstein
+      keynote: true
+    - speaker: Román Cuartango (University of Barcelona)
+      title: Fragmentos de una theoria imperfecta (Wittgenstein y la especulación)
+      keynote: true
+    - speaker: Christina Weiss (University of Darmstadt)
+      title: Self-reference in Hegel’s Doctrine of Essence
+    - speaker: Simone Nota (Trinity College Dublin)
+      title: Judgement and Self-Consciousness in Kant and the early Wittgenstein
+    - speaker: Simon Skempton (University of York)
+      title: Hegel and Wittgenstein on the ‘Civil Status of a Contradiction’
+    - speaker: Karl-Friedrich Kiesow (University of Hannover)
+      title: Wittgenstein, Schopenhauer – and Spinoza
+    - speaker: David Lindeman (Georgetown University)
+      title: Being that can understand is world, or How much truth there is in solipsism
+    - speaker: Aran Gharibpour (Austin Community College)
+      title: "Self-Consciousness and the Threat of Privacy: Reading Chapter Four of the Phenomenology in the Light of Wittgenstein’s Case Against a Private Language"
+    - day: Thursday, 22 Sept. 2022
+    - speaker: Hans-Johann Glock (University of Zurich)
+      title: "‘The I, the I is what is deeply mysterious!’ – Is it? Ego-centred reflections in the wake of Kant, Schopenhauer, Wittgenstein and Strawson"
+      keynote: true
+    - speaker: Sebastian Rödl (University of Leipzig)
+      title: The Silence of the Philosophical Investigations
+      keynote: true
+    - speaker: Alexander Berg (University of Zurich)
+      title: Three Types of the Self in Hegel and Wittgenstein
+    - speaker: Jens Pier (University of Leipzig)
+      title: Philosophy is really more work on oneself. Kant and Wittgenstein on the Limits of Sense
+    - speaker: Filip Gołaszewski (University of Warsaw)
+      title: The Wittgenstein’s ladder as a metaphor of self-development – cognition as a practice of self-reference
+    - speaker: Konrad Wyszkowski (University of Warsaw)
+      title: Can a form of life be self-conscious and self-referring?
+    - speaker: Giuseppa Bella (University of Catania)
+      title: Die Aktivität der Negation als Voraussetzung für das Selbstbewusstsein und die Selbstreferenz in Hegel und Wittgenstein
+    - speaker: Ricard Sapena (University of Barcelona)
+      title: "Lo indecible de sí mismo: posibilidad y límites de la autoconciencia"
+    - speaker: Silvia Locatelli (University of Lisbon)
+      title: "The Activity of Life: Form of Life and Ethical State between Wittgenstein and Hegel"
+    - day: Friday, 23 Sept. 2022
+    - speaker: Luca Illetterati (University of Padua)
+      title: Science and Pseudoscience. Hegel and Wittgenstein on the nature of philosophy
+      keynote: true
+    - speaker: Jakub Mácha (Masaryk University Brno)
+      title: Speculative Realism vs. Transcendental Idealism
+    - speaker: Denys Kaidalov (Charles University Prague)
+      title: Private language vs. private speech
+    - speaker: Christos Kalpakidis (University of Bonn)
+      title: Wittgenstein and Sartre on Self-Consciousness and Self-reference
+    - speaker: Cristóbal Balbontin Gallo (Austral University of Chile)
+      title: "Hegel’s recognition in context: A Wittgensteinian pragmatist approach of recognition"
+
+- id: warsaw-2021
+  city: Warsaw
+  title: Wittgenstein and Classical German Philosophy
+  dates: 1–3 Sept. 2021
+  start: 2021-09-01
+  end: 2021-09-03
+  place: University of Warsaw
+  locality: Warsaw
+  country: PL
+  organizers: Alexander Berg (Zurich), Denys Kaidalov (Warsaw)
+  led_by: Pirmin Stekeler-Weithofer (Leipzig), Hans-Johann Glock (Zurich), Richard Raatzsch (Oestrich-Winkel), Jakub Mácha (Brno)
+  volume: wittgenstein-classical-german-philosophy
+  talks:
+    - speaker: Denys Kaidalov (Warsaw)
+      title: The Two Faces of Contradiction
+    - speaker: Pirmin Stekeler-Weithofer (Leipzig)
+      title: Hegelian Semantics. From Wittgenstein’s Pure Konstatierungen to Dialectically Comprehended Utterances
+    - speaker: Christina Weiss (Darmstadt)
+      title: Hegel’s Shine and Wittgenstein’s Function
+    - speaker: Guillaume Decauwert (Grenoble)
+      title: Philosophical Clarity, Negation and Ineffability. A Dialogue between Wittgenstein and Schopenhauer
+    - speaker: Hans-Johann Glock (Zurich)
+      title: "The Whole Truth about Truth: Kant and Wittgenstein vs. Hegel"
+    - speaker: Bruna Picas (Barcelona)
+      title: Hegel and Wittgenstein on Philosophical Concepts, between Determination and Blurriness
+    - speaker: Karl-Friedrich Kiesow (Hannover)
+      title: Wittgenstein, Longfellow – and Goethe
+    - speaker: Jakub Mácha (Brno)
+      title: Hegel and Wittgenstein on God at the Beginning of the World
+    - speaker: Alexander Berg (Zurich)
+      title: Wittgenstein’s Synoptic View and Hegel’s Speculative Philosophy
+    - speaker: Josefina Anna Formanová (Prague)
+      title: The Failure of Philosophy. Language and Cognition between Hegel and Wittgenstein
+    - speaker: Elena Romano (Padua)
+      title: Paradoxical Normativity. Wittgenstein and Kant on Following a Rule
+    - speaker: Richard Raatzsch (Oestrich-Winkel)
+      title: Sameness and Difference
+    - speaker: Aloisia Moser (Linz)
+      title: Acts of Thinking in Kant and Wittgenstein
+    - speaker: Silvia Locatelli (Padua)
+      title: Following a Rule Blindly – Hegel and Wittgenstein on the Immediacy of Habit
+    - speaker: Thomas Spiegel (Potsdam)
+      title: Rule-Following and Objective Spirit. Wittgenstein and Classical German Philosophy
+    - speaker: Herbert Hrachovec (Vienna)
+      title: Exceptional Cases. Wittgensteinian Remarks on post-Kantian Emergency Law
+    - speaker: Valentina Balestracci (Pisa)
+      title: "Wittgenstein and Kant’s Influence through Hertz: the Boundaries of Language"
+    - speaker: Jordi Fairhurst (Balearic Islands)
+      title: Ethics is Transcendental (TLP 6.421)
+    - speaker: David Palme (Erfurt/Graz)
+      title: "Between Theory and Practice: Was Wittgenstein a Partial Idealist?"
+    - speaker: Jan Podacker (Duisburg-Essen)
+      title: Rules as the Pragmatic Core of Concepts in Kant and Wittgenstein
+    - speaker: Maya Halperin (Tel Aviv)
+      title: "“A man’s style is a picture of him”: Wittgenstein and Hamann"
+    - speaker: Andrei-Valentin Bacrau
+      title: Naturalism and Noncognitivism in Wittgenstein and Nietzsche
+    - speaker: Eric Sancho Adamson (Barcelona)
+      title: Wittgenstein, Mendelssohn, Kant, Dedekind and Wittgenstein. On How it is Possible to Learn Mathematics
+
+- id: prague-2019
+  city: Prague
+  title: "Hegel and Wittgenstein: Negativity and Language"
+  dates: 11–13 June 2019
+  start: 2019-06-11
+  end: 2019-06-13
+  place: Charles University Prague (Campus Hybernská)
+  locality: Prague
+  country: CZ
+  organizers: Alexander Berg, Vojtěch Kolman
+  led_by: Kenneth R. Westphal (Istanbul), Pirmin Stekeler-Weithofer (Leipzig)
+  support: European Regional Development Fund, project “Creativity and Adaptability as Conditions of the Success of Europe in an Interrelated World” (CZ.02.1.01/0.0/0.0/16_019/0000734)
+  talks:
+    - speaker: Jakub Mácha
+      title: Introduction to the volume Wittgenstein and Hegel – Reevaluation of Difference
+    - speaker: Pirmin Stekeler-Weithofer
+      title: Teaching Differences vs. Negation of Negation. Wittgenstein and Hegel on Two Aspects of Meaning
+    - speaker: Simon Skempton
+      title: Saying the Showing of the Absolute
+    - speaker: Josefina Anna Formanová
+      title: "When History Remains Silent: Collective Trauma as Dialectical Negativity of Social Rituals"
+    - speaker: Guido Tana
+      title: "Rules, Recognition and Community: a Hegelian Proposal for a Wittgensteinian Paradox"
+    - speaker: Andrej S. Peter
+      title: Relativism and Negativism – Talking about Following a Rule as a Reflexionsbestimmung
+    - speaker: Kenneth R. Westphal
+      title: Kant, Hegel & the Historicity of Pure Reason
+    - speaker: Denys Kaidalov
+      title: Hegel on Private Language
+    - speaker: Saori Makino
+      title: "Our Way of Deciding the Use of a Word: Wittgenstein, Hegel, and Philosophical Method"
+    - speaker: Vojtěch Kolman
+      title: "Talking is Lying: On One Suspicious Metaphor"
+    - speaker: Marco Kleber
+      title: "Rethinking Logical Form: Wittgenstein, Hegel, and the Problem of Logical Antinomy"
+    - speaker: David Palme
+      title: Critique with Wittgenstein. From the sub specie aeterni to the Entanglement in our Rules
+    - speaker: Alexander Berg
+      title: Hegel and Wittgenstein – Idea and Text
+    - speaker: James Fielding
+      title: "The Spectre of Conservatism: The Ambiguous Political Legacy of Wittgenstein and Hegel"
+    - speaker: Bruna Picas
+      title: "Blurring the Differences between Hegel and Wittgenstein: a Response to Robert Brandom"
+    - speaker: Martin Palauneck
+      title: Sophistic Education, Rhetoric and Negative Force
+    - speaker: Gabriele Tomasi
+      title: Wittgenstein and Hegel on the Artistic Gaze
+    - speaker: Kathrin Menden
+      title: Aspect Seeing and the Hegelian Notion – Examining the Rabbit-Duck Illusion through Hegel’s Science of Logic
+    - speaker: Christina Weiss
+      title: Schematizing Saying and Showing
+
+- id: dresden-2017
+  city: Dresden
+  title: "Wittgenstein und Hegel: Neubewertung einer Differenz / Reevaluation of Difference"
+  dates: 28–30 June 2017
+  start: 2017-06-28
+  end: 2017-06-30
+  place: TU Dresden
+  locality: Dresden
+  country: DE
+  organizers: Alexander Berg (Dresden & Prague), Jakub Mácha (Brno), Louisa Frintert/Herzfeld (Dresden), Marco Kleber (Dresden), Alexander Romahn (Leipzig)
+  keynotes: Thomas Rentsch (Dresden), Pirmin Stekeler-Weithofer (Leipzig), Hans-Johann Glock (Zurich)
+  support: Graduate Academy of TU Dresden (Excellence Initiative)
+  volume: wittgenstein-hegel-reevaluation
+  talks:
+    - speaker: Thomas Rentsch (Dresden)
+      title: Hegel und Wittgenstein, drei systematische Thesen
+      keynote: true
+    - speaker: Pirmin Stekeler-Weithofer (Leipzig)
+      title: Das metaphysische Weltbild der Analytischen Philosophie. Kritik atomarer Monaden und Pixel bei Hegel und dem späteren Wittgenstein
+      keynote: true
+      video: https://youtu.be/FPDV7McgmsE
+    - speaker: Bruno Haas (Dresden)
+      title: Vom Unsinn und seinen Produkten
+      video: https://youtu.be/0Yw5yCqvh5Y
+    - speaker: Herbert Hrachovec (Vienna)
+      title: Maßstab und Regel. Ein Berührungspunkt zwischen Hegel und Wittgenstein
+    - speaker: Aloisia Moser (Linz)
+      title: Hegel’s Speculative Method and Wittgenstein’s Projection Method
+      video: https://youtu.be/uZ5AGkv1n38
+    - speaker: Ingolf Max (Leipzig)
+      title: Hegel and Wittgenstein on Contradiction
+      video: https://youtu.be/661MvlaCH_o
+    - speaker: Karl-Friedrich Kiesow (Hannover)
+      title: Perspectivism in Hegel and Wittgenstein
+      video: https://youtu.be/qyHsblP-VVY
+    - speaker: Rico Gutschmidt (Chicago)
+      title: Unabschließbarkeit und unglückliches Bewusstsein. Transformationen bei Wittgenstein und Hegel
+      video: https://youtu.be/bt7aHQRiTuE
+    - speaker: David Kolb (Bates College)
+      title: "The Diamond Net: Metaphysics, Grammar, Ontologies"
+      video: https://youtu.be/TB28v5NNoy4
+    - speaker: Hans-Johann Glock (Zurich)
+      title: "Suggesting Differences: Wittgenstein’s ‘Undogmatic Procedure’ vs. Hegel’s Dialectic"
+      keynote: true
+      video: https://youtu.be/xrhnvfFolfo
+    - speaker: Gaetano Chiurazzi (Turin)
+      title: Hegel’s Discussion of Kant’s Second Antinomy and its Anti-analytical Implications
+      video: https://youtu.be/bUkzAM1Oo8Y
+    - speaker: Ermylos Plevrakis (Heidelberg)
+      title: "„Die Eine logische Konstante“: Ein Vergleich zwischen Wittgensteins Logisch-philosophischer Abhandlung und Hegels Wissenschaft der Logik"
+      video: https://youtu.be/DBCfI1JkBI4
+    - speaker: Guillaume Lejeune (Leipzig/Liège)
+      title: "Internal Relations: Wittgenstein’s Tractatus from the Point of View of Bradley’s Philosophy"
+      video: https://youtu.be/-lDEWZHA2qY
+    - speaker: Vojtěch Kolman (Prague)
+      title: "Master, Slave and Wittgenstein: the Dialectic of Rule-following"
+      video: https://youtu.be/UNx2Zl5D2Hs
+    - speaker: Josefina Anna Formanová (Prague)
+      title: Social Structure of Cognition in the Philosophy of Hegel and Wittgenstein
+      video: https://youtu.be/UmL9Vdpat1E
+    - speaker: Valentin Pluder (Siegen)
+      title: Regelbefolgung und institutioneller Kontext
+      video: https://youtu.be/aMNhTlHt8jE
+    - speaker: Valentina Balestracci (Pisa)
+      title: "Hegel and Wittgenstein: Examples of a Comparison"
+      video: https://youtu.be/rRDQ6kCvags
+    - speaker: Oriane Petteni (Liège)
+      title: Differences between Hegel’s and Wittgenstein’s Philosophical Approaches as they Relate to the Analytic-Continental Split
+      video: https://youtu.be/YjFDdfAWjVY
+    - speaker: Lorenzo Cammi (Leipzig/Verona)
+      title: Hegel and Wittgenstein on the Notion of Wirklichkeit
+      video: https://youtu.be/7_HtYyrJi1s
+    - speaker: Elena Ficara (Paderborn)
+      title: Truth and Incompatibility
+      video: https://youtu.be/x0xAxEkJrng
+    - speaker: Davide Dalla Rosa (Padua)
+      title: Gestalten des Geistes as Lebensformen. On Terry Pinkard’s Notion of ‘Form of Life’ between Hegel and Wittgenstein
+      video: https://youtu.be/Pq5Rmha8F0c
+    - speaker: Jonathan Shaheen (Uppsala)
+      title: Hegel and Wittgenstein on Recognition and Social Constitution
+    - speaker: Marco Kleber (Dresden)
+      title: Das Unsagbare als Widerspruch zwischen Hegel und Wittgenstein
+      video: https://youtu.be/LqhhuhsQBUs
+    - speaker: Alexander Romahn (Leipzig)
+      title: Die Unterschätzung von Hegels Philosophie durch die analytische Tradition – Eine mögliche Erklärung im Hinblick auf McTaggart und Russell
+      video: https://youtu.be/vPZjAQpoRV4
+    - speaker: Louisa Frintert/Herzfeld (Dresden)
+      title: Der Widerspruch als Einführung in die Sprache – Hegels Logik des Seins im Dialog mit Wittgenstein
+      video: https://youtu.be/03F9zArrHD4
+    - speaker: Alexander Berg (Dresden/Prague)
+      title: Wittgensteins Hegel – vom Wortspiel zum Sprachspiel
+      video: https://youtu.be/GqSvvLgsv20
+    - speaker: Jakub Mácha (Brno)
+      title: Individuality, Particularity and Universality in Hegel and Wittgenstein
+      video: https://youtu.be/cj0Lh9ZYMdE
+
+# The volumes that came out of the series (ids from publications.yml), shown at the end of /conferences/.
+volumes:
+  - wittgenstein-hegel-reevaluation
+  - wittgenstein-classical-german-philosophy
+  - synthesis-philosophica-41-1
+
+organized:
+
+- series: zagreb-2024
+  with: Denys Kaidalov, Karlo Gardavski and Bruna Picas
+
+- title: Reading Philosophy – On the Literary Forms of Philosophy
+  dates: 12 April 2024
+  place: University of Zurich
+  with: Frauke Berndt
+  url: https://www.ds.uzh.ch/apps/_files/uploads/agenda/1483.pdf
+
+- series: vienna-2023
+  with: Denys Kaidalov, Daniel Kuran, Bruna Picas
+
+- series: barcelona-2022
+  with: Denys Kaidalov, Jakub Mácha, Bruna Picas, Ricard Sapena, Thomas Spiegel
+
+- series: warsaw-2021
+  with: Denys Kaidalov
+
+- series: prague-2019
+  with: Vojtěch Kolman
+
+- series: dresden-2017
+  with: Jakub Mácha, Louisa Herzfeld, Alexander Romahn and Marco Kleber
+
+- title: "Georg Friedrich Wilhelm Hegel: Rationalität und christlicher Glaube"
+  dates: 18 Nov. 2016
+  place: Kathedralforum Dresden
+  with: Arbeitsgemeinschaft Religionsphilosophie Dresden e. V.
+
+- title: The Night of Philosophy in Prague – Images, Sciences and Politics
+  dates: 16–17 June 2016
+  place: Charles University Prague
+  with: Ondřej Švec, Benjamin Kaiser and the Institut français de Prague
+  url: https://philonight.hypotheses.org/

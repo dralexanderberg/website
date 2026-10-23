@@ -1,0 +1,173 @@
+/* Alexander Berg – site styles. Accent: the night blue of the portrait background. */
+
+@font-face {
+  font-family: "P052";
+  src: url("../fonts/p052-roman.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "P052";
+  src: url("../fonts/p052-italic.woff2") format("woff2");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "P052";
+  src: url("../fonts/p052-bold.woff2") format("woff2");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+
+:root {
+  --accent: #1b2638;
+  --accent-soft: #4a5a75;
+  --accent-faint: #a9b3c4;
+  --text: #22252b;
+  --muted: #5a606b;
+  --rule: #dcd8cf;
+  --bg: #fbfaf7;
+  --bg-tint: #f2f0ea;
+  --measure: 40rem;
+  --wide: 66rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  font-family: "P052", "Palatino Linotype", Palatino, "Book Antiqua", serif;
+  font-size: 106.25%; /* 17px */
+  line-height: 1.55;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+body { margin: 0; }
+
+.wrap { max-width: var(--wide); margin: 0 auto; padding: 0 1.25rem; }
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+h1, h2, h3 { font-weight: 400; color: var(--accent); line-height: 1.2; }
+h1 { font-size: 2.4rem; margin: 0 0 0.2rem; letter-spacing: 0.01em; }
+h2 { font-size: 1.5rem; margin: 3.5rem 0 0.6rem; }
+h3 { font-size: 1.05rem; margin: 0 0 0.8rem; }
+p { margin: 0 0 0.9rem; }
+
+.skip { position: absolute; left: -999px; top: 0; background: var(--accent); color: #fff; padding: 0.5rem 1rem; }
+.skip:focus { left: 0.5rem; z-index: 10; }
+
+/* Header */
+.site-header { border-bottom: 1px solid var(--rule); }
+.header-inner { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.4rem 2rem; padding-top: 1.1rem; padding-bottom: 1.1rem; }
+.site-name { font-size: 1.2rem; color: var(--accent); text-decoration: none; letter-spacing: 0.04em; }
+.site-header ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.2rem 1.2rem; }
+.site-header nav a { text-decoration: none; color: var(--muted); font-size: 0.95rem; }
+.site-header nav a:hover, .site-header nav a[aria-current="page"] { color: var(--accent); text-decoration: underline; }
+
+main.wrap { padding-top: 2.5rem; padding-bottom: 4rem; }
+
+/* Home: intro */
+.intro { display: grid; grid-template-columns: 11rem 1fr; gap: 1.5rem 2.5rem; align-items: start; }
+.portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; border-radius: 2px; background: var(--accent); }
+.intro-text { max-width: var(--measure); }
+.subtitle { color: var(--muted); font-size: 1.05rem; margin-bottom: 1.4rem; letter-spacing: 0.02em; }
+.intro-links { margin-top: 1.4rem; font-size: 0.95rem; }
+
+.lead { color: var(--muted); max-width: var(--measure); }
+.more { margin-top: 1.2rem; font-size: 0.95rem; }
+.more a::after { content: " →"; }
+
+/* Work Diary */
+.diary { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 1.6rem; }
+.stage { border-top: 3px solid var(--accent); padding-top: 0.9rem; }
+.stage-review { border-top-color: var(--accent-soft); }
+.stage-published { border-top-color: var(--accent-faint); }
+.stage h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); }
+.stage ul { list-style: none; margin: 0; padding: 0; }
+.entry { padding: 0 0 1.1rem; margin: 0 0 1.1rem; border-bottom: 1px solid var(--rule); font-size: 0.95rem; line-height: 1.45; }
+.entry:last-child { border-bottom: 0; margin-bottom: 0; }
+.entry > span { display: block; }
+.entry-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 0.15rem; }
+.entry-title { font-style: italic; color: var(--text); }
+.entry-title a { color: inherit; text-decoration-color: var(--accent-faint); }
+.entry-note, .entry-status, .entry-more { color: var(--muted); margin-top: 0.25rem; }
+.entry-status { font-style: italic; }
+.entry-date { color: var(--muted); font-size: 0.8rem; margin-top: 0.35rem; letter-spacing: 0.02em; }
+
+/* Conference series teaser */
+.home-series { max-width: var(--measure); }
+.home-series p:first-of-type { font-size: 1rem; }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.85rem; padding: 1.5rem 0 2.5rem; }
+.site-footer p { margin: 0.2rem 0; }
+.site-footer a { color: var(--muted); }
+
+
+/* Inner pages */
+.lead + .diary { margin-top: 1rem; }
+.prose { max-width: var(--measure); }
+.toc { font-size: 0.9rem; color: var(--muted); margin: 0.5rem 0 1rem; line-height: 1.9; }
+.biblio { list-style: none; margin: 0; padding: 0; max-width: 46rem; }
+.biblio li { padding-left: 1.2rem; text-indent: -1.2rem; margin: 0 0 0.7rem; }
+.biblio a { word-break: break-word; }
+h2.year { font-size: 1.15rem; margin-top: 2.2rem; }
+cite { font-style: italic; }
+.archive { margin-top: 1rem; }
+.archive-list { list-style: none; margin: 0; padding: 0; max-width: var(--measure); }
+.contact-mail { font-size: 1.2rem; }
+
+/* Conferences */
+.conf { margin-top: 3.5rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); max-width: 46rem; }
+.conf h2 { margin-top: 0; }
+.conf-city { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 0.3rem; }
+.conf-meta { color: var(--muted); }
+.conf-facts { display: grid; grid-template-columns: 1fr; gap: 0.1rem 1.2rem; margin: 1rem 0; font-size: 0.95rem; }
+.conf-facts dt { color: var(--accent); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.5rem; }
+.conf-facts dd { margin: 0; }
+details.talks { border: 1px solid var(--rule); border-radius: 3px; background: var(--bg-tint); }
+details.talks summary { cursor: pointer; padding: 0.6rem 0.9rem; color: var(--accent); }
+details.talks ul { list-style: none; margin: 0; padding: 0.2rem 0.9rem 0.9rem; font-size: 0.95rem; }
+details.talks li { margin: 0 0 0.5rem; }
+.talk-day { color: var(--accent); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1rem !important; }
+.talk-speaker { font-weight: 700; }
+.talk-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+
+/* Selected texts */
+.texts { list-style: none; margin: 1rem 0 0; padding: 0; max-width: var(--measure); }
+.text-entry { margin-bottom: 1.4rem; }
+.text-entry > span { display: block; }
+.text-version, .text-cite { color: var(--muted); font-size: 0.9rem; margin-top: 0.2rem; }
+.text-links { margin-top: 0.3rem; font-size: 0.95rem; }
+
+@media (min-width: 48rem) {
+  .conf-facts { grid-template-columns: 9rem 1fr; }
+  .conf-facts dt { margin-top: 0.15rem; }
+}
+
+@media (min-width: 48rem) {
+  .intro { grid-template-columns: 15rem 1fr; gap: 3rem; }
+  h1 { font-size: 2.8rem; margin-top: 0.4rem; }
+  .diary { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+}
+
+@media (max-width: 30rem) {
+  html { font-size: 100%; }
+  .intro { grid-template-columns: 1fr; }
+  .portrait { max-width: 12rem; }
+  h1 { font-size: 2.1rem; }
+}
+
+@media print {
+  .site-header nav, .skip, .site-footer, .more, .intro-links { display: none; }
+  html { background: #fff; font-size: 11pt; }
+  .wrap { max-width: none; padding: 0; }
+  main { padding: 0; }
+  a { color: inherit; text-decoration: none; }
+  .diary { grid-template-columns: repeat(3, 1fr); }
+  .stage, .entry, .biblio li { break-inside: avoid; }
+  details.talks { border: 0; background: none; }
+  details.talks summary { padding-left: 0; }
+  .toc { display: none; }
+}

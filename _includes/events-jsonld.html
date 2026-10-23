@@ -1,0 +1,17 @@
+<script type="application/ld+json">
+[
+{%- for c in site.data.conferences.series %}
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": {{ c.title | jsonify }},
+    "startDate": "{{ c.start | date: '%Y-%m-%d' }}",
+    "endDate": "{{ c.end | date: '%Y-%m-%d' }}",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": { "@type": "Place", "name": {{ c.place | jsonify }}, "address": { "@type": "PostalAddress", "addressLocality": {{ c.locality | jsonify }}, "addressCountry": "{{ c.country }}" } },
+    "organizer": { "@type": "Person", "name": "Alexander Berg", "url": "{{ '/' | absolute_url }}" },
+    "url": "{{ '/conferences/' | absolute_url }}#{{ c.id }}"
+  }{% unless forloop.last %},{% endunless %}
+{%- endfor %}
+]
+</script>

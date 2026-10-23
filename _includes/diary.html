@@ -1,0 +1,29 @@
+{%- comment -%}
+  The three stages of the Work Diary.
+  include.more = true: show the longer descriptions (Work Diary page).
+  Only the newest site.diary_recent_count entries under "published" are shown here;
+  older ones appear in the archive on the Work Diary page.
+{%- endcomment -%}
+{%- assign progress = site.data.diary | where: "stage", "progress" -%}
+{%- assign review = site.data.diary | where: "stage", "review" -%}
+{%- assign published = site.data.diary | where: "stage", "published" | sort: "date" | reverse -%}
+<div class="diary">
+  <section class="stage stage-progress" aria-labelledby="stage-progress">
+    <h3 id="stage-progress">In progress</h3>
+    <ul>
+    {%- for e in progress %}{% include diary-entry.html entry=e more=include.more %}{% endfor %}
+    </ul>
+  </section>
+  <section class="stage stage-review" aria-labelledby="stage-review">
+    <h3 id="stage-review">Under review / in press</h3>
+    <ul>
+    {%- for e in review %}{% include diary-entry.html entry=e more=include.more %}{% endfor %}
+    </ul>
+  </section>
+  <section class="stage stage-published" aria-labelledby="stage-published">
+    <h3 id="stage-published">Recently published</h3>
+    <ul>
+    {%- for e in published limit: site.diary_recent_count %}{% include diary-entry.html entry=e more=include.more %}{% endfor %}
+    </ul>
+  </section>
+</div>

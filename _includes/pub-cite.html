@@ -1,0 +1,14 @@
+{%- comment -%} One bibliographic entry from publications.yml. Usage: include pub-cite.html pub=p {%- endcomment -%}
+{%- assign p = include.pub -%}
+{%- capture bracket -%}{{ p.publisher }}{% if p.date %} {{ p.date }}{% endif %}{% if p.pages %}: {{ p.pages }}{% endif %}{% if p.note %}, {{ p.note }}{% endif %}{% if p.status %}, {{ p.status }}{% endif %}{%- endcapture -%}
+{%- capture link_label -%}{% if p.url contains "doi.org/" %}doi:{{ p.url | split: "doi.org/" | last }}{% elsif p.url contains ".pdf" %}PDF{% else %}Publisher{% endif %}{%- endcapture -%}
+{%- if p.type == "translation" %}{{ p.author }}, {% endif -%}
+{%- if p.type == "monograph" or p.type == "edited" %}<cite>{{ p.title }}</cite>{% else %}{{ p.title }}{% endif -%}
+{%- if p.editors %}, {{ p.editors }} (eds.){% endif -%}
+{%- if p.in %}{% if p.type == "edited" %}, {{ p.in }}{% else %}, in: <cite>{{ p.in }}</cite>{% endif %}{% endif -%}
+{%- if p.in_editors %}, {{ p.in_editors }}{% endif -%}
+{%- if p.series %}, {{ p.series }}{% endif -%}
+{%- if bracket != "" %} [{{ bracket }}]{% endif -%}
+{%- if p.isbn %} – ISBN {{ p.isbn }}{% endif -%}
+{%- if p.url %} – <a href="{{ p.url }}">{{ link_label }}</a>{% endif -%}
+{%- if p.toc %} – <a href="{{ p.toc | relative_url }}">Table of contents (PDF)</a>{% endif -%}
