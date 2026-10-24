@@ -188,7 +188,7 @@ details.talks li { margin: 0 0 0.5rem; }
 .field-habil { border-top-color: var(--accent-soft); }
 .habil-title { margin-bottom: 1rem; }
 .habil-title cite { font-size: 1.1rem; }
-.habil-title span { display: block; color: var(--muted); font-size: 0.9rem; margin-top: 0.2rem; }
+.habil-title span { color: var(--muted); font-size: 0.9rem; }
 .field-further { margin-top: 3rem; color: var(--muted); max-width: 46rem; }
 
 /* Conferences page: headings inside the series, posters */

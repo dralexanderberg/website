@@ -5,10 +5,10 @@
 {%- assign link = e.link -%}
 {%- if link == nil and p.url %}{% unless p.url contains "PLACEHOLDER" %}{% assign link = p.url %}{% endunless %}{% endif -%}
 <li class="entry" data-date="{{ e.date | date: '%Y-%m-%d' }}">
-  {%- if e.label %}<span class="entry-label">{{ e.label }}</span>{% endif %}
+  {% if e.label %}<span class="entry-label">{{ e.label }}</span>{% endif %}
   <span class="entry-title">{% if link %}<a href="{{ link }}">{{ title }}</a>{% else %}{{ title }}{% endif %}</span>
-  {%- if e.note %}<span class="entry-note">{{ e.note }}</span>{% endif %}
-  {%- if e.status %}<span class="entry-status">{{ e.status | capitalize }}.</span>{% endif %}
-  {%- if include.more and e.more %}<span class="entry-more">{{ e.more }}</span>{% endif %}
+  {% if e.note %}<span class="entry-note">{{ e.note }}</span>{% endif %}
+  {% if e.status %}<span class="entry-status">{{ e.status | capitalize }}.</span>{% endif %}
+  {% if include.more and e.more %}<span class="entry-more">{{ e.more }}</span>{% endif %}
   <span class="entry-date">{% if e.stage == "published" %}{% else %}Updated {% endif %}<time datetime="{{ e.date | date: '%Y-%m-%d' }}">{{ e.date | date: "%b %Y" }}</time></span>
 </li>

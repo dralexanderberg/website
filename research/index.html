@@ -37,7 +37,7 @@ description: >-
 {%- if h %}
 <section class="field field-habil" id="habilitation" aria-labelledby="habilitation-h">
   <h2 id="habilitation-h">{{ h.heading }}</h2>
-  <p class="habil-title"><cite lang="de">{{ h.title }}</cite>{% if h.note %}<span>{{ h.note }}</span>{% endif %}</p>
+  <p class="habil-title"><cite lang="de">{{ h.title }}</cite>{% if h.note %}<br> <span>{{ h.note }}</span>{% endif %}</p>
   <div class="prose">{{ h.text | markdownify }}</div>
   <p class="more"><a href="{{ '/diary/' | relative_url }}">Current state in the Work Diary</a></p>
 </section>
