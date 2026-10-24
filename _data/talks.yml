@@ -8,8 +8,10 @@
 #   year: 2026                     # used for the year headings
 #   url: https://…                 # optional: event page
 #   video: https://youtu.be/…      # optional: recording (linked, never embedded)
+#   id: short-name                 # optional: needed only to show the talk on the Research page
 
 - title: Goethe’s Artistic Influence on the Phenomenology of Spirit
+  id: goethe-artistic-influence
   venue: XXXVI International Hegel Congress, Rome III – Sept. 2026
   year: 2026
 
@@ -22,10 +24,12 @@
   year: 2025
 
 - title: On the Literary Form of the Phenomenology of Spirit – Method and Meaning
+  id: literary-form-phenomenology-turin
   venue: University of Turin – May 2025
   year: 2025
 
 - title: Die Bedeutung der literarischen Form des Herr-Knecht-Kapitels als Schlüssel für Anerkennung und Freiheit
+  id: herr-knecht-literary-form
   venue: XXXV International Hegel Congress, University of Tbilisi – Oct. 2024
   year: 2024
 
@@ -39,6 +43,7 @@
   url: https://wcprome2024.com/round-tables/
 
 - title: Methods for a Literary History of Philosophy
+  id: methods-literary-history
   venue: XXV World Congress of Philosophy, Rome – Aug. 2024 / XXVI German Congress of Philosophy, Münster – Sept. 2024
   year: 2024
 
@@ -48,6 +53,7 @@
   url: https://www.ds.uzh.ch/apps/_files/uploads/agenda/1483.pdf
 
 - title: Grundzüge einer Literaturgeschichte der Philosophie
+  id: grundzuege-literaturgeschichte
   venue: University of Konstanz – Dec. 2023
   year: 2023
 
@@ -75,6 +81,7 @@
   url: /conferences/#barcelona-2022
 
 - title: The Art of Philosophy – On the Significance of Literary Form in Hegel’s Phenomenology of Spirit
+  id: art-of-philosophy
   venue: 34th International Hegel Congress, Zadar – Sept. 2022
   year: 2022
 

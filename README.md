@@ -9,11 +9,14 @@ Diese Website wird von GitHub Pages aus den Dateien in diesem Repository erzeugt
 | `_data/diary.yml` | Work Diary (In progress – Under review / in press – Recently published) | Startseite, Work Diary |
 | `_data/publications.yml` | alle Publikationen, jede nur einmal; auch Rezensionen der Bücher | Publications, Work Diary, Conferences |
 | `_data/talks.yml` | Vorträge | Talks |
-| `_data/conferences.yml` | Tagungsreihe „Wittgenstein & Hegel“ und alle organisierten Tagungen | Conferences, Talks |
+| `_data/conferences.yml` | Tagungen: in Vorbereitung, die Reihe „Wittgenstein & Hegel“, weitere Tagungen und Workshops | Conferences |
+| `_data/research.yml` | Texte der Forschungsseite (zwei Forschungsfelder, Habilitation) und die dort gezeigte Auswahl | Research |
+| `_data/motto.yml` | Motto (Hegel und Wittgenstein) | Startseite |
 | `_data/selected_texts.yml` | ausgewählte Texte zum Herunterladen (solange leer, ist die Rubrik unsichtbar) | Startseite, Selected Texts |
 | `_data/memberships.yml` | Mitgliedschaften | About |
 | `images/portrait.jpg` | Porträtfoto | Startseite |
 | `files/conferences/` | PDFs der Tagungen | Conferences |
+| `images/posters/` | Vorschaubilder der Tagungsplakate | Conferences |
 | `texts/` | PDFs der „Selected Texts“ | Selected Texts |
 
 Am Anfang jeder Datei in `_data/` steht eine **Vorlage** für einen neuen Eintrag (die Zeilen mit `#` sind Kommentare und erscheinen nicht auf der Seite).
@@ -118,6 +121,13 @@ Sobald der erste Eintrag da ist, erscheinen die Rubrik auf der Startseite (die e
 3. Datei **`_config.yml`** öffnen und die Zeile `portrait_crops: true` in `portrait_crops: false` ändern → „Commit changes“.
 
 Die Seite schneidet das Foto dann selbst hochkant zu (Gesicht etwa in der Mitte, etwas oberhalb). Die Dateien `portrait-400.jpg`, `portrait-600.jpg` und `portrait-800.jpg` sind fertig zugeschnittene, kleinere Fassungen des jetzigen Fotos; sie werden mit `portrait_crops: false` nicht mehr benutzt und können bleiben.
+
+## 6. Tagungen, Forschungsseite und Motto
+
+- **Geplante Tagung konkretisieren:** In `_data/conferences.yml` unter `in_preparation:` beim Eintrag die Zeilen `dates:`, `place:` und `with:` ergänzen (Vorlage am Dateianfang). Nach der Tagung den Eintrag unter `further:` verschieben.
+- **Weitere Tagung oder Workshop eintragen:** in `_data/conferences.yml` unter `further:` ganz oben, nach der Vorlage am Dateianfang.
+- **Forschungsseite:** Texte und Auswahl stehen in `_data/research.yml`. Eine Publikation erscheint dort, wenn ihre Kennung (`id` aus `publications.yml`) in der Liste `publications:` steht. Ein Vortrag erscheint, wenn er in `talks.yml` eine Zeile `id:` hat und diese Kennung unter `talks:` steht.
+- **Motto:** in `_data/motto.yml`. Um nur ein Zitat zu zeigen, den anderen Eintrag löschen; ohne Einträge verschwindet das Motto.
 
 ## Technisches (nur zur Information)
 

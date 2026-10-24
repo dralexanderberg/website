@@ -2,9 +2,8 @@
 layout: default
 title: Home
 description: >-
-  Alexander Berg, philosopher – German Idealism, Wittgenstein and the literary
-  form of philosophy. Work in progress, recent publications and the conference
-  series “Wittgenstein & Hegel” (2017–2024).
+  Alexander Berg, philosopher: Wittgenstein and Hegel, and the literary form of
+  philosophy. Work diary, publications, talks and conferences.
 structured_data: person-jsonld.html
 ---
 <section class="intro" aria-labelledby="name">
@@ -22,11 +21,24 @@ structured_data: person-jsonld.html
   <div class="intro-text">
     <h1 id="name">Alexander Berg</h1>
     <p class="subtitle">M.A., Ph.D. · Philosopher</p>
-    <p>I work on German Idealism – above all Hegel – and on Wittgenstein, and on the literary form of philosophy: how philosophical works are written, and why their form matters for what they say.</p>
-    <p>Until recently, I was a Feodor Lynen Research Fellow of the Alexander von Humboldt Foundation at the University of Zurich, where I am completing my habilitation.</p>
-    <p class="intro-links"><a href="mailto:{{ site.email }}">{{ site.email }}</a> · <a href="{{ '/publications/' | relative_url }}">Publications</a> · <a href="{{ '/talks/' | relative_url }}">Talks</a></p>
+    <p>I am a philosopher working in <a href="{{ '/research/' | relative_url }}">two fields</a>. The first, Wittgenstein and Hegel, belongs to philosophy proper: I have written a monograph on it, edited two volumes and a journal special issue, and from 2017 to 2024 initiated and organized, together with colleagues, an international conference series. The second, which I have pursued at the University of Zurich since 2020, is the literary form of philosophy: from the methods of literary studies I develop a method for reading philosophical texts.</p>
+    <p>Until recently, I was a Feodor Lynen Research Fellow of the Alexander von Humboldt Foundation at the University of Zurich, where I am completing my habilitation. It brings both fields together by testing this method on the main works of Hegel and Wittgenstein, the <i>Phenomenology of Spirit</i> and the <i>Philosophical Investigations</i>.</p>
+    <p>Next: a conference on the literary form of philosophy, which I am preparing, and an Element on Wittgenstein and Hegel for Cambridge University Press.</p>
+    <p class="intro-links"><a href="{{ '/conferences/' | relative_url }}">Conferences</a> · <a href="{{ '/publications/' | relative_url }}">Publications</a> · <a href="{{ '/talks/' | relative_url }}">Talks</a></p>
   </div>
 </section>
+
+{%- if site.data.motto and site.data.motto.size > 0 %}
+<section class="motto" aria-label="Motto">
+  {%- for m in site.data.motto %}
+  <figure>
+    <blockquote lang="de"><p>„{{ m.text }}“</p></blockquote>
+    {%- if m.translation %}<p class="motto-translation">{{ m.translation }}</p>{% endif %}
+    <figcaption>{{ m.author }}{% if m.source %}, <cite lang="de">{{ m.source }}</cite>{% endif %}</figcaption>
+  </figure>
+  {%- endfor %}
+</section>
+{%- endif %}
 
 <section class="home-diary" aria-labelledby="work-diary">
   <h2 id="work-diary">Work Diary</h2>
@@ -44,10 +56,3 @@ structured_data: person-jsonld.html
   <p class="more"><a href="{{ '/texts/' | relative_url }}">All selected texts</a></p>
 </section>
 {%- endif %}
-
-<section class="home-series" aria-labelledby="series">
-  <h2 id="series">Conference Series “Wittgenstein &amp; Hegel”, 2017–2024</h2>
-  <p>“Hegel seems to me to be always wanting to say that things which look different are really the same. Whereas my interest is in showing that things which look the same are really different.” Starting from this remark of Wittgenstein’s, I initiated a series of six international conferences – Dresden, Prague, Warsaw, Barcelona, Vienna and Zagreb – which I organized together with colleagues from across Europe. Three volumes have come out of it.</p>
-  <p>The documentation is kept here: programmes, abstracts, lists of talks, recordings and the resulting volumes.</p>
-  <p class="more"><a href="{{ '/conferences/' | relative_url }}">To the conference series</a></p>
-</section>

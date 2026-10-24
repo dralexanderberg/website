@@ -1,13 +1,33 @@
 ---
 layout: default
-title: Conference Series “Wittgenstein & Hegel” (2017–2024)
+title: Conferences
 description: >-
-  Documentation of the international conference series “Wittgenstein & Hegel”
-  (Dresden 2017, Prague 2019, Warsaw 2021, Barcelona 2022, Vienna 2023,
-  Zagreb 2024): programmes, abstracts, talks, recordings and resulting volumes.
+  Conferences organized by Alexander Berg: the international series
+  “Wittgenstein & Hegel” (Dresden 2017, Prague 2019, Warsaw 2021, Barcelona
+  2022, Vienna 2023, Zagreb 2024) with programmes, abstracts, talks and
+  recordings, and further conferences and workshops.
 structured_data: events-jsonld.html
 ---
-<h1>Conference Series “Wittgenstein &amp; Hegel”, 2017–2024</h1>
+{%- assign conf = site.data.conferences %}
+<h1>Conferences</h1>
+
+<nav class="toc" aria-label="Sections">
+{%- if conf.in_preparation %}<a href="#in-preparation">In preparation</a> · {% endif %}<a href="#series">Series “Wittgenstein &amp; Hegel”</a>: {% for c in conf.series %}<a href="#{{ c.id }}">{{ c.city }} {{ c.start | date: "%Y" }}</a> · {% endfor %}<a href="#volumes">Volumes</a>{% if conf.further %} · <a href="#further">Further conferences and workshops</a>{% endif %}
+</nav>
+
+{%- if conf.in_preparation %}
+<section id="in-preparation" aria-labelledby="in-preparation-h">
+  <h2 id="in-preparation-h">In preparation</h2>
+  <ul class="biblio">
+  {%- for o in conf.in_preparation %}
+    <li>{% include conf-line.html conf=o %}</li>
+  {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+
+<section id="series" aria-labelledby="series-h">
+<h2 id="series-h">Conference Series “Wittgenstein &amp; Hegel”, 2017–2024</h2>
 
 <div class="prose">
 <p>“Hegel seems to me to be always wanting to say that things which look different are really the same. Whereas my interest is in showing that things which look the same are really different.” Wittgenstein made this remark in a conversation with Maurice O’C. Drury (Rush Rhees, ed., <cite>Recollections of Wittgenstein</cite>, Oxford 1981, p. 157).</p>
@@ -16,16 +36,18 @@ structured_data: events-jsonld.html
 <p>Between 2017 and 2024, six conferences took place – in Dresden, Prague, Warsaw, Barcelona, Vienna and Zagreb – and three volumes have come out of them. I initiated the series and was its main organizer; the co-organizers of each conference are named below.</p>
 </div>
 
-<nav class="toc" aria-label="Conferences">
-{%- for c in site.data.conferences.series %}<a href="#{{ c.id }}">{{ c.city }} {{ c.start | date: "%Y" }}</a> · {% endfor %}<a href="#volumes">Volumes</a>
-</nav>
-
-{%- for c in site.data.conferences.series %}
+{%- for c in conf.series %}
 {%- assign talks = c.talks | where_exp: "t", "t.speaker" %}
 {%- assign videos = c.talks | where_exp: "t", "t.video" %}
 <section class="conf" id="{{ c.id }}" aria-labelledby="{{ c.id }}-h">
-  <h2 id="{{ c.id }}-h"><span class="conf-city">{{ c.city }} {{ c.start | date: "%Y" }}</span> {{ c.title }}</h2>
+  <h3 id="{{ c.id }}-h"><span class="conf-city">{{ c.city }} {{ c.start | date: "%Y" }}</span> {{ c.title }}</h3>
   <p class="conf-meta">{{ c.dates }} · {{ c.place }}</p>
+  {%- if c.poster %}
+  {%- assign poster_pdf = c.files | where: "label", "Poster" | first %}
+  <figure class="conf-poster">
+    <a href="{{ poster_pdf.file | default: c.poster | relative_url }}"><img src="{{ c.poster | relative_url }}" width="480" height="676" loading="lazy" alt="Poster of the conference “{{ c.title }}”, {{ c.place }}, {{ c.dates }}"></a>
+  </figure>
+  {%- endif %}
   <dl class="conf-facts">
     <dt>Organizers</dt><dd>{{ c.organizers }}</dd>
     {%- if c.keynotes %}<dt>Keynotes</dt><dd>{{ c.keynotes }}</dd>{% endif %}
@@ -50,11 +72,23 @@ structured_data: events-jsonld.html
 </section>
 {%- endfor %}
 
-<section id="volumes" aria-labelledby="volumes-h">
-  <h2 id="volumes-h">Volumes from the series</h2>
+<section class="conf" id="volumes" aria-labelledby="volumes-h">
+  <h3 id="volumes-h">Volumes from the series</h3>
   <ul class="biblio">
-  {%- for id in site.data.conferences.volumes %}{% assign v = site.data.publications | where: "id", id | first %}
+  {%- for id in conf.volumes %}{% assign v = site.data.publications | where: "id", id | first %}
     <li>{% include pub-cite.html pub=v %}</li>
   {%- endfor %}
   </ul>
 </section>
+</section>
+
+{%- if conf.further %}
+<section id="further" aria-labelledby="further-h">
+  <h2 id="further-h">Further conferences and workshops</h2>
+  <ul class="biblio">
+  {%- for o in conf.further %}
+    <li>{% include conf-line.html conf=o %}</li>
+  {%- endfor %}
+  </ul>
+</section>
+{%- endif %}

@@ -1,0 +1,50 @@
+---
+layout: default
+title: Research
+description: >-
+  Alexander Berg’s research: Wittgenstein and Hegel, the literary form of
+  philosophy, and the habilitation that brings both together.
+---
+{%- assign r = site.data.research %}
+<h1>Research</h1>
+<p class="lead">{{ r.intro }}</p>
+
+{%- for f in r.fields %}
+<section class="field" id="{{ f.id }}" aria-labelledby="{{ f.id }}-h">
+  <h2 id="{{ f.id }}-h">{{ f.title }}</h2>
+  <div class="prose">{{ f.text | markdownify }}</div>
+  {%- if f.publications %}
+  <h3>Selected publications</h3>
+  <ul class="biblio">
+    {%- for id in f.publications %}{% assign p = site.data.publications | where: "id", id | first %}{% if p %}
+    <li>{% include pub-cite.html pub=p %}</li>{% endif %}{% endfor %}
+  </ul>
+  {%- endif %}
+  {%- if f.talks %}
+  <h3>Selected talks</h3>
+  <ul class="biblio">
+    {%- for id in f.talks %}{% assign t = site.data.talks | where: "id", id | first %}{% if t %}
+    <li>{{ t.title }} [{{ t.venue }}]</li>{% endif %}{% endfor %}
+  </ul>
+  {%- endif %}
+  {%- if f.links %}
+  <p class="more">{% for l in f.links %}<a href="{{ l.url | relative_url }}">{{ l.label }}</a>{% unless forloop.last %}<br>{% endunless %}{% endfor %}</p>
+  {%- endif %}
+</section>
+{%- endfor %}
+
+{%- assign h = r.habilitation %}
+{%- if h %}
+<section class="field field-habil" id="habilitation" aria-labelledby="habilitation-h">
+  <h2 id="habilitation-h">{{ h.heading }}</h2>
+  <p class="habil-title"><cite lang="de">{{ h.title }}</cite>{% if h.note %}<span>{{ h.note }}</span>{% endif %}</p>
+  <div class="prose">{{ h.text | markdownify }}</div>
+  <p class="more"><a href="{{ '/diary/' | relative_url }}">Current state in the Work Diary</a></p>
+</section>
+{%- endif %}
+
+{%- if r.further %}
+<section class="field-further" aria-label="Further work">
+  <p>{{ r.further }} <a href="{{ '/publications/' | relative_url }}">All publications</a></p>
+</section>
+{%- endif %}
