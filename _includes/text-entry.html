@@ -5,6 +5,10 @@
   <span class="entry-title">{% if p %}{{ p.title }}{% else %}{{ t.title }}{% endif %}</span>
   {% if t.note %}<span class="entry-note">{{ t.note }}</span>{% endif %}
   <span class="text-version">{{ t.version | capitalize }}</span>
-  {% if t.cite %}<span class="text-cite">Please cite the published version: {{ t.cite }}</span>{% endif %}
-  <span class="text-links"><a href="{{ t.file | relative_url }}">Download PDF</a>{% if p.url %} · <a href="{{ p.url }}">Published version</a>{% endif %}{% if t.open_access %} · <a href="{{ t.open_access }}">Free version at the publisher</a>{% endif %}</span>
+  {% if t.cite %}<span class="text-cite">{% if t.version contains "manuscript" or t.version contains "preprint" %}Please cite the published version: {% else %}Published as: {% endif %}{{ t.cite }}</span>{% endif %}
+  <span class="text-links">
+    {%- if t.file %}<a href="{{ t.file | relative_url }}">Download PDF</a>{% endif %}
+    {%- if t.open_access %}{% if t.file %} · {% endif %}<a href="{{ t.open_access }}">Free download at the publisher</a>{% endif %}
+    {%- if p.url and t.open_access == nil %}{% if t.file %} · {% endif %}<a href="{{ p.url }}">Published version</a>{% endif -%}
+  </span>
 </li>
