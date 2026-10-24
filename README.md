@@ -109,7 +109,7 @@ Datei `_data/publications.yml` öffnen. Den neuen Eintrag **oben in der passende
 ```
 
 - `pub`: die Kennung (`id`) aus `publications.yml`.
-- `version`: `preprint`, `author’s manuscript`, `accepted manuscript`, `author’s corrected version` oder `publisher's version` – bitte die Bedingungen des Verlags beachten.
+- `version`: `preprint`, `accepted manuscript`, `author’s corrected version` oder `publisher's version` – bitte die Bedingungen des Verlags beachten.
 - `open_access` nur, wenn es eine frei zugängliche Fassung beim Verlag gibt; sonst die Zeile weglassen.
 
 Sobald der erste Eintrag da ist, erscheinen die Rubrik auf der Startseite (die ersten drei Texte) und der Menüpunkt „Selected Texts“ von selbst.
