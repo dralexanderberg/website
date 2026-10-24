@@ -1,10 +1,10 @@
 {%- comment -%} One entry from selected_texts.yml {%- endcomment -%}
 {%- assign t = include.text -%}
 {%- assign p = site.data.publications | where: "id", t.pub | first -%}
-<li class="text-entry">
+<li class="text-entry" id="{{ t.pub }}">
   <span class="entry-title">{% if p %}{{ p.title }}{% else %}{{ t.title }}{% endif %}</span>
   {% if t.note %}<span class="entry-note">{{ t.note }}</span>{% endif %}
   <span class="text-version">{{ t.version | capitalize }}</span>
   {% if t.cite %}<span class="text-cite">Please cite the published version: {{ t.cite }}</span>{% endif %}
-  <span class="text-links"><a href="{{ t.file | relative_url }}">Download PDF</a>{% if t.open_access %} · <a href="{{ t.open_access }}">Free version at the publisher</a>{% endif %}</span>
+  <span class="text-links"><a href="{{ t.file | relative_url }}">Download PDF</a>{% if p.url %} · <a href="{{ p.url }}">Published version</a>{% endif %}{% if t.open_access %} · <a href="{{ t.open_access }}">Free version at the publisher</a>{% endif %}</span>
 </li>

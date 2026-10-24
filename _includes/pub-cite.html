@@ -12,3 +12,4 @@
 {%- if p.isbn %} – ISBN {{ p.isbn }}{% endif -%}
 {%- if p.url %} – <a href="{{ p.url }}">{{ link_label }}</a>{% endif -%}
 {%- if p.toc %} – <a href="{{ p.toc | relative_url }}">Table of contents (PDF)</a>{% endif -%}
+{%- if site.data.selected_texts %}{% assign st = site.data.selected_texts | where: "pub", p.id | first %}{% if st %} – <a href="{{ st.file | relative_url }}">{{ st.version | capitalize }} (PDF)</a>{% endif %}{% endif -%}
