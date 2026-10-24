@@ -8,7 +8,7 @@
 #
 # - pub: identity-in-difference    # id of the entry in publications.yml
 #   file: /texts/berg-2019-identity-in-difference.pdf   # leave out if the text is only linked
-#   version: accepted manuscript   # preprint | accepted manuscript | publisher's version
+#   version: accepted manuscript   # preprint | accepted manuscript | author’s corrected version | publisher's version
 #   cite: "Alexander Berg, Identity in Difference – Wittgenstein’s Hegel, in: … (De Gruyter 2019), 349–364."
 #   open_access: https://…         # optional: free version at the publisher or conference
 #   note: One sentence on what the text is about.   # optional
@@ -20,7 +20,8 @@
   note: How Wittgenstein learnt about Hegel’s philosophy – from Bertrand Russell and from C. D. Broad – and what his remark to Drury about Hegel reveals.
 
 - pub: photo-album-experiment
-  version: publisher’s version, free at the publisher
+  file: /texts/berg-2022-wittgensteins-photo-album.pdf
+  version: author’s corrected version
   cite: "Alexander Berg, “Wittgenstein’s Photo Album as a Philosophical Experiment”, in: Károly Kókai (ed.), Zeit der Unkultur – Ludwig Wittgenstein im Österreich der Zwischenkriegszeit, NoPress, Vienna 2022, pp. 203–220."
   open_access: https://www.nopress.at/wittgenstein/
   note: On the pocket notebook in which Wittgenstein arranged photographs instead of written remarks – read as a philosophical experiment.
