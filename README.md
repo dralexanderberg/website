@@ -11,7 +11,7 @@ Diese Website wird von GitHub Pages aus den Dateien in diesem Repository erzeugt
 | `_data/talks.yml` | Vorträge | Talks |
 | `_data/conferences.yml` | Tagungen: in Vorbereitung, die Reihe „Wittgenstein & Hegel“, weitere Tagungen und Workshops | Conferences |
 | `_data/research.yml` | Texte der Forschungsseite (zwei Forschungsfelder, Habilitation) und die dort gezeigte Auswahl | Research |
-| `_data/motto.yml` | Motto (Hegel und Wittgenstein) | Startseite |
+| `_data/motto.yml` | Motto (Hegel, Wittgenstein und Schlegel) | Startseite |
 | `_data/selected_texts.yml` | ausgewählte Texte zum Herunterladen (solange leer, ist die Rubrik unsichtbar) | Startseite, Selected Texts |
 | `_data/memberships.yml` | Mitgliedschaften | About |
 | `images/portrait.jpg` | Porträtfoto | Startseite |
@@ -127,7 +127,7 @@ Die Seite schneidet das Foto dann selbst hochkant zu (Gesicht etwa in der Mitte,
 - **Geplante Tagung konkretisieren:** In `_data/conferences.yml` unter `in_preparation:` beim Eintrag die Zeilen `dates:`, `place:` und `with:` ergänzen (Vorlage am Dateianfang). Nach der Tagung den Eintrag unter `further:` verschieben.
 - **Weitere Tagung oder Workshop eintragen:** in `_data/conferences.yml` unter `further:` ganz oben, nach der Vorlage am Dateianfang.
 - **Forschungsseite:** Texte und Auswahl stehen in `_data/research.yml`. Eine Publikation erscheint dort, wenn ihre Kennung (`id` aus `publications.yml`) in der Liste `publications:` steht. Ein Vortrag erscheint, wenn er in `talks.yml` eine Zeile `id:` hat und diese Kennung unter `talks:` steht.
-- **Motto:** in `_data/motto.yml`. Um nur ein Zitat zu zeigen, den anderen Eintrag löschen; ohne Einträge verschwindet das Motto.
+- **Motto:** in `_data/motto.yml`, drei Zitate (Hegel, Wittgenstein, Schlegel). Auf breiten Bildschirmen stehen die ersten beiden nebeneinander und das dritte mittig darunter, auf dem Handy alle untereinander. Um weniger Zitate zu zeigen, einen Eintrag löschen (von „- text“ bis vor das nächste „- text“); ohne Einträge verschwindet das Motto.
 
 ## Technisches (nur zur Information)
 

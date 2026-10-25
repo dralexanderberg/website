@@ -1,13 +1,20 @@
 # MOTTO on the home page, shown between the introduction and the Work Diary.
-# To show only one quotation, delete the other entry (from "- text" to the next "- text").
-# To show no motto at all, delete both entries.
+# Hegel (system) and Wittgenstein (album) stand side by side; Schlegel, who
+# "combines the two", stands below across both columns (rule in main.css).
+# German in modernized spelling; the translator follows each translation.
+# To show fewer quotations, delete an entry (from "- text" to the next "- text").
 
 - text: Die wahre Gestalt, in welcher die Wahrheit existiert, kann allein das wissenschaftliche System derselben sein.
-  translation: The true shape in which truth exists can only be the scientific system of that truth.
+  translation: The true shape in which truth exists can only be the scientific system of that truth. (trans. Terry Pinkard)
   author: Hegel
-  source: Phänomenologie des Geistes, Vorrede
+  source: Phänomenologie des Geistes (1807), Vorrede
 
-- text: Philosophie dürfte man eigentlich nur dichten.
-  translation: Philosophy ought really to be written only as poetry.
+- text: So ist also dieses Buch eigentlich nur ein Album.
+  translation: Thus this book is really only an album. (trans. G. E. M. Anscombe)
   author: Wittgenstein
-  source: Vermischte Bemerkungen
+  source: Philosophische Untersuchungen (1953), Vorwort
+
+- text: Es ist gleich tödlich für den Geist, ein System zu haben, und keins zu haben. Er wird sich also wohl entschließen müssen, beides zu verbinden.
+  translation: It’s equally fatal for the mind to have a system and to have none. It will simply have to decide to combine the two. (trans. Peter Firchow)
+  author: Friedrich Schlegel
+  source: Athenäums-Fragment 53 (1798)
