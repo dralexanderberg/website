@@ -47,7 +47,7 @@ structured_data: events-jsonld.html
   {%- assign ph = c.poster_height | default: 676 %}
   <figure class="conf-poster{% if ph < 480 %} conf-poster-wide{% endif %}">
     <a href="{{ poster_pdf.file | default: c.poster | relative_url }}"><img src="{{ c.poster | relative_url }}" width="480" height="{{ ph }}" loading="lazy" alt="Poster of the conference “{{ c.title }}”, {{ c.place }}, {{ c.dates }}"></a>
-    {%- if c.poster_by or c.poster_note %}<figcaption>{% include poster-credit.html c=c %}</figcaption>{% endif %}
+    {%- if c.poster_by or c.poster_note or c.poster_photo %}<figcaption>{% include poster-credit.html c=c %}</figcaption>{% endif %}
   </figure>
   {%- endif %}
   <dl class="conf-facts">
@@ -56,6 +56,7 @@ structured_data: events-jsonld.html
     {%- if c.led_by %}<dt>Led by</dt><dd>{{ c.led_by }}</dd>{% endif %}
     {%- if c.partners %}<dt>Partners</dt><dd>{{ c.partners }}</dd>{% endif %}
     {%- if c.support %}<dt>Support</dt><dd>{{ c.support }}</dd>{% endif %}
+    {%- if c.url %}<dt>Website</dt><dd><a href="{{ c.url }}">{{ c.url | remove_first: "https://" | remove_first: "http://" | split: "/" | first }}</a></dd>{% endif %}
     {%- if c.files %}<dt>Documents</dt><dd>{% for f in c.files %}<a href="{{ f.file | relative_url }}">{{ f.label }}</a> (PDF){% unless forloop.last %} · {% endunless %}{% endfor %}</dd>{% endif %}
     {%- if videos.size > 0 %}<dt>Recordings</dt><dd>{{ videos.size }} talks on YouTube, linked in the list of talks</dd>{% endif %}
     {%- if c.volume %}{% assign v = site.data.publications | where: "id", c.volume | first %}<dt>Volume</dt><dd>{% include pub-cite.html pub=v %}</dd>{% endif %}

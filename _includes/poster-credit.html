@@ -5,4 +5,5 @@
   {%- if c.poster_photo and c.poster_photo != c.poster_by %}Poster design: {{ c.poster_by }}; photo: {{ c.poster_photo }}
   {%- elsif c.poster_photo %}Poster design and photo: {{ c.poster_by }}
   {%- else %}Poster design: {{ c.poster_by }}{% endif -%}
+{%- elsif c.poster_photo %}Photo: {{ c.poster_photo }}
 {%- endif -%}
