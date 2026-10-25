@@ -18,6 +18,7 @@ Diese Website wird von GitHub Pages aus den Dateien in diesem Repository erzeugt
 | `files/conferences/` | PDFs der Tagungen | Conferences |
 | `images/posters/` | Vorschaubilder der Tagungsplakate | Conferences |
 | `texts/` | PDFs der „Selected Texts“ | Selected Texts |
+| `berg-publications.bib` | BibTeX-Datei aller Publikationen, wird automatisch aus `publications.yml` erzeugt (siehe Abschnitt 7) | Publications (Download) |
 
 Am Anfang jeder Datei in `_data/` steht eine **Vorlage** für einen neuen Eintrag (die Zeilen mit `#` sind Kommentare und erscheinen nicht auf der Seite).
 
@@ -94,6 +95,7 @@ Datei `_data/publications.yml` öffnen. Den neuen Eintrag **oben in der passende
 - Noch nicht erschienen? Zeile `status: forthcoming` hinzufügen.
 - Links nur auf Verlagsseite oder DOI, nicht auf Amazon.
 - Rezension eines Buches: beim Buch unter `reviews:` eine Zeile ergänzen (Beispiel bei „Wittgensteins Hegel“).
+- Für die BibTeX-Datei sind außerdem `isbn:`, `doi:` und bei Zeitschriftenaufsätzen `journal:`, `volume:`, `issue:` nützlich (siehe Abschnitt 7).
 
 ## 4. Einen Text mit PDF unter „Selected Texts“ ergänzen
 
@@ -129,7 +131,25 @@ Die Seite schneidet das Foto dann selbst hochkant zu (Gesicht etwa in der Mitte,
 - **Forschungsseite:** Texte und Auswahl stehen in `_data/research.yml`. Eine Publikation erscheint dort, wenn ihre Kennung (`id` aus `publications.yml`) in der Liste `publications:` steht. Ein Vortrag erscheint, wenn er in `talks.yml` eine Zeile `id:` hat und diese Kennung unter `talks:` steht.
 - **Plakat einer Tagung der Reihe:** Vorschaubild (480 Pixel breit) in den Ordner `images/posters/`, das PDF in `files/conferences/`. In `_data/conferences.yml` beim Eintrag `poster:` mit dem Pfad des Bildes ergänzen, unter `files:` das PDF mit `label: Poster` und, wenn jemand anderes das Plakat gestaltet hat, unter `poster_by:` deren oder dessen Namen (erscheint unter dem Plakat); `poster_photo:` nennt bei Bedarf die Fotografin oder den Fotografen. Das geht auch bei einem Eintrag unter `further:`.
 - **Buchcover:** Bild (440 Pixel breit) in den Ordner `images/covers/`, dann in `_data/publications.yml` beim Buch `cover:` mit dem Pfad und `cover_height:` mit der Höhe des Bildes in Pixeln ergänzen; `cover_credit:` nennt bei Bedarf, wer das Coverbild gemacht hat (erscheint neben dem Cover). Das Cover erscheint rechts neben dem Eintrag auf Publications, Research und Conferences (auf breiten Bildschirmen am rechten Rand neben der Liste); bei einem Kapitel ist es das Cover des Sammelbandes.
+- **PDFs von Tagungen:** vor dem Hochladen prüfen, dass keine privaten Kontaktdaten darin stehen (E-Mail-Adressen, Telefonnummern, Anschriften). Im Abstract-Heft von Zagreb 2024 sind die E-Mail-Adressen deshalb entfernt.
 - **Motto:** in `_data/motto.yml`, drei Zitate (Hegel, Wittgenstein, Schlegel). Auf breiten Bildschirmen stehen die ersten beiden nebeneinander und das dritte mittig darunter, auf dem Handy alle untereinander. Um weniger Zitate zu zeigen, einen Eintrag löschen (von „- text“ bis vor das nächste „- text“); ohne Einträge verschwindet das Motto.
+
+## 7. Bibliographie-Datei (BibTeX)
+
+Die Datei **`berg-publications.bib`** (online unter alexanderberg.ch/berg-publications.bib, verlinkt oben auf der Seite „Publications“) entsteht bei jedem Bau **automatisch aus `_data/publications.yml`**. Sie wird nie von Hand bearbeitet: Wer eine Publikation in der yml einträgt oder ändert, hat sie auch in der BibTeX-Datei. Geplante Titel (`status: planned`) und die Online-Edition fehlen darin, Titel mit `status: forthcoming` sind als solche markiert.
+
+Diese Felder nutzt vor allem die BibTeX-Datei:
+
+- `isbn:` – auf der Website nur bei Büchern ohne DOI sichtbar, in der BibTeX-Datei immer (bei Kapiteln die ISBN des Bandes).
+- `doi:` – nur nötig, wenn `url:` nicht auf doi.org zeigt (z. B. beim Anthem-Kapitel, das auf die Verlagsseite verlinkt).
+- `journal:`, `volume:`, `issue:` – bei Aufsätzen in Zeitschriften; dann erscheint der Eintrag in der BibTeX-Datei als Zeitschriftenaufsatz statt als Beitrag in einem Sammelband.
+- `url_label:` – eigener Text für den Link, z. B. `Preview (PDF)` bei den Leseproben von Bautz. Solche Links kommen nicht in die BibTeX-Datei.
+
+**Import in andere Dienste:**
+
+- **Zotero:** Datei herunterladen, dann in Zotero „Datei → Importieren…“.
+- **ORCID:** im Bereich „Works“ auf „+ Add“: Werke mit DOI am besten über „Add DOI“ (dann kommen die Daten direkt von Crossref), den Rest über „Import BibTeX“. ORCID zeigt vorher eine Liste, aus der man auswählt (forthcoming-Titel besser erst nach Erscheinen). Die Übersetzungen besser von Hand als „Translation“ anlegen.
+- **PhilPapers:** zuerst unter „My works“ prüfen, was PhilPapers schon über den Namen zugeordnet hat, und Fremdes mit „not mine“ markieren; dann „Submit material → Upload a bibliography“ und die Datei hochladen. Vorhandene Einträge werden zugeordnet, nur fehlende neu angelegt.
 
 ## Technisches (nur zur Information)
 

@@ -1,0 +1,80 @@
+---
+layout: null
+permalink: /berg-publications.bib
+---
+{%- comment -%}
+  All publications in BibTeX format, built from _data/publications.yml at every build.
+  Left out: planned items and the online edition. Forthcoming items get pubstate = {forthcoming}.
+  Types: monograph and edited -> @book; article with journal -> @article; other articles and
+  translations -> @incollection. "&" becomes "\\&" in text fields; URLs and DOIs stay as they are.
+{%- endcomment -%}
+{%- assign ob = "{" -%}{%- assign cb = "}" -%}
+% Alexander Berg – publications (BibTeX, UTF-8)
+% {{ site.url }}/publications/ – generated {{ site.time | date: "%Y-%m-%d" }}
+{% for p in site.data.publications %}
+{%- if p.status == "planned" or p.type == "online" %}{% continue %}{% endif %}
+{%- if p.type == "monograph" or p.type == "edited" %}{% assign kind = "book" %}{% elsif p.journal %}{% assign kind = "article" %}{% else %}{% assign kind = "incollection" %}{% endif %}
+{%- assign year = p.date | append: "" | slice: -4, 4 %}
+{%- assign title = p.title | replace: "&", "\\&" %}
+{%- comment %} persons: "A & B" or "A, B, C (eds.)" -> "A and B and C" {% endcomment %}
+{%- assign author = "" %}{% assign editor = "" %}{% assign translator = "" %}
+{%- if p.type == "translation" %}{% assign author = p.author %}{% assign translator = "Berg, Alexander" %}
+{%- elsif p.type != "edited" %}{% assign author = "Berg, Alexander" %}{% endif %}
+{%- if p.type == "edited" %}{% assign editor = p.editors %}{% elsif kind == "incollection" %}{% assign editor = p.in_editors | default: "" %}{% endif %}
+{%- assign editor = editor | remove: " (eds.)" | remove: " (ed.)" | replace: " & ", ", " | split: ", " | join: " and " %}
+{%- comment %} container {% endcomment %}
+{%- assign booktitle = "" %}{% assign journal = "" %}
+{%- if kind == "article" %}{% assign journal = p.journal | replace: "&", "\\&" %}{% elsif kind == "incollection" %}{% assign booktitle = p.in | replace: "&", "\\&" %}{% endif %}
+{%- comment %} series "Name (number), editors" -> series and number; an edited journal issue keeps its "in" as series {% endcomment %}
+{%- assign series = "" %}{% assign number = "" %}
+{%- if p.series %}{% assign series = p.series | split: ", " | first %}
+  {%- if series contains " (" %}{% assign number = series | split: " (" | last | remove: ")" %}{% assign series = series | split: " (" | first %}{% endif %}
+{%- elsif p.type == "edited" and p.in %}{% assign series = p.in %}{% endif %}
+{%- assign series = series | replace: "&", "\\&" %}
+{%- comment %} "Publisher, City" -> publisher and address {% endcomment %}
+{%- assign parts = p.publisher | split: ", " %}{% assign address = "" %}{% assign publisher = p.publisher %}
+{%- if parts.size > 1 %}{% assign address = parts | last %}{% assign n = parts.size | minus: 1 %}{% assign publisher = parts | slice: 0, n | join: ", " %}{% endif %}
+{%- assign publisher = publisher | replace: "&", "\\&" %}{% assign address = address | replace: "&", "\\&" %}
+{%- comment %} pages: "349–364" -> "349--364", "15 f." -> "15--16" {% endcomment %}
+{%- assign pages = p.pages | append: "" %}
+{%- if pages contains " f." %}{% assign first = pages | remove: " f." | plus: 0 %}{% capture pages %}{{ first }}--{{ first | plus: 1 }}{% endcapture %}{% else %}{% assign pages = pages | replace: "–", "--" %}{% endif %}
+{%- comment %} DOI from the doi field or a doi.org link; other links as url, except previews {% endcomment %}
+{%- assign doi = p.doi | default: "" %}{% assign url = "" %}
+{%- if p.url contains "doi.org/" %}{% assign doi = p.url | split: "doi.org/" | last %}
+{%- elsif p.url %}{% unless p.url_label %}{% assign url = p.url %}{% unless url contains "://" %}{% assign url = url | absolute_url %}{% endunless %}{% endunless %}{% endif %}
+@{{ kind }}{{ ob }}berg-{{ p.id }}
+{%- if author != "" %},
+  author     = {{ ob }}{{ author }}{{ cb }}{% endif %}
+{%- if editor != "" %},
+  editor     = {{ ob }}{{ editor }}{{ cb }}{% endif %}
+{%- if translator != "" %},
+  translator = {{ ob }}{{ translator }}{{ cb }}{% endif %},
+  title      = {{ ob }}{{ title }}{{ cb }}
+{%- if booktitle != "" %},
+  booktitle  = {{ ob }}{{ booktitle }}{{ cb }}{% endif %}
+{%- if journal != "" %},
+  journal    = {{ ob }}{{ journal }}{{ cb }}{% endif %}
+{%- if p.volume %},
+  volume     = {{ ob }}{{ p.volume }}{{ cb }}{% endif %}
+{%- if p.issue %},
+  number     = {{ ob }}{{ p.issue }}{{ cb }}{% endif %}
+{%- if series != "" %},
+  series     = {{ ob }}{{ series }}{{ cb }}{% endif %}
+{%- if number != "" %},
+  number     = {{ ob }}{{ number }}{{ cb }}{% endif %}
+{%- if kind != "article" %},
+  publisher  = {{ ob }}{{ publisher }}{{ cb }}{% if address != "" %},
+  address    = {{ ob }}{{ address }}{{ cb }}{% endif %}{% endif %},
+  year       = {{ ob }}{{ year }}{{ cb }}
+{%- if pages != "" %},
+  pages      = {{ ob }}{{ pages }}{{ cb }}{% endif %}
+{%- if p.isbn %},
+  isbn       = {{ ob }}{{ p.isbn }}{{ cb }}{% endif %}
+{%- if doi != "" %},
+  doi        = {{ ob }}{{ doi }}{{ cb }}{% endif %}
+{%- if url != "" %},
+  url        = {{ ob }}{{ url }}{{ cb }}{% endif %}
+{%- if p.status == "forthcoming" %},
+  pubstate   = {{ ob }}forthcoming{{ cb }}{% endif %}
+{{ cb }}
+{% endfor %}

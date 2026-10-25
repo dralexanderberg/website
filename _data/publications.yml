@@ -17,8 +17,13 @@
 #   pages: 1–20
 #   status: forthcoming            # forthcoming | planned | (leave out once published)
 #   note: any additional remark
-#   isbn: "3689110300"             # optional
+#   isbn: "978-3-…"                # optional; shown for books without DOI, also used in the BibTeX file
 #   url: https://doi.org/…         # publisher page or DOI, never Amazon
+#   url_label: Preview (PDF)       # optional: text of the link instead of "doi:…", "PDF" or "Publisher"
+#   doi: 10.…/…                    # optional: DOI if url points elsewhere (used only in the BibTeX file)
+#   journal: Name of the journal   # journal articles only (BibTeX file): journal, volume and issue
+#   volume: 11
+#   issue: 1
 #   cover: /images/covers/name.jpg # optional: book cover, 440 px wide, in images/covers/
 #   cover_height: 450              # height of that image in px
 #   cover_credit: "Cover: Name"    # optional: only if someone else made the cover picture
@@ -27,6 +32,9 @@
 #
 # Groups appear on the Publications page in this order: monograph, edited,
 # article, translation, online. Within each group, newest first (top of the list).
+#
+# The BibTeX file /berg-publications.bib is built from this file at every build
+# (without planned items and the online edition).
 
 # ---------------------------------------------------------------- Monographs
 
@@ -45,7 +53,9 @@
   series: Libri Nigri, Hans Rainer Sepp (ed.)
   publisher: Bautz
   date: April 2025
-  isbn: "3689110300"
+  isbn: "978-3-689-11030-7"
+  url: https://content.bautz.de/neuerscheinungen-2025/pdf/9783689110307.pdf
+  url_label: Preview (PDF)
 
 - id: wittgensteins-hegel
   type: monograph
@@ -53,7 +63,8 @@
   publisher: Wilhelm Fink Verlag, Paderborn
   date: 2021
   note: with the support of the VG Wort Science Promotion Fund
-  url: https://brill.com/display/title/54766
+  isbn: "978-3-7705-6570-2"
+  url: https://doi.org/10.30965/9783846765708
   cover: /images/covers/wittgensteins-hegel.jpg
   cover_height: 659
   reviews:
@@ -65,7 +76,9 @@
   series: Libri Virides, Hans Rainer Sepp (ed.)
   publisher: Bautz
   date: 2012
-  isbn: "3883097365"
+  isbn: "978-3-88309-736-7"
+  url: https://content.bautz.de/neuerscheinungen-2012/pdf/9783883097350.pdf
+  url_label: Preview (PDF)
 
 # ------------------------------------------------------------ Edited volumes
 
@@ -84,7 +97,8 @@
   title: Wittgenstein and Classical German Philosophy – Logic, Language, Life
   editors: Alexander Berg & Denys Kaidalov
   publisher: De Gruyter, Berlin/New York
-  date: Oct. 2025
+  date: 2025
+  isbn: "978-3-11-069844-2"
   url: https://doi.org/10.1515/9783110698497
   cover: /images/covers/wittgenstein-classical-german-philosophy.jpg
   cover_height: 654
@@ -96,6 +110,7 @@
   series: On Wittgenstein (5), James Conant, Wolfgang Kienzler, Stefan Majetschak, Volker Munz, Josef Rothhaupt, David Stern, Wilhelm Vossenkuhl (eds.)
   publisher: De Gruyter, Berlin/New York
   date: 2019
+  isbn: "978-3-11-056885-1"
   url: https://doi.org/10.1515/9783110572780
   toc: /files/conferences/toc.pdf
   reviews:
@@ -110,6 +125,8 @@
   series: Journal für Religionsphilosophie (3), Arbeitsgemeinschaft Religionsphilosophie Dresden e. V. (ed.)
   publisher: Verlag Text & Dialog, Dresden
   date: 2014
+  isbn: "978-3-943897-11-1"
+  url: https://text-dialog.de/verlag_preview_journal3
 
 # ------------------------------------------------------------------ Articles
 
@@ -136,6 +153,9 @@
   title: Possibility and Probability – Wittgenstein in Russia, and the Curious Case of the Yellow Book
   in: "Wittgenstein and Hegel on Normativity and Rationality, Synthesis Philosophica, vol. 41, no. 1"
   in_editors: Alexander Berg & Kenan Šljivo (eds.)
+  journal: Synthesis Philosophica
+  volume: 41
+  issue: 1
   publisher: Filozofski Fakultet, Zagreb
   date: 2026
   status: forthcoming
@@ -150,9 +170,21 @@
   date: July 2026
   pages: 111–134
   url: https://anthempress.com/wittgenstein-and-popular-culture-hb
+  doi: 10.2307/jj.44645099.13
+  isbn: "978-1-83999-131-8"
   cover: /images/covers/wittgenstein-and-popular-culture.jpg
   cover_height: 660
   cover_credit: "Cover: Felix Bennett, after Lichtenstein"
+
+- id: introduction-classical-german-philosophy
+  type: article
+  title: "Introduction: Wittgenstein and Classical German Philosophy – Logic, Language, Life"
+  in: Wittgenstein and Classical German Philosophy
+  in_editors: Alexander Berg & Denys Kaidalov (eds.)
+  publisher: De Gruyter
+  date: 2025
+  pages: 1–10
+  url: https://doi.org/10.1515/9783110698497-003
 
 - id: uebersichtliche-darstellung-2025
   type: article
@@ -160,7 +192,9 @@
   in: Wittgenstein and Classical German Philosophy
   in_editors: Alexander Berg & Denys Kaidalov (eds.)
   publisher: De Gruyter
-  date: Oct. 2025
+  date: 2025
+  pages: 167–182
+  url: https://doi.org/10.1515/9783110698497-012
 
 - id: peculiar-nature-of-philosophy
   type: article
@@ -169,14 +203,17 @@
   in_editors: Hrvoje Jurić & Karlo Gardavski (eds.)
   publisher: Croatian Philosophical Society
   date: 2024
+  pages: 21–22
+  url: /files/conferences/programme.abstracts_wh_zagreb_2024.pdf
 
 - id: absolute-negativity-tractatus
   type: article
   title: The Method of Absolute Negativity and the Tractatus Logico-Philosophicus – Wittgenstein, William James and Hegel
   in: 100 Years of Tractatus Logico-Philosophicus – 70 Years after Wittgenstein’s Death. A Critical Assessment. Contributions of the 44th International Wittgenstein Symposium, vol. XXIX
-  in_editors: Esther Heinrich-Ramharter, Alois Pichler, Friedrich Stadler (eds.)
-  publisher: Kirchberg a. W.
+  in_editors: Alois Pichler, Esther Heinrich-Ramharter, Friedrich Stadler (eds.)
+  publisher: ALWS, Kirchberg a. W.
   date: 2023
+  pages: 61–69
   url: https://symposium.alws.at/api/content/volume/2023.pdf
 
 - id: photo-album-experiment
@@ -187,14 +224,17 @@
   publisher: NoPress, Vienna
   date: 2022
   pages: 203–220
+  isbn: "978-3-9504520-4-4"
 
 - id: uebersichtliche-darstellung-2022
   type: article
   title: Wittgensteins Übersichtliche Darstellung und Hegels Spekulative Philosophie
   in: Wittgenstein and Platonism. Contributions of the 43rd International Wittgenstein Symposium, vol. XXVIII
   in_editors: Herbert Hrachovec & Jakub Mácha (eds.)
-  publisher: Kirchberg a. W.
+  publisher: ALWS, Kirchberg a. W.
   date: 2022
+  pages: 21–23
+  url: https://www.alws.at/alws/wp-content/uploads/2024/04/contributions_2022a.pdf
 
 - id: philosophisches-photoalbum
   type: article
@@ -204,12 +244,18 @@
   publisher: Bautz
   date: 2022
   pages: 194–239
+  isbn: "978-3-95948-585-2"
+  url: https://content.bautz.de/neuerscheinungen-2023/pdf/9783959485852.pdf
+  url_label: Preview (PDF)
 
 - id: begriffe-des-psychischen
   type: article
   title: Wittgenstein und die Begriffe des Psychischen bei Hegel
   in: Special section Wittgenstein über das Psychische, Wittgenstein-Studien, vol. 11
   in_editors: Richard Raatzsch (ed.)
+  journal: Wittgenstein-Studien
+  volume: 11
+  issue: 1
   publisher: Walter de Gruyter, Berlin/New York
   date: 2020
   pages: 137–168
@@ -230,7 +276,7 @@
   title: Wittgenstein, die Grundlagen der Mathematik, und Hegel
   in: Philosophie der Logik und Mathematik. Beiträge zum 41. Internationalen Wittgenstein Symposium, vol. XXVI
   in_editors: Gabriele M. Mras, Paul Weingartner, Bernhard Ritter (eds.)
-  publisher: Kirchberg a. W.
+  publisher: ALWS, Kirchberg a. W.
   date: 2018
   pages: 15 f.
 
@@ -239,7 +285,7 @@
   title: Vom Wissen zum Denken – Wittgensteins dialektische Methode am Beispiel der Seminarnotizen G. E. Moores
   in: Contributions of the 40th International Wittgenstein Symposium, vol. XXV
   in_editors: Christoph Limbeck-Lilienau, Friedrich Stadler (eds.)
-  publisher: Kirchberg a. W.
+  publisher: ALWS, Kirchberg a. W.
   date: 2017
   pages: 20 f.
   url: https://www.alws.at/alws/wp-content/uploads/2020/03/papers-2017.pdf
@@ -249,16 +295,19 @@
   title: Ernste Spiele – eine kleine Erzählung von Wittgenstein bis Schiller und zurück
   in: Ernste Spiele, Journal für Religionsphilosophie (5)
   in_editors: Arbeitsgemeinschaft Religionsphilosophie Dresden e. V. (ed.)
+  journal: Journal für Religionsphilosophie
+  volume: 5
   publisher: Verlag Text & Dialog, Dresden
   date: 2016
   pages: 57 f.
+  url: https://text-dialog.de/verlag_preview_journal5
 
 - id: vom-pun-zum-sprachspiel
   type: article
   title: Vom „pun“ zum Sprachspiel – Wittgenstein, Russell, Bradley, Hegel und der Streit um das concrete universal
   in: Contributions of the 39th International Wittgenstein Symposium, vol. XXIV
   in_editors: Stefan Majetschak & Anja Weiberg (eds.)
-  publisher: Kirchberg a. W.
+  publisher: ALWS, Kirchberg a. W.
   date: 2016
   pages: 20 f.
   url: https://www.alws.at/alws/wp-content/uploads/2019/01/papers-2016.pdf
@@ -268,7 +317,7 @@
   title: Probleme in der historischen Wittgenstein-Forschung – Wunsch, Wirklichkeit und Russische Philosophie
   in: Contributions of the 38th International Wittgenstein Symposium, vol. XXIII
   in_editors: Christian Kanzian, Josef Mitterer, Katharina Neges (eds.)
-  publisher: Kirchberg a. W.
+  publisher: ALWS, Kirchberg a. W.
   date: 2015
   pages: 23 f.
   url: https://www.alws.at/alws/wp-content/uploads/2018/06/papers-2015.pdf
@@ -278,7 +327,7 @@
   title: Grundlose Gewissheit und Absolutes Wissen – Wittgenstein und Hegel
   in: Contributions of the 37th International Wittgenstein Symposium, vol. XXII
   in_editors: Sonja Rinofner-Kreidl, Harald A. Wiltsche (eds.)
-  publisher: Kirchberg a. W.
+  publisher: ALWS, Kirchberg a. W.
   date: 2014
   pages: 24 f.
   url: https://www.alws.at/alws/wp-content/uploads/2018/06/papers-2014.pdf
@@ -292,7 +341,9 @@
   in: Wittgenstein and Classical German Philosophy
   in_editors: Alexander Berg & Denys Kaidalov (eds.)
   publisher: De Gruyter
-  date: Oct. 2025
+  date: 2025
+  pages: 201–212
+  url: https://doi.org/10.1515/9783110698497-014
 
 - id: rentsch-translation
   type: translation
@@ -302,6 +353,7 @@
   in_editors: Jakub Mácha & Alexander Berg (eds.)
   publisher: De Gruyter
   date: 2019
+  pages: 51–58
   url: https://doi.org/10.1515/9783110572780-006
 
 # ------------------------------------------------------------ Online edition
