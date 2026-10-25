@@ -65,7 +65,7 @@ p { margin: 0 0 0.9rem; }
 .site-header nav a { text-decoration: none; color: var(--muted); font-size: 0.95rem; }
 .site-header nav a:hover, .site-header nav a[aria-current="page"] { color: var(--accent); text-decoration: underline; }
 
-main.wrap { padding-top: 2.5rem; padding-bottom: 4rem; }
+main.wrap { padding-top: 2.5rem; padding-bottom: 4rem; display: flow-root; }
 
 /* Home: intro */
 .intro { display: grid; grid-template-columns: 11rem 1fr; gap: 1.5rem 2.5rem; align-items: start; }
@@ -119,7 +119,7 @@ cite { font-style: italic; }
 .contact-mail { font-size: 1.2rem; }
 
 /* Conferences */
-.conf { margin-top: 3.5rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); max-width: 46rem; }
+.conf { margin-top: 3.5rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); max-width: 46rem; display: flow-root; }
 .conf h2 { margin-top: 0; }
 .conf-city { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 0.3rem; }
 .conf-meta { color: var(--muted); }
@@ -191,35 +191,41 @@ details.talks li { margin: 0 0 0.5rem; }
 .habil-title span { color: var(--muted); font-size: 0.9rem; }
 .field-further { margin-top: 3rem; color: var(--muted); max-width: 46rem; }
 
-/* Conferences page: headings inside the series, posters */
+/* Conferences page: headings inside the series, talks inside a list */
 .conf h3 { font-size: 1.35rem; margin: 0 0 0.6rem; }
-.conf-poster { margin: 0.5rem 0 1rem; width: 8rem; }
-.conf-poster img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); }
-.conf-poster figcaption { margin-top: 0.35rem; font-size: 0.72rem; line-height: 1.3; color: var(--muted); }
-.conf-poster.conf-poster-wide { width: 15rem; max-width: 100%; }
-.biblio .conf-poster { float: none; width: auto; display: flex; align-items: flex-end; gap: 0.9rem; margin: 0.5rem 0 0.6rem; text-indent: 0; }
-.biblio .conf-poster a { flex: 0 0 7rem; }
-.biblio .conf-poster figcaption { max-width: 20rem; margin: 0; }
 .biblio details.talks { text-indent: 0; margin: 0.5rem 0 0.4rem; }
 .biblio details.talks li { padding-left: 0; text-indent: 0; }
-
-/* Book covers under a bibliographic entry */
-.pub-cover { display: flex; align-items: flex-end; gap: 0.9rem; margin: 0.5rem 0 0.3rem; text-indent: 0; }
-.pub-cover a { flex: none; }
-.pub-cover img { display: block; width: 6rem; height: auto; border: 1px solid var(--rule); }
-.pub-cover figcaption { max-width: 20rem; font-size: 0.72rem; line-height: 1.3; color: var(--muted); }
-@media print { .pub-cover { display: none; } }
 details.talks { clear: both; }
+
+/* Conference posters and book covers stand at the right of their entry (the figure comes
+   first in the HTML); on wide screens in the margin beside the text column, so that the
+   text and the lists run on undisturbed. */
+.conf-poster, .pub-cover { margin: 0.5rem 0 1rem; width: 8rem; text-indent: 0; }
+.conf-poster img, .pub-cover img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); }
+.conf-poster figcaption, .pub-cover figcaption { margin-top: 0.35rem; font-size: 0.72rem; line-height: 1.3; color: var(--muted); }
+.conf-poster.conf-poster-wide { width: 15rem; max-width: 100%; }
+.biblio .conf-poster, .pub-cover { float: right; width: 5.5rem; margin: 0.25rem 0 0.6rem 1rem; }
+.biblio li:has(> .conf-poster, > .pub-cover) { display: flow-root; }
 
 @media (min-width: 36rem) {
   .conf-poster { float: right; width: 9.5rem; margin: 0.2rem 0 1rem 1.5rem; }
   .conf-poster.conf-poster-wide { width: 15rem; }
+  .biblio .conf-poster, .pub-cover { width: 7.5rem; margin: 0.25rem 0 0.6rem 1.5rem; }
+}
+@media (min-width: 64rem) {
+  .conf-poster, .biblio .conf-poster, .pub-cover { clear: right; width: 11rem; margin: 0.3rem -13.75rem 1.5rem 0; }
+  .conf-poster.conf-poster-wide { width: 12.5rem; margin-right: -15.25rem; }
+  .biblio li:has(> .conf-poster, > .pub-cover) { display: list-item; }
+  /* an entry whose successor also has a figure keeps its figure, so that the next figure
+     can stand beside its own entry */
+  .biblio li:has(> .conf-poster, > .pub-cover):has(+ li > .conf-poster, + li > .pub-cover) { display: flow-root; }
+  details.talks { clear: none; }
 }
 @media (min-width: 48rem) {
   .motto { grid-template-columns: 1fr 1fr; gap: 3rem; }
   .motto figure:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; max-width: 36rem; }
 }
 @media print {
-  .conf-poster { display: none; }
+  .conf-poster, .pub-cover { display: none; }
   .motto { break-inside: avoid; }
 }

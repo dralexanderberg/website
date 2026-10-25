@@ -1,6 +1,5 @@
-{%- comment -%} One conference or workshop from conferences.yml (in_preparation or further). {%- endcomment -%}
+{%- comment -%} One conference or workshop from conferences.yml (in_preparation or further). The poster comes first, so that it stands at the right of the entry. {%- endcomment -%}
 {%- assign o = include.conf -%}
-{% if o.url %}<a href="{{ o.url }}">{{ o.title }}</a>{% else %}{{ o.title }}{% endif %}{% if o.dates %}, {{ o.dates }}{% endif %}{% if o.place %}, {{ o.place }}{% endif %}{% if o.speakers %}; speakers: {{ o.speakers }}{% endif %}{% if o.with %} [with {{ o.with }}]{% endif %}
 {%- if o.poster %}
 {%- assign poster_pdf = o.files | where: "label", "Poster" | first %}
 <figure class="conf-poster">
@@ -8,4 +7,5 @@
   {%- if o.poster_by or o.poster_note or o.poster_photo %}<figcaption>{% include poster-credit.html c=o %}</figcaption>{% endif %}
 </figure>
 {%- endif %}
+{% if o.url %}<a href="{{ o.url }}">{{ o.title }}</a>{% else %}{{ o.title }}{% endif %}{% if o.dates %}, {{ o.dates }}{% endif %}{% if o.place %}, {{ o.place }}{% endif %}{% if o.speakers %}; speakers: {{ o.speakers }}{% endif %}{% if o.with %} [with {{ o.with }}]{% endif %}
 {%- if o.talks %}{% include talk-list.html talks=o.talks %}{% endif %}
