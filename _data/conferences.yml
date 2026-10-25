@@ -15,13 +15,14 @@
 #   dates: 1–3 Sept. 2027                # leave out if not yet known
 #   place: University of …               # leave out if not yet known
 #   with: Co-organizer, Co-organizer     # leave out if not yet known
+#   speakers: Name and Name              # optional
 #   url: https://…                       # optional
 #
 # Poster of a conference in the series (optional): a preview image, 480 px wide, in images/posters/,
 # and the PDF under "files:" with the label "Poster".
 #   poster: /images/posters/city-year.jpg
 #   poster_height: 309                   # only for a landscape poster (height of the preview)
-#   poster_by: Name                      # designer, shown under the poster
+#   poster_by: Name                      # designer, shown under the poster (leave out if unknown)
 #   poster_photo: Name                   # optional: photographer
 #   poster_note: Text                    # optional: a sentence before the credit
 # The same fields also work for an entry under "further".
@@ -299,10 +300,12 @@ series:
   country: PL
   organizers: Alexander Berg (Zurich), Denys Kaidalov (Warsaw)
   led_by: Pirmin Stekeler-Weithofer (Leipzig), Hans-Johann Glock (Zurich), Richard Raatzsch (Oestrich-Winkel), Jakub Mácha (Brno)
+  files:
+    - label: Programme
+      file: /files/conferences/programme_wh_warsaw_2021.pdf
   volume: wittgenstein-classical-german-philosophy
   talks:
-    - speaker: Denys Kaidalov (Warsaw)
-      title: The Two Faces of Contradiction
+    - day: Wednesday, 1 Sept. 2021
     - speaker: Pirmin Stekeler-Weithofer (Leipzig)
       title: Hegelian Semantics. From Wittgenstein’s Pure Konstatierungen to Dialectically Comprehended Utterances
     - speaker: Christina Weiss (Darmstadt)
@@ -315,6 +318,9 @@ series:
       title: Hegel and Wittgenstein on Philosophical Concepts, between Determination and Blurriness
     - speaker: Karl-Friedrich Kiesow (Hannover)
       title: Wittgenstein, Longfellow – and Goethe
+    - speaker: Denys Kaidalov (Warsaw)
+      title: The Two Faces of Contradiction
+    - day: Thursday, 2 Sept. 2021
     - speaker: Jakub Mácha (Brno)
       title: Hegel and Wittgenstein on God at the Beginning of the World
     - speaker: Alexander Berg (Zurich)
@@ -331,6 +337,7 @@ series:
       title: Following a Rule Blindly – Hegel and Wittgenstein on the Immediacy of Habit
     - speaker: Thomas Spiegel (Potsdam)
       title: Rule-Following and Objective Spirit. Wittgenstein and Classical German Philosophy
+    - day: Friday, 3 Sept. 2021
     - speaker: Herbert Hrachovec (Vienna)
       title: Exceptional Cases. Wittgensteinian Remarks on post-Kantian Emergency Law
     - speaker: Valentina Balestracci (Pisa)
@@ -361,13 +368,17 @@ series:
   led_by: Kenneth R. Westphal (Istanbul), Pirmin Stekeler-Weithofer (Leipzig)
   support: European Regional Development Fund, project “Creativity and Adaptability as Conditions of the Success of Europe in an Interrelated World” (CZ.02.1.01/0.0/0.0/16_019/0000734)
   files:
+    - label: Programme
+      file: /files/conferences/programme_wh_prague_2019.pdf
     - label: Poster
       file: /files/conferences/poster_wh_prague_2019.pdf
+  url: https://wittgensteinhegel2017.weebly.com/negativity-and-language.html
   poster: /images/posters/prague-2019.jpg
   poster_height: 309
   poster_by: Alexander Berg
   poster_photo: Alexander Berg
   talks:
+    - day: Tuesday, 11 June 2019
     - speaker: Jakub Mácha
       title: Introduction to the volume Wittgenstein and Hegel – Reevaluation of Difference
     - speaker: Pirmin Stekeler-Weithofer
@@ -380,6 +391,7 @@ series:
       title: "Rules, Recognition and Community: a Hegelian Proposal for a Wittgensteinian Paradox"
     - speaker: Andrej S. Peter
       title: Relativism and Negativism – Talking about Following a Rule as a Reflexionsbestimmung
+    - day: Wednesday, 12 June 2019
     - speaker: Kenneth R. Westphal
       title: Kant, Hegel & the Historicity of Pure Reason
     - speaker: Denys Kaidalov
@@ -392,6 +404,7 @@ series:
       title: "Rethinking Logical Form: Wittgenstein, Hegel, and the Problem of Logical Antinomy"
     - speaker: David Palme
       title: Critique with Wittgenstein. From the sub specie aeterni to the Entanglement in our Rules
+    - day: Thursday, 13 June 2019
     - speaker: Alexander Berg
       title: Hegel and Wittgenstein – Idea and Text
     - speaker: James Fielding
@@ -419,6 +432,7 @@ series:
   organizers: Alexander Berg (Dresden & Prague), Jakub Mácha (Brno), Louisa Frintert/Herzfeld (Dresden), Marco Kleber (Dresden), Alexander Romahn (Leipzig)
   keynotes: Thomas Rentsch (Dresden), Pirmin Stekeler-Weithofer (Leipzig), Hans-Johann Glock (Zurich)
   support: Graduate Academy of TU Dresden (Excellence Initiative)
+  url: https://wittgensteinhegel2017.weebly.com/
   files:
     - label: Programme
       file: /files/conferences/programme_wh_dresden_2017.pdf
@@ -532,12 +546,12 @@ further:
   dates: 18 Nov. 2016
   place: Kathedralforum Dresden
   with: Arbeitsgemeinschaft Religionsphilosophie Dresden e. V.
+  speakers: Harald Seubert and Pirmin Stekeler-Weithofer
   files:
     - label: Poster
       file: /files/conferences/poster_klassiker_kontrovers_hegel_2016.pdf
   poster: /images/posters/dresden-2016.jpg
   poster_note: Poster for the original date in January 2016; the event was postponed because of illness.
-  poster_by: Alexander Berg
   poster_photo: Conny Sandland (Flickr)
 
 - title: The Night of Philosophy in Prague – Images, Sciences and Politics
