@@ -119,6 +119,7 @@ cite { font-style: italic; }
 .archive { margin-top: 1rem; }
 .archive-list { list-style: none; margin: 0; padding: 0; max-width: var(--measure); }
 .contact-mail { font-size: 1.2rem; }
+.contact-orcid { margin-bottom: 0.35rem; }
 .contact-orcid a { display: inline-flex; align-items: center; gap: 0.45em; }
 .orcid-icon { width: 1.1em; height: 1.1em; flex: none; }
 

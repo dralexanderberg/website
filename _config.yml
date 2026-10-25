@@ -2,8 +2,10 @@
 title: Alexander Berg
 author: Alexander Berg
 email: alexander@alexanderberg.ch
-# ORCID iD, linked on the Contact page (leave empty to hide the link).
+# ORCID iD and PhilPeople profile name (philpeople.org/profiles/…), linked on the
+# Contact page (leave a line empty to hide that link).
 orcid: "0000-0002-3409-0396"
+philpeople: alexander-berg
 description: >-
   Alexander Berg, philosopher: Wittgenstein and Hegel, and the literary form
   of philosophy.

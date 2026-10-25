@@ -7,8 +7,8 @@
   "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Zurich" },
   "knowsAbout": ["Ludwig Wittgenstein", "G. W. F. Hegel", "Literary form of philosophy", "German Idealism"],
   "url": "{{ '/' | absolute_url }}",
-{%- if site.orcid %}
-  "sameAs": ["https://orcid.org/{{ site.orcid }}"],
+{%- if site.orcid or site.philpeople %}
+  "sameAs": [{% if site.orcid %}"https://orcid.org/{{ site.orcid }}"{% endif %}{% if site.orcid and site.philpeople %}, {% endif %}{% if site.philpeople %}"https://philpeople.org/profiles/{{ site.philpeople }}"{% endif %}],
 {%- endif %}
   "image": "{% if site.portrait_crops %}{{ '/images/portrait-800.jpg' | absolute_url }}{% else %}{{ '/images/portrait.jpg' | absolute_url }}{% endif %}"
 }
