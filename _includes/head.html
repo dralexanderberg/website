@@ -18,7 +18,7 @@
 <meta property="og:image" content="{% if site.portrait_crops %}{{ '/images/portrait-800.jpg' | absolute_url }}{% else %}{{ '/images/portrait.jpg' | absolute_url }}{% endif %}">
 <meta name="theme-color" content="#1b2638">
 <link rel="preload" href="{{ '/assets/fonts/p052-roman.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
 {%- if page.structured_data %}
 {% include {{ page.structured_data }} %}
