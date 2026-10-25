@@ -61,17 +61,7 @@ structured_data: events-jsonld.html
     {%- if videos.size > 0 %}<dt>Recordings</dt><dd>{{ videos.size }} talks on YouTube, linked in the list of talks</dd>{% endif %}
     {%- if c.volume %}{% assign v = site.data.publications | where: "id", c.volume | first %}<dt>Volume</dt><dd>{% include pub-cite.html pub=v %}</dd>{% endif %}
   </dl>
-  {%- if talks.size > 0 %}
-  <details class="talks">
-    <summary>Talks ({{ talks.size }})</summary>
-    <ul>
-    {%- for t in c.talks %}
-      {%- if t.day %}<li class="talk-day">{{ t.day }}</li>
-      {%- else %}<li><span class="talk-speaker">{{ t.speaker }}</span>: {{ t.title }}{% if t.keynote %} <span class="talk-tag">keynote</span>{% endif %}{% if t.video %} – <a href="{{ t.video }}">Video (YouTube)</a>{% endif %}</li>{% endif %}
-    {%- endfor %}
-    </ul>
-  </details>
-  {%- endif %}
+  {%- include talk-list.html talks=c.talks %}
 </section>
 {%- endfor %}
 

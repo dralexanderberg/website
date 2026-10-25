@@ -1,0 +1,13 @@
+{%- comment -%} Collapsible list of talks of a conference or workshop (talks: from conferences.yml). {%- endcomment -%}
+{%- assign list = include.talks | where_exp: "t", "t.speaker" -%}
+{%- if list.size > 0 %}
+  <details class="talks">
+    <summary>Talks ({{ list.size }})</summary>
+    <ul>
+    {%- for t in include.talks %}
+      {%- if t.day %}<li class="talk-day">{{ t.day }}</li>
+      {%- else %}<li><span class="talk-speaker">{{ t.speaker }}</span>: {{ t.title }}{% if t.keynote %} <span class="talk-tag">keynote</span>{% endif %}{% if t.video %} – <a href="{{ t.video }}">Video (YouTube)</a>{% endif %}</li>{% endif %}
+    {%- endfor %}
+    </ul>
+  </details>
+{%- endif %}

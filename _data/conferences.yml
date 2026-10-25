@@ -16,6 +16,7 @@
 #   place: University of …               # leave out if not yet known
 #   with: Co-organizer, Co-organizer     # leave out if not yet known
 #   speakers: Name and Name              # optional
+#   talks: (list of talks, as in the series below; shown as “Talks (n)”)  # optional
 #   url: https://…                       # optional
 #
 # Poster of a conference in the series (optional): a preview image, 480 px wide, in images/posters/,
@@ -541,6 +542,26 @@ further:
   place: University of Zurich
   with: Frauke Berndt
   url: https://www.ds.uzh.ch/apps/_files/uploads/agenda/1483.pdf
+  files:
+    - label: Poster
+      file: /files/conferences/poster_reading_philosophy_zurich_2024.pdf
+  poster: /images/posters/zurich-2024.jpg
+  poster_by: Frauke Berndt
+  talks:
+    - speaker: Hans-Johann Glock
+      title: Bernard Williams und die Schlangen im genealogischen Garten Eden
+    - speaker: Roland Spalinger
+      title: Philosophie des Trostes. Kants Trauerrede
+    - speaker: Gottfried Gabriel
+      title: Darstellungsformen der Philosophie
+    - speaker: Albrecht Koschorke
+      title: Philosophische Logik und ästhetische Form
+    - speaker: Frauke Berndt
+      title: Baumgartens Gattungen der Ästhetik
+    - speaker: Alois Pichler
+      title: Was ist ein Werk Wittgensteins und warum die Frage wichtig ist
+    - speaker: Alexander Berg
+      title: Methoden für eine Literaturgeschichte der Philosophie
 
 - title: "Georg Friedrich Wilhelm Hegel: Rationalität und christlicher Glaube"
   dates: 18 Nov. 2016
