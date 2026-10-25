@@ -202,6 +202,7 @@ details.talks { clear: both; }
 }
 @media (min-width: 48rem) {
   .motto { grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .motto figure:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; max-width: 36rem; }
 }
 @media print {
   .conf-poster { display: none; }
