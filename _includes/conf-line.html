@@ -8,3 +8,4 @@
   {%- if o.poster_by or o.poster_note or o.poster_photo %}<figcaption>{% include poster-credit.html c=o %}</figcaption>{% endif %}
 </figure>
 {%- endif %}
+{%- if o.talks %}{% include talk-list.html talks=o.talks %}{% endif %}

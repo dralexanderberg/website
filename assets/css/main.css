@@ -200,6 +200,8 @@ details.talks li { margin: 0 0 0.5rem; }
 .biblio .conf-poster { float: none; width: auto; display: flex; align-items: flex-end; gap: 0.9rem; margin: 0.5rem 0 0.6rem; text-indent: 0; }
 .biblio .conf-poster a { flex: 0 0 7rem; }
 .biblio .conf-poster figcaption { max-width: 20rem; margin: 0; }
+.biblio details.talks { text-indent: 0; margin: 0.5rem 0 0.4rem; }
+.biblio details.talks li { padding-left: 0; text-indent: 0; }
 details.talks { clear: both; }
 
 @media (min-width: 36rem) {
