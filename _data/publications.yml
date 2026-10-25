@@ -21,6 +21,7 @@
 #   url: https://doi.org/…         # publisher page or DOI, never Amazon
 #   cover: /images/covers/name.jpg # optional: book cover, 300 px wide, in images/covers/
 #   cover_height: 450              # height of that image in px
+#   cover_credit: "Cover: Name"    # optional: only if someone else made the cover picture
 #   reviews:                       # optional: reviews of this book
 #     - Reviewer (University), Journal 12 (1), 2027, pp. 1–5.
 #
@@ -149,6 +150,9 @@
   date: July 2026
   pages: 111–134
   url: https://anthempress.com/wittgenstein-and-popular-culture-hb
+  cover: /images/covers/wittgenstein-and-popular-culture.jpg
+  cover_height: 450
+  cover_credit: "Cover: Felix Bennett, after Lichtenstein"
 
 - id: uebersichtliche-darstellung-2025
   type: article
