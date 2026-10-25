@@ -197,6 +197,9 @@ details.talks li { margin: 0 0 0.5rem; }
 .conf-poster img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); }
 .conf-poster figcaption { margin-top: 0.35rem; font-size: 0.72rem; line-height: 1.3; color: var(--muted); }
 .conf-poster.conf-poster-wide { width: 15rem; max-width: 100%; }
+.biblio .conf-poster { float: none; width: auto; display: flex; align-items: flex-end; gap: 0.9rem; margin: 0.5rem 0 0.6rem; text-indent: 0; }
+.biblio .conf-poster a { flex: 0 0 7rem; }
+.biblio .conf-poster figcaption { max-width: 20rem; margin: 0; }
 details.talks { clear: both; }
 
 @media (min-width: 36rem) {

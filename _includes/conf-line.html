@@ -1,3 +1,10 @@
 {%- comment -%} One conference or workshop from conferences.yml (in_preparation or further). {%- endcomment -%}
 {%- assign o = include.conf -%}
 {% if o.url %}<a href="{{ o.url }}">{{ o.title }}</a>{% else %}{{ o.title }}{% endif %}{% if o.dates %}, {{ o.dates }}{% endif %}{% if o.place %}, {{ o.place }}{% endif %}{% if o.with %} [with {{ o.with }}]{% endif %}
+{%- if o.poster %}
+{%- assign poster_pdf = o.files | where: "label", "Poster" | first %}
+<figure class="conf-poster">
+  <a href="{{ poster_pdf.file | default: o.poster | relative_url }}"><img src="{{ o.poster | relative_url }}" width="480" height="{{ o.poster_height | default: 679 }}" loading="lazy" alt="Poster of “{{ o.title }}”"></a>
+  {%- if o.poster_by or o.poster_note %}<figcaption>{% include poster-credit.html c=o %}</figcaption>{% endif %}
+</figure>
+{%- endif %}

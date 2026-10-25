@@ -22,6 +22,9 @@
 #   poster: /images/posters/city-year.jpg
 #   poster_height: 309                   # only for a landscape poster (height of the preview)
 #   poster_by: Name                      # designer, shown under the poster
+#   poster_photo: Name                   # optional: photographer
+#   poster_note: Text                    # optional: a sentence before the credit
+# The same fields also work for an entry under "further".
 
 in_preparation:
 
@@ -363,6 +366,7 @@ series:
   poster: /images/posters/prague-2019.jpg
   poster_height: 309
   poster_by: Alexander Berg
+  poster_photo: Alexander Berg
   talks:
     - speaker: Jakub Mácha
       title: Introduction to the volume Wittgenstein and Hegel – Reevaluation of Difference
@@ -424,6 +428,7 @@ series:
       file: /files/conferences/poster_wh_dresden_2017.pdf
   poster: /images/posters/dresden-2017.jpg
   poster_by: Alexander Berg
+  poster_photo: Alexander Berg
   volume: wittgenstein-hegel-reevaluation
   talks:
     - speaker: Thomas Rentsch (Dresden)
@@ -527,6 +532,13 @@ further:
   dates: 18 Nov. 2016
   place: Kathedralforum Dresden
   with: Arbeitsgemeinschaft Religionsphilosophie Dresden e. V.
+  files:
+    - label: Poster
+      file: /files/conferences/poster_klassiker_kontrovers_hegel_2016.pdf
+  poster: /images/posters/dresden-2016.jpg
+  poster_note: Poster for the original date in January 2016; the event was postponed because of illness.
+  poster_by: Alexander Berg
+  poster_photo: Conny Sandland (Flickr)
 
 - title: The Night of Philosophy in Prague – Images, Sciences and Politics
   dates: 16–17 June 2016
