@@ -16,6 +16,12 @@
 #   place: University of …               # leave out if not yet known
 #   with: Co-organizer, Co-organizer     # leave out if not yet known
 #   url: https://…                       # optional
+#
+# Poster of a conference in the series (optional): a preview image, 480 px wide, in images/posters/,
+# and the PDF under "files:" with the label "Poster".
+#   poster: /images/posters/city-year.jpg
+#   poster_height: 309                   # only for a landscape poster (height of the preview)
+#   poster_by: Name                      # designer, shown under the poster
 
 in_preparation:
 
@@ -41,6 +47,7 @@ series:
     - label: Poster
       file: /files/conferences/poster_wh_zagreb_2024.pdf
   poster: /images/posters/zagreb-2024.jpg
+  poster_by: Bruna Picas
   volume: synthesis-philosophica-41-1
   talks:
     - day: Monday, 9 Sept. 2024
@@ -221,6 +228,7 @@ series:
     - label: Poster
       file: /files/conferences/conference_wittgenstein_and_the_german_philosophical_tradition_self-consciousness_and_self-reference-def.pdf
   poster: /images/posters/barcelona-2022.jpg
+  poster_by: Bruna Picas
   talks:
     - day: Wednesday, 21 Sept. 2022
     - speaker: Bruna Picas (University of Barcelona)
@@ -349,6 +357,12 @@ series:
   organizers: Alexander Berg, Vojtěch Kolman
   led_by: Kenneth R. Westphal (Istanbul), Pirmin Stekeler-Weithofer (Leipzig)
   support: European Regional Development Fund, project “Creativity and Adaptability as Conditions of the Success of Europe in an Interrelated World” (CZ.02.1.01/0.0/0.0/16_019/0000734)
+  files:
+    - label: Poster
+      file: /files/conferences/poster_wh_prague_2019.pdf
+  poster: /images/posters/prague-2019.jpg
+  poster_height: 309
+  poster_by: Alexander Berg
   talks:
     - speaker: Jakub Mácha
       title: Introduction to the volume Wittgenstein and Hegel – Reevaluation of Difference
@@ -401,6 +415,15 @@ series:
   organizers: Alexander Berg (Dresden & Prague), Jakub Mácha (Brno), Louisa Frintert/Herzfeld (Dresden), Marco Kleber (Dresden), Alexander Romahn (Leipzig)
   keynotes: Thomas Rentsch (Dresden), Pirmin Stekeler-Weithofer (Leipzig), Hans-Johann Glock (Zurich)
   support: Graduate Academy of TU Dresden (Excellence Initiative)
+  files:
+    - label: Programme
+      file: /files/conferences/programme_wh_dresden_2017.pdf
+    - label: Abstracts
+      file: /files/conferences/abstracts_wh_dresden_2017.pdf
+    - label: Poster
+      file: /files/conferences/poster_wh_dresden_2017.pdf
+  poster: /images/posters/dresden-2017.jpg
+  poster_by: Alexander Berg
   volume: wittgenstein-hegel-reevaluation
   talks:
     - speaker: Thomas Rentsch (Dresden)
