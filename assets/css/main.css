@@ -202,6 +202,11 @@ details.talks li { margin: 0 0 0.5rem; }
 .biblio .conf-poster figcaption { max-width: 20rem; margin: 0; }
 .biblio details.talks { text-indent: 0; margin: 0.5rem 0 0.4rem; }
 .biblio details.talks li { padding-left: 0; text-indent: 0; }
+
+/* Book covers under a bibliographic entry */
+.pub-cover { margin: 0.5rem 0 0.3rem; width: 6rem; text-indent: 0; }
+.pub-cover img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); }
+@media print { .pub-cover { display: none; } }
 details.talks { clear: both; }
 
 @media (min-width: 36rem) {
