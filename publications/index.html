@@ -18,7 +18,7 @@ description: >-
   <h2 id="{{ g[1] }}">{{ g[2] }}</h2>
   <ul class="biblio">
   {%- for p in items %}
-    <li id="{{ p.id }}">{% include pub-cite.html pub=p %}</li>
+    <li id="{{ p.id }}">{% include pub-cite.html pub=p %}{% include pub-cover.html pub=p %}</li>
   {%- endfor %}
   </ul>
 </section>

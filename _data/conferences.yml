@@ -23,8 +23,8 @@
 # and the PDF under "files:" with the label "Poster".
 #   poster: /images/posters/city-year.jpg
 #   poster_height: 309                   # only for a landscape poster (height of the preview)
-#   poster_by: Name                      # designer, shown under the poster (leave out if unknown)
-#   poster_photo: Name                   # optional: photographer
+#   poster_by: Name                      # designer, shown under the poster – only if someone else designed it
+#   poster_photo: Name                   # optional: photographer, likewise only if someone else
 #   poster_note: Text                    # optional: a sentence before the credit
 # The same fields also work for an entry under "further".
 
@@ -376,8 +376,6 @@ series:
   url: https://wittgensteinhegel2017.weebly.com/negativity-and-language.html
   poster: /images/posters/prague-2019.jpg
   poster_height: 309
-  poster_by: Alexander Berg
-  poster_photo: Alexander Berg
   talks:
     - day: Tuesday, 11 June 2019
     - speaker: Jakub Mácha
@@ -442,8 +440,6 @@ series:
     - label: Poster
       file: /files/conferences/poster_wh_dresden_2017.pdf
   poster: /images/posters/dresden-2017.jpg
-  poster_by: Alexander Berg
-  poster_photo: Alexander Berg
   volume: wittgenstein-hegel-reevaluation
   talks:
     - speaker: Thomas Rentsch (Dresden)
