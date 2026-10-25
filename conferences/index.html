@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Conferences
+title: Conferences Organized
 description: >-
   Conferences organized by Alexander Berg: the international series
   “Wittgenstein & Hegel” (Dresden 2017, Prague 2019, Warsaw 2021, Barcelona
@@ -9,7 +9,7 @@ description: >-
 structured_data: events-jsonld.html
 ---
 {%- assign conf = site.data.conferences %}
-<h1>Conferences</h1>
+<h1>Conferences Organized</h1>
 
 <nav class="toc" aria-label="Sections">
 {%- if conf.in_preparation %}<a href="#in-preparation">In preparation</a> · {% endif %}<a href="#series">Series “Wittgenstein &amp; Hegel”</a>: {% for c in conf.series %}<a href="#{{ c.id }}">{{ c.city }} {{ c.start | date: "%Y" }}</a> · {% endfor %}<a href="#volumes">Volumes</a>{% if conf.further %} · <a href="#further">Further conferences and workshops</a>{% endif %}
