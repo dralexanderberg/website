@@ -69,7 +69,7 @@ structured_data: events-jsonld.html
   <h3 id="volumes-h">Volumes from the series</h3>
   <ul class="biblio">
   {%- for id in conf.volumes %}{% assign v = site.data.publications | where: "id", id | first %}
-    <li>{% include pub-cite.html pub=v %}{% include pub-cover.html pub=v %}</li>
+    <li>{% include pub-cover.html pub=v %}{% include pub-cite.html pub=v %}</li>
   {%- endfor %}
   </ul>
 </section>

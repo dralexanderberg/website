@@ -19,7 +19,7 @@
 #   note: any additional remark
 #   isbn: "3689110300"             # optional
 #   url: https://doi.org/…         # publisher page or DOI, never Amazon
-#   cover: /images/covers/name.jpg # optional: book cover, 300 px wide, in images/covers/
+#   cover: /images/covers/name.jpg # optional: book cover, 440 px wide, in images/covers/
 #   cover_height: 450              # height of that image in px
 #   cover_credit: "Cover: Name"    # optional: only if someone else made the cover picture
 #   reviews:                       # optional: reviews of this book
@@ -55,7 +55,7 @@
   note: with the support of the VG Wort Science Promotion Fund
   url: https://brill.com/display/title/54766
   cover: /images/covers/wittgensteins-hegel.jpg
-  cover_height: 449
+  cover_height: 659
   reviews:
     - Peter Eschweiler, Bibliographie zur Symbolik, Ikonographie und Mythologie 54/2021, pp. 22–23.
 
@@ -87,7 +87,7 @@
   date: Oct. 2025
   url: https://doi.org/10.1515/9783110698497
   cover: /images/covers/wittgenstein-classical-german-philosophy.jpg
-  cover_height: 446
+  cover_height: 654
 
 - id: wittgenstein-hegel-reevaluation
   type: edited
@@ -151,7 +151,7 @@
   pages: 111–134
   url: https://anthempress.com/wittgenstein-and-popular-culture-hb
   cover: /images/covers/wittgenstein-and-popular-culture.jpg
-  cover_height: 450
+  cover_height: 660
   cover_credit: "Cover: Felix Bennett, after Lichtenstein"
 
 - id: uebersichtliche-darstellung-2025

@@ -17,7 +17,7 @@ description: >-
   <h3>Selected publications</h3>
   <ul class="biblio">
     {%- for id in f.publications %}{% assign p = site.data.publications | where: "id", id | first %}{% if p %}
-    <li>{% include pub-cite.html pub=p %}{% include pub-cover.html pub=p %}</li>{% endif %}{% endfor %}
+    <li>{% include pub-cover.html pub=p %}{% include pub-cite.html pub=p %}</li>{% endif %}{% endfor %}
   </ul>
   {%- endif %}
   {%- if f.talks %}
