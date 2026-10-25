@@ -1,10 +1,13 @@
 ---
 layout: default
 title: Contact
-description: Contact Alexander Berg by e-mail. Imprint and privacy notice.
+description: Contact Alexander Berg by e-mail; ORCID iD. Imprint and privacy notice.
 ---
 <h1>Contact</h1>
 <p class="contact-mail"><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+{%- if site.orcid %}
+<p class="contact-orcid"><a href="https://orcid.org/{{ site.orcid }}" rel="me">{% include orcid-icon.html %}https://orcid.org/{{ site.orcid }}</a></p>
+{%- endif %}
 
 <section aria-labelledby="imprint">
   <h2 id="imprint">Imprint</h2>
