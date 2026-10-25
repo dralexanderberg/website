@@ -1,0 +1,8 @@
+{%- comment -%} Caption under a conference poster: optional note, designer and photographer. {%- endcomment -%}
+{%- assign c = include.c -%}
+{%- if c.poster_note %}{{ c.poster_note }} {% endif -%}
+{%- if c.poster_by -%}
+  {%- if c.poster_photo and c.poster_photo != c.poster_by %}Poster design: {{ c.poster_by }}; photo: {{ c.poster_photo }}
+  {%- elsif c.poster_photo %}Poster design and photo: {{ c.poster_by }}
+  {%- else %}Poster design: {{ c.poster_by }}{% endif -%}
+{%- endif -%}
