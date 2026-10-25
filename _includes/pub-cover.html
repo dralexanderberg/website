@@ -1,5 +1,5 @@
-{%- comment -%} Book cover under an entry from publications.yml (fields cover and cover_height). Usage: include pub-cover.html pub=p {%- endcomment -%}
+{%- comment -%} Book cover under an entry from publications.yml (fields cover, cover_height, cover_credit). Usage: include pub-cover.html pub=p {%- endcomment -%}
 {%- assign p = include.pub -%}
 {%- if p.cover %}
-<figure class="pub-cover">{% if p.url %}<a href="{{ p.url }}">{% endif %}<img src="{{ p.cover | relative_url }}" width="300" height="{{ p.cover_height | default: 450 }}" loading="lazy" alt="Cover of {{ p.title }}">{% if p.url %}</a>{% endif %}</figure>
+<figure class="pub-cover">{% if p.url %}<a href="{{ p.url }}">{% endif %}<img src="{{ p.cover | relative_url }}" width="300" height="{{ p.cover_height | default: 450 }}" loading="lazy" alt="Cover of {{ p.in | default: p.title }}">{% if p.url %}</a>{% endif %}{% if p.cover_credit %}<figcaption>{{ p.cover_credit }}</figcaption>{% endif %}</figure>
 {%- endif %}
