@@ -44,8 +44,10 @@ structured_data: events-jsonld.html
   <p class="conf-meta">{{ c.dates }} · {{ c.place }}</p>
   {%- if c.poster %}
   {%- assign poster_pdf = c.files | where: "label", "Poster" | first %}
-  <figure class="conf-poster">
-    <a href="{{ poster_pdf.file | default: c.poster | relative_url }}"><img src="{{ c.poster | relative_url }}" width="480" height="676" loading="lazy" alt="Poster of the conference “{{ c.title }}”, {{ c.place }}, {{ c.dates }}"></a>
+  {%- assign ph = c.poster_height | default: 676 %}
+  <figure class="conf-poster{% if ph < 480 %} conf-poster-wide{% endif %}">
+    <a href="{{ poster_pdf.file | default: c.poster | relative_url }}"><img src="{{ c.poster | relative_url }}" width="480" height="{{ ph }}" loading="lazy" alt="Poster of the conference “{{ c.title }}”, {{ c.place }}, {{ c.dates }}"></a>
+    {%- if c.poster_by %}<figcaption>Poster design: {{ c.poster_by }}</figcaption>{% endif %}
   </figure>
   {%- endif %}
   <dl class="conf-facts">
