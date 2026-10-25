@@ -109,9 +109,11 @@ main.wrap { padding-top: 2.5rem; padding-bottom: 4rem; display: flow-root; }
 .lead + .diary { margin-top: 1rem; }
 .prose { max-width: var(--measure); }
 .toc { font-size: 0.9rem; color: var(--muted); margin: 0.5rem 0 1rem; line-height: 1.9; }
+.bib-download { font-size: 0.9rem; color: var(--muted); margin: -0.4rem 0 1rem; }
 .biblio { list-style: none; margin: 0; padding: 0; max-width: 46rem; }
 .biblio li { padding-left: 1.2rem; text-indent: -1.2rem; margin: 0 0 0.7rem; }
 .biblio a { word-break: break-word; }
+.isbn { white-space: nowrap; }
 h2.year { font-size: 1.15rem; margin-top: 2.2rem; }
 cite { font-style: italic; }
 .archive { margin-top: 1rem; }
@@ -169,7 +171,7 @@ details.talks li { margin: 0 0 0.5rem; }
   .stage, .entry, .biblio li { break-inside: avoid; }
   details.talks { border: 0; background: none; }
   details.talks summary { padding-left: 0; }
-  .toc { display: none; }
+  .toc, .bib-download { display: none; }
 }
 
 /* Motto (home page) */
