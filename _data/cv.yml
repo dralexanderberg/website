@@ -87,11 +87,26 @@ research_stays:
 teaching:
 
 - years: "2022"
-  title: Course in the MA module “Cultural Diagnosis”
-  place: University of Zurich
+  title: MA course (teaching assignment)
+  place: Deutsches Seminar, University of Zurich
   courses:
     - term: Autumn semester 2022
-      title: Literary Thinking – Introduction to the Literary History of Philosophy
+      kind: Seminar
+      title: Literarisch denken. Eine Literaturgeschichte der Philosophie
+      text: "A literary history of philosophy reads philosophical works explicitly as literary texts, attending above all to the relation between literary form and philosophical content. The seminar examined literary forms in major works from Hegel to Adorno and related them to key texts of literary theory. Taught in German, as a colloquium for the MA programmes in Modern German Literature and in Literature, Knowledge, Culture; assessed by essays. English title: *Literary Thinking. A Literary History of Philosophy*."
+      sessions:
+        - "Christiane Schildknecht on the literary forms of philosophy"
+        - "Wittgenstein, the prefaces to the *Tractatus* and the *Philosophical Investigations*"
+        - "Julia Kristeva, “Bachtin, das Wort, der Dialog und der Roman”"
+        - "Hegel, *Phänomenologie des Geistes*: “Die Bildung”"
+        - "Hegel on Plato’s dialogues; Michel Foucault, “Was ist ein Autor?”"
+        - "Nietzsche, *Also sprach Zarathustra*"
+        - "Paul de Man, “Der Widerstand gegen die Theorie”"
+        - "Heidegger, *Sein und Zeit*"
+        - "Christine Abbt and Christian Benne, a literature-philosophy (with their workshop at the University of Zurich)"
+        - "Albrecht Koschorke, “Codes und Narrative”"
+        - "Hannah Arendt, *Vita activa*"
+        - "Theodor W. Adorno, *Minima Moralia*"
 
 - years: 2018–2019
   title: Courses on philosophy and literature (teaching assignments)
