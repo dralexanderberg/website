@@ -16,6 +16,8 @@ lang: en
 # Portrait on the home page. true = use the prepared sizes portrait-400/600/800.jpg;
 # false = use images/portrait.jpg directly (after uploading a new photo).
 portrait_crops: true
+# Photographer of the portrait, shown under it as "Photo: …" (leave empty to hide).
+portrait_credit: Iveta Ryšavá
 
 # Number of entries shown under "Recently published" in the Work Diary;
 # older ones move to the archive on the Work Diary page.
