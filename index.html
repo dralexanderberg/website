@@ -7,7 +7,8 @@ description: >-
 structured_data: person-jsonld.html
 ---
 <section class="intro" aria-labelledby="name">
-  <picture class="portrait">
+  <figure class="portrait">
+    <picture>
     {%- if site.portrait_crops %}
     <img src="{{ '/images/portrait-600.jpg' | relative_url }}"
          srcset="{{ '/images/portrait-400.jpg' | relative_url }} 400w, {{ '/images/portrait-600.jpg' | relative_url }} 600w, {{ '/images/portrait-800.jpg' | relative_url }} 800w"
@@ -17,7 +18,11 @@ structured_data: person-jsonld.html
     <img src="{{ '/images/portrait.jpg' | relative_url }}"
     {%- endif %}
          alt="Portrait photograph of Alexander Berg">
-  </picture>
+    </picture>
+    {%- if site.portrait_credit %}
+    <figcaption>Photo: {{ site.portrait_credit }}</figcaption>
+    {%- endif %}
+  </figure>
   <div class="intro-text">
     <h1 id="name">Alexander Berg</h1>
     <p class="subtitle">M.A., Ph.D. · Philosopher</p>

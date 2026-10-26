@@ -69,6 +69,8 @@ main.wrap { padding-top: 2.5rem; padding-bottom: 4rem; display: flow-root; }
 
 /* Home: intro */
 .intro { display: grid; grid-template-columns: 11rem 1fr; gap: 1.5rem 2.5rem; align-items: start; }
+.portrait { margin: 0; }
+.portrait figcaption { margin-top: 0.4rem; font-size: 0.75rem; color: var(--muted); letter-spacing: 0.02em; }
 .portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; border-radius: 2px; background: var(--accent); }
 .intro-text { max-width: var(--measure); }
 .subtitle { color: var(--muted); font-size: 1.05rem; margin-bottom: 1.4rem; letter-spacing: 0.02em; }

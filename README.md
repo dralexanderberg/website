@@ -125,6 +125,8 @@ Sobald der erste Eintrag da ist, erscheinen die Rubrik auf der Startseite (die e
 2. Das neue Foto hochladen; es muss genau **`portrait.jpg`** heißen (die alte Datei wird ersetzt). Am besten ein Foto mit mindestens 800 Pixel Breite und unter 1 MB.
 3. Datei **`_config.yml`** öffnen und die Zeile `portrait_crops: true` in `portrait_crops: false` ändern → „Commit changes“.
 
+4. In derselben Datei bei `portrait_credit:` den Namen der Fotografin oder des Fotografen eintragen (erscheint klein als „Photo: …“ unter dem Porträt; leer lassen, wenn kein Credit nötig ist). Derzeit: Iveta Ryšavá.
+
 Die Seite schneidet das Foto dann selbst hochkant zu (Gesicht etwa in der Mitte, etwas oberhalb). Die Dateien `portrait-400.jpg`, `portrait-600.jpg` und `portrait-800.jpg` sind fertig zugeschnittene, kleinere Fassungen des jetzigen Fotos; sie werden mit `portrait_crops: false` nicht mehr benutzt und können bleiben.
 
 ## 6. Tagungen, Forschungsseite und Motto
