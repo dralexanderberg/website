@@ -28,7 +28,12 @@
 #   cover_height: 450              # height of that image in px
 #   cover_credit: "Cover: Name"    # optional: only if someone else made the cover picture
 #   reviews:                       # optional: reviews of this book
-#     - Reviewer (University), Journal 12 (1), 2027, pp. 1–5.
+#     - by: Reviewer (University)
+#       source: Journal 12 (1), 2027, pp. 1–5
+#       url: https://doi.org/…     # optional: the review online
+#       quote: "A short quotation from the review"   # optional
+#       lang: de                   # only if the quotation is not in English, then also:
+#       translation: "English translation of the quotation"
 #
 # Groups appear on the Publications page in this order: monograph, edited,
 # article, translation, online. Within each group, newest first (top of the list).
@@ -68,7 +73,11 @@
   cover: /images/covers/wittgensteins-hegel.jpg
   cover_height: 659
   reviews:
-    - Peter Eschweiler, Bibliographie zur Symbolik, Ikonographie und Mythologie 54/2021, pp. 22–23.
+    - by: Peter Eschweiler
+      source: Bibliographie zur Symbolik, Ikonographie und Mythologie 54/2021, pp. 22–23
+      lang: de
+      quote: "Ohne Rekurs auf die Hegelsche Logik ist – so die These des Verf. – Wittgensteins Stellung in der Geschichte der Philosophie unverständlich. […] Der geneigte Leser findet bei Berg eine ausführliche Wertung der Auseinandersetzungen, die der späte Wittgenstein mit den Zeitgenossen Russell oder Whitehead geführt hat, vor allem seine Ausführungen im Rahmen der Cambridge-Vorlesungen, zu denen erst kürzlich veröffentlichte Mitschriften Zugang verschaffen. […] In Kap. V § 18 finden sich höchst wertvolle grundsätzliche Einsichten, die sich der Sprachanalytik verdanken. […] Der Band enthält überraschende Details zu Wittgensteins Position in der Geschichte der modernen Philosophie …"
+      translation: "Without recourse to Hegel’s logic – such is the author’s thesis – Wittgenstein’s place in the history of philosophy cannot be understood. […] The interested reader will find in Berg a detailed assessment of the later Wittgenstein’s debates with his contemporaries Russell or Whitehead, above all of his remarks in the Cambridge lectures, to which only recently published lecture notes give access. […] Chapter V, § 18 offers highly valuable fundamental insights owed to the analysis of language. […] The volume contains surprising details on Wittgenstein’s position in the history of modern philosophy …"
 
 - id: transzendenz-hegel-heidegger
   type: monograph
@@ -114,9 +123,19 @@
   url: https://doi.org/10.1515/9783110572780
   toc: /files/conferences/toc.pdf
   reviews:
-    - Stany Mazurkiewicz (Université de Liège), Bulletin de littérature hégélienne XXX, 2020, pp. 182–183.
-    - Guido Tana (University of Pavia), Verifiche XLIX (1–2), 2020, pp. 333–346.
-    - Diogo Ferrer (University of Coimbra), Wittgenstein-Studien 14 (1), 2023, pp. 277–283.
+    - by: Stany Mazurkiewicz (Université de Liège)
+      source: Bulletin de littérature hégélienne XXX, 2020, pp. 182–183
+      url: https://doi.org/10.3917/aphi.834.0149
+      lang: fr
+      quote: "… ce très riche ouvrage, qui est assurément à inclure parmi les contributions significatives aux études hégéliennes."
+      translation: "… this very rich work, which certainly belongs among the significant contributions to Hegel studies."
+    - by: Guido Tana (University of Pavia)
+      source: Verifiche XLIX (1–2), 2020, pp. 333–346
+      quote: "… this collection is the first systematic collective attempt in establishing a background on which future engagement on the topics of idealism and language can be played out, and it should serve as the benchmark for future endeavors on the topic."
+    - by: Diogo Ferrer (University of Coimbra)
+      source: Wittgenstein-Studien 14 (1), 2023, pp. 277–283
+      url: https://doi.org/10.1515/witt-2023-0015
+      quote: "Although a comparative study between Hegel and Wittgenstein is not unprecedented, this collection is groundbreaking due to the number and the significant scope of perspectives it contains."
 
 - id: ambivalenzen-des-heiligen
   type: edited

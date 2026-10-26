@@ -139,6 +139,14 @@ details.talks li { margin: 0 0 0.5rem; }
 .talk-speaker { font-weight: 700; }
 .talk-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
 
+/* Reviews of my books (Publications page) */
+.reviews { list-style: none; margin: 0; padding: 0; max-width: var(--measure); }
+.reviews li { margin: 0 0 1.6rem; }
+.reviews blockquote { margin: 0; }
+.reviews blockquote p { margin: 0; font-style: italic; color: var(--accent); }
+.review-translation { margin: 0.35rem 0 0; font-size: 0.85rem; color: var(--muted); }
+.review-source { margin: 0.4rem 0 0; font-size: 0.9rem; }
+
 /* Selected texts */
 .texts { list-style: none; margin: 1rem 0 0; padding: 0; max-width: var(--measure); }
 .text-entry { margin-bottom: 1.4rem; }
