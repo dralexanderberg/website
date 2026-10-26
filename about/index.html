@@ -1,27 +1,18 @@
 ---
-layout: default
-title: About
-description: >-
-  Alexander Berg – studies, research stays, languages and memberships.
+layout: null
+permalink: /about/
+sitemap: false
 ---
-<h1>About</h1>
-
-<section aria-labelledby="research">
-  <h2 id="research">Studies and research</h2>
-  <ul class="biblio">
-    <li>Research stays at the University of Zurich, the University of Konstanz, the Wittgenstein Archives at the University of Bergen, the Wren Library of Trinity College Cambridge, the University of Chicago and Charles University Prague.</li>
-    <li>Studies of philosophy, art history and psychology at TU Dresden, the Sorbonne (Paris) and the University of Florence.</li>
-  </ul>
-</section>
-
-<section aria-labelledby="languages">
-  <h2 id="languages">Languages</h2>
-  <p>Fluent: German, English, Italian, French.<br>Basic: Latin, Czech, Norwegian, Russian.</p>
-</section>
-
-<section aria-labelledby="memberships">
-  <h2 id="memberships">Memberships</h2>
-  <ul class="biblio">
-  {%- for m in site.data.memberships %}<li>{{ m }}</li>{% endfor %}
-  </ul>
-</section>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CV – {{ site.title }}</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="{{ '/cv/' | absolute_url }}">
+<meta http-equiv="refresh" content="0; url={{ '/cv/' | relative_url }}">
+</head>
+<body>
+<p>The former page “About” is now part of the <a href="{{ '/cv/' | relative_url }}">CV</a>.</p>
+</body>
+</html>

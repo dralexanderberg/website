@@ -1,0 +1,74 @@
+---
+layout: default
+title: CV
+description: >-
+  Curriculum vitae of Alexander Berg: positions and fellowships, education,
+  teaching, grants, academic service, publications, languages and memberships.
+---
+{%- assign cv = site.data.cv %}
+<div class="cv">
+<h1>Curriculum Vitae</h1>
+<p class="print-only cv-print-meta">{{ site.url | remove: "https://" }} · ORCID {{ site.orcid }} · as of {{ site.time | date: "%B %Y" }}</p>
+<nav class="toc" aria-label="Sections">
+  <a href="#positions">Positions</a> · <a href="#education">Education</a> · <a href="#teaching">Teaching</a> · <a href="#grants">Grants</a> · <a href="#service">Academic service</a> · <a href="#publications">Publications and talks</a> · <a href="#languages">Languages and memberships</a>
+</nav>
+<p class="bib-download">This page prints as a CV: in the browser, choose Print and then Save as PDF.</p>
+
+<section aria-labelledby="positions">
+  <h2 id="positions">Positions and fellowships</h2>
+  {% include cv-list.html items=cv.positions %}
+</section>
+
+<section aria-labelledby="education">
+  <h2 id="education">Education</h2>
+  {% include cv-list.html items=cv.education %}
+</section>
+
+<section aria-labelledby="stays">
+  <h2 id="stays">Research stays</h2>
+  {% include cv-list.html items=cv.research_stays %}
+</section>
+
+<section aria-labelledby="teaching">
+  <h2 id="teaching">Teaching</h2>
+  {% include cv-list.html items=cv.teaching %}
+</section>
+
+<section aria-labelledby="grants">
+  <h2 id="grants">Grants and fellowships</h2>
+  {% include cv-list.html items=cv.grants %}
+</section>
+
+<section aria-labelledby="service">
+  <h2 id="service">Academic service</h2>
+  {% include cv-list.html items=cv.service %}
+</section>
+
+<section aria-labelledby="outreach">
+  <h2 id="outreach">Public engagement</h2>
+  {% include cv-list.html items=cv.outreach %}
+</section>
+
+{%- comment %} counted from publications.yml and talks.yml, so the numbers stay current {% endcomment %}
+{%- assign pubs = site.data.publications | where_exp: "p", "p.status != 'planned'" %}
+{%- assign n_mono = pubs | where: "type", "monograph" | size %}
+{%- assign n_edited = pubs | where: "type", "edited" | size %}
+{%- assign n_edited_f = pubs | where: "type", "edited" | where: "status", "forthcoming" | size %}
+{%- assign n_articles = pubs | where: "type", "article" | size %}
+{%- assign n_articles_f = pubs | where: "type", "article" | where: "status", "forthcoming" | size %}
+{%- assign n_transl = pubs | where: "type", "translation" | size %}
+{%- assign first_talk = site.data.talks | last %}
+<section aria-labelledby="publications">
+  <h2 id="publications">Publications and talks</h2>
+  <p>{{ n_mono }} monographs, {{ n_edited }} edited volumes{% if n_edited_f > 0 %} ({{ n_edited_f }} forthcoming){% endif %}, {{ n_articles }} articles and book chapters{% if n_articles_f > 0 %} ({{ n_articles_f }} forthcoming){% endif %} and {{ n_transl }} translations: <a href="{{ '/publications/' | relative_url }}">complete list</a><span class="print-only"> at {{ site.url | remove: "https://" }}/publications/</span>, also as a BibTeX file.</p>
+  <p>{{ site.data.talks.size }} talks since {{ first_talk.year }}: <a href="{{ '/talks/' | relative_url }}">list of talks</a><span class="print-only"> at {{ site.url | remove: "https://" }}/talks/</span>.</p>
+</section>
+
+<section aria-labelledby="languages">
+  <h2 id="languages">Languages and memberships</h2>
+  <p>Fluent: {{ cv.languages.fluent }}.<br>Basic: {{ cv.languages.basic }}.</p>
+  <ul class="biblio">
+  {%- for m in site.data.memberships %}<li>{{ m }}</li>{% endfor %}
+  </ul>
+</section>
+</div>

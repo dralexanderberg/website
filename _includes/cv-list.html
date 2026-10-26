@@ -1,0 +1,42 @@
+{%- comment -%} A dated list of CV entries from cv.yml (fields years, title, place, with, note, url; under teaching also courses). Usage: include cv-list.html items=cv.positions {%- endcomment -%}
+<dl class="cv-list">
+{%- for e in include.items %}
+  <dt>{{ e.years }}</dt>
+  <dd>
+    {%- assign main = e.title | markdownify | remove: "<p>" | remove: "</p>" | strip %}
+    {%- if e.url %}<a href="{{ e.url | relative_url }}">{{ main }}</a>{% else %}{{ main }}{% endif %}
+    {%- if e.place %}, {{ e.place }}{% endif %}
+    {%- if e.with %} (with {{ e.with }}){% endif %}
+    {%- if e.note %}<span class="cv-note">{{ e.note | markdownify | remove: "<p>" | remove: "</p>" | strip }}</span>{% endif %}
+    {%- if e.courses %}
+    <ul class="cv-courses">
+      {%- for c in e.courses %}
+      <li>{{ c.term }}{% if c.kind %}, {{ c.kind | downcase }}{% endif %}: {% if c.title %}“{{ c.title }}”{% else %}{{ c.topic | markdownify | remove: "<p>" | remove: "</p>" | strip }}{% endif %}
+        {%- if c.text %}<span class="cv-note">{{ c.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}</span>{% endif %}
+        {%- if c.sessions or c.readings %}
+        <details class="talks cv-syllabus">
+          <summary>{% if c.sessions %}Session plan{% if c.readings %} and readings{% endif %}{% else %}Readings{% endif %}</summary>
+          {%- if c.sessions %}
+          <ol>
+            {%- for s in c.sessions %}
+            <li>{{ s | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>
+            {%- endfor %}
+          </ol>
+          {%- endif %}
+          {%- if c.readings %}
+          <p class="cv-syllabus-head">Readings</p>
+          <ul>
+            {%- for r in c.readings %}
+            <li>{{ r | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>
+            {%- endfor %}
+          </ul>
+          {%- endif %}
+        </details>
+        {%- endif %}
+      </li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </dd>
+{%- endfor %}
+</dl>

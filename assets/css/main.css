@@ -156,9 +156,26 @@ h4.reviews-sub { font-size: 0.95rem; font-weight: 400; color: var(--muted); marg
 .text-version, .text-cite { color: var(--muted); font-size: 0.9rem; margin-top: 0.2rem; }
 .text-links { margin-top: 0.3rem; font-size: 0.95rem; }
 
+/* CV */
+.print-only { display: none; }
+.cv-list { display: grid; grid-template-columns: 1fr; gap: 0 1.5rem; margin: 0; max-width: 46rem; }
+.cv-list dt { color: var(--muted); font-size: 0.9rem; margin-top: 1rem; }
+.cv-list dt:first-child { margin-top: 0; }
+.cv-list dd { margin: 0; }
+.cv-note { display: block; color: var(--muted); font-size: 0.95rem; margin-top: 0.1rem; }
+.cv-courses { list-style: none; margin: 0.5rem 0 0; padding: 0; }
+.cv-courses > li { margin: 0 0 0.7rem; }
+details.cv-syllabus { margin-top: 0.5rem; font-size: 0.95rem; }
+details.cv-syllabus ol { margin: 0; padding: 0.2rem 0.9rem 0.5rem 2.6rem; }
+details.cv-syllabus ol li { margin: 0 0 0.2rem; }
+.cv-syllabus-head { color: var(--accent); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; margin: 0.5rem 0.9rem 0.3rem; }
+
 @media (min-width: 48rem) {
   .conf-facts { grid-template-columns: 9rem 1fr; }
   .conf-facts dt { margin-top: 0.15rem; }
+  .cv-list { grid-template-columns: 7rem 1fr; }
+  .cv-list dt { margin-top: 0; padding-top: 0.05rem; }
+  .cv-list dd { margin-bottom: 1rem; }
 }
 
 @media (min-width: 48rem) {
@@ -178,7 +195,7 @@ h4.reviews-sub { font-size: 0.95rem; font-weight: 400; color: var(--muted); marg
   .site-header nav, .skip, .site-footer, .more, .intro-links { display: none; }
   html { background: #fff; font-size: 11pt; }
   .wrap { max-width: none; padding: 0; }
-  main { padding: 0; }
+  main, main.wrap { padding: 0; }
   a { color: inherit; text-decoration: none; }
   .diary { grid-template-columns: repeat(3, 1fr); }
   .stage, .entry, .biblio li { break-inside: avoid; }
@@ -243,4 +260,13 @@ details.talks { clear: both; }
 @media print {
   .conf-poster, .pub-cover { display: none; }
   .motto { break-inside: avoid; }
+  .print-only { display: revert; }
+  .cv-print-meta { color: var(--muted); margin-top: 0.3rem; }
+  .cv h1 { font-size: 2rem; }
+  .cv h2 { font-size: 1.2rem; margin: 1.6rem 0 0.5rem; break-after: avoid; }
+  .cv-list { grid-template-columns: 6.5rem 1fr; }
+  .cv-list dt { margin-top: 0; }
+  .cv-list dd { margin-bottom: 0.45rem; break-inside: avoid; }
+  .cv .biblio li { margin-bottom: 0.1rem; }
+  details.cv-syllabus, .cv-courses .cv-note { display: none; }
 }
