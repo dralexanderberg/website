@@ -144,8 +144,10 @@ details.talks li { margin: 0 0 0.5rem; }
 .reviews li { margin: 0 0 1.6rem; }
 .reviews blockquote { margin: 0; }
 .reviews blockquote p { margin: 0; font-style: italic; color: var(--accent); }
+.reviews blockquote i { font-style: normal; }
 .review-translation { margin: 0.35rem 0 0; font-size: 0.85rem; color: var(--muted); }
 .review-source { margin: 0.4rem 0 0; font-size: 0.9rem; }
+h4.reviews-sub { font-size: 0.95rem; font-weight: 400; color: var(--muted); margin: 0.4rem 0 1rem; }
 
 /* Selected texts */
 .texts { list-style: none; margin: 1rem 0 0; padding: 0; max-width: var(--measure); }

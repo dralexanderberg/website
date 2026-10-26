@@ -34,6 +34,11 @@
 #       quote: "A short quotation from the review"   # optional
 #       lang: de                   # only if the quotation is not in English, then also:
 #       translation: "English translation of the quotation"
+#   discussed:                     # optional, for a chapter: passages about it in reviews
+#                                  # of the volume (same fields as reviews; shown with them)
+#   endorsements:                  # optional, for a book: blurbs from the back cover
+#     - by: Name (University)
+#       quote: "The blurb"
 #
 # Groups appear on the Publications page in this order: monograph, edited,
 # article, translation, online. Within each group, newest first (top of the list).
@@ -111,6 +116,11 @@
   url: https://doi.org/10.1515/9783110698497
   cover: /images/covers/wittgenstein-classical-german-philosophy.jpg
   cover_height: 654
+  endorsements:
+    - by: Michael Beaney (Humboldt University of Berlin, University of Aberdeen)
+      quote: "This is a stimulating collection of papers exploring the rich connections between Wittgenstein’s thought and classical German philosophy, especially Hegel’s philosophy. Focusing on the general themes of logic, language, and life, this volume can be recommended."
+    - by: Jakub Mácha (Masaryk University in Brno)
+      quote: "A seminal publication for anyone interested in the development of analytic philosophy …"
 
 - id: wittgenstein-hegel-reevaluation
   type: edited
@@ -130,7 +140,7 @@
       quote: "… ce très riche ouvrage, qui est assurément à inclure parmi les contributions significatives aux études hégéliennes."
       translation: "… this very rich work, which certainly belongs among the significant contributions to Hegel studies."
     - by: Guido Tana (University of Pavia)
-      source: Verifiche XLIX (1–2), 2020, pp. 333–346
+      source: "“Unlikely Bedfellows? On a recent rapprochement between Hegel and Wittgenstein”, Verifiche XLIX (1–2), 2020, pp. 333–346"
       quote: "… this collection is the first systematic collective attempt in establishing a background on which future engagement on the topics of idealism and language can be played out, and it should serve as the benchmark for future endeavors on the topic."
     - by: Diogo Ferrer (University of Coimbra)
       source: Wittgenstein-Studien 14 (1), 2023, pp. 277–283
@@ -289,6 +299,14 @@
   date: 2019
   pages: 349–364
   url: https://doi.org/10.1515/9783110572780-024
+  discussed:
+    - by: Diogo Ferrer (University of Coimbra)
+      source: Wittgenstein-Studien 14 (1), 2023, p. 278
+      url: https://doi.org/10.1515/witt-2023-0015
+      quote: "… the study by Alexander Berg (349–364) is especially significant, as it is the only one to present a factual account of Wittgenstein’s words and writing about Hegel. One main result of Berg’s study (further developed in Berg’s <i>Wittgensteins Hegel</i> […]) is the claim that Wittgenstein’s notion of ‘language game’ was likely inspired by the reception of Hegel’s dialectic by Russell and, more specifically, by C. D. Broad in 1929."
+    - by: Guido Tana (University of Pavia)
+      source: "“Unlikely Bedfellows? On a recent rapprochement between Hegel and Wittgenstein”, Verifiche XLIX (1–2), 2020, pp. 340–341"
+      quote: "Berg tackles the usually casted-aside question of whether Hegelian Idealism might have had an actual influence in shaping Wittgenstein’s thought. […] Berg suggests that Wittgenstein’s concept of Sprachspiele might have been substantially informed by Broad’s contention that Hegelian dialectic is akin to playing a game."
 
 - id: grundlagen-der-mathematik
   type: article

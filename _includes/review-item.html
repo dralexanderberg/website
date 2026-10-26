@@ -1,0 +1,10 @@
+{%- comment -%} One review, a passage about a chapter in a review, or a back-cover endorsement (fields by, source, url, quote, lang, translation). Usage: include review-item.html r=r {%- endcomment -%}
+{%- assign r = include.r -%}
+{%- if r.by %}
+{%- if r.quote %}
+{%- case r.lang %}{% when "de" %}{% assign q1 = "„" %}{% assign q2 = "“" %}{% when "fr" %}{% assign q1 = "«&nbsp;" %}{% assign q2 = "&nbsp;»" %}{% else %}{% assign q1 = "“" %}{% assign q2 = "”" %}{% endcase %}
+<blockquote{% if r.lang %} lang="{{ r.lang }}"{% endif %}><p>{{ q1 }}{{ r.quote }}{{ q2 }}</p></blockquote>
+{%- if r.translation %}<p class="review-translation">“{{ r.translation }}” (my translation)</p>{% endif %}
+{%- endif %}
+<p class="review-source">{{ r.by }}{% if r.source %}, {{ r.source }}{% endif %}{% if r.url %} – <a href="{{ r.url }}">{% if r.url contains "doi.org/" %}doi:{{ r.url | split: "doi.org/" | last }}{% else %}Online{% endif %}</a>{% endif %}</p>
+{%- else %}{{ r }}{% endif -%}
