@@ -96,16 +96,69 @@ teaching:
 - years: 2018–2019
   title: Courses on philosophy and literature (teaching assignments)
   place: Faculty of Humanities, Charles University Prague
-  note: Supervision of two MA theses in philosophy; seminars assessed by essays
+  note: Supervision of two MA theses in philosophy
   courses:
+    - term: Summer semester 2019
+      kind: Seminar
+      title: Philosophy and Literature
+      text: Since the linguistic turn, philosophy has had to reflect on how its insights are mediated by language – including the literary forms of its works. The seminar examined, on classical works and recent research, how far the literary form of philosophical works shapes their content as philosophical knowledge.
+      sessions:
+        - Dieter Henrich I
+        - Dieter Henrich II
+        - Wittgenstein I
+        - Wittgenstein II
+        - "Frauke Berndt, *Poema/Gedicht*"
+        - Alexander Gottlieb Baumgarten I
+        - Alexander Gottlieb Baumgarten II
+        - "Gottfried Gabriel, “Literarische Form und nicht-propositionale Erkenntnis”"
+        - "Thomas Rentsch, “Die Kultur der quaestio”"
+        - "Carlos Spoerhase, “Was ist ein Werk?”"
+        - "Steffen Martus, “Die Selbstanregung des Werks”"
+        - Hans Blumenberg, metaphorology I
+        - Hans Blumenberg, metaphorology II
+      readings:
+        - "Dieter Henrich: *Werke im Werden. Über die Genesis philosophischer Einsichten*, München 2011"
+        - "Irina Wutsdorff: “Philosophie und Literatur – Erkenntnis und Darstellung. Einführende Bemerkungen zu einem komplizierten Verhältnis”, in: Catrin Misselhorn, Schamma Schahadat, Irina Wutsdorff (eds.): *Erkenntnis und Darstellung. Formen der Philosophie und der Literatur*, Paderborn 2011, pp. 7–18"
+        - "Irina Wutsdorff: *Bachtin und der Prager Strukturalismus. Modelle poetischer Offenheit am Beispiel der tschechischen Avantgarde*, München 2006"
+        - "Gottfried Gabriel, Christiane Schildknecht (eds.): *Literarische Formen der Philosophie*, Stuttgart 1990"
+        - "Frauke Berndt: *Poema/Gedicht. Die epistemische Konfiguration der Literatur um 1750*, Berlin 2011"
+        - "Steffen Martus: *Werkpolitik*, Berlin 2007"
+        - "Carlos Spoerhase: *Autorschaft und Interpretation. Methodische Grundlagen einer philologischen Hermeneutik*, Berlin 2012"
+        - "Hans Blumenberg: *Paradigmen zu einer Metaphorologie*, Frankfurt am Main 1960"
+    - term: Summer semester 2019
+      kind: Seminar
+      title: Philosophers and Transcendence
+      text: What does transcendence mean in philosophical, theological or artistic contexts, and does it have a historical or social dimension of its own? The seminar pursued these questions through key analyses by Hegel, Heidegger, Husserl, Charles Taylor and others.
+      sessions:
+        - Hegel I
+        - Hegel II
+        - Heidegger I
+        - Heidegger II
+        - Hegel and Heidegger compared
+        - Charles Taylor I
+        - Charles Taylor II
+        - Husserl
+        - Meister Eckhart
+        - Nicholas of Cusa
+        - George Berkeley
+        - Kierkegaard
+        - Merleau-Ponty
+      readings:
+        - "Alexander Berg: *Transzendenz bei Hegel und Heidegger*, Nordhausen 2012"
+        - "Aleš Novák (ed.): *Grenzen der Transzendenz*, Nordhausen 2013"
+        - "Charles Taylor: *Ein säkulares Zeitalter*, Frankfurt am Main 2009"
+        - "Markus Enders: “Transzendenz”, in: *Historisches Wörterbuch der Philosophie*, pp. 1442–1455"
+        - "Pirmin Stekeler-Weithofer: *Sinn*, Berlin 2011, ch. 2: “Transzendenz und Immanenz”, pp. 43–70"
+        - "Thomas Rentsch: *Gott*, Berlin 2005, ch. 2, pp. 48–108"
+        - "Jean-Luc Marion: “The Event, the Phenomenon, and the Revealed”, in: James E. Faulconer (ed.): *Transcendence in Philosophy and Religion*, pp. 87–105"
     - term: Winter semester 2018/19
       kind: Seminar
       topic: Reading Hegel’s *Phenomenology of Spirit*
-      text: The *Phenomenology* is one of the most famous works in the history of philosophy, but its dense style makes it hard to enter. The seminar offered a way in for beginners, with advanced readers welcome.
+      text: The *Phenomenology* is one of the most famous works in the history of philosophy, but its dense style makes it hard to enter. The seminar offered a way in for beginners, with advanced readers welcome. Assessed by essays.
     - term: Winter semester 2018/19
       kind: Seminar
       topic: Wittgenstein’s philosophical development and its Cambridge background
-      text: When Wittgenstein came to Cambridge in 1911, analytic philosophy was just emerging, shaped by the debate between his teachers Bertrand Russell and G. E. Moore and the British Hegelians F. H. Bradley and J. M. E. McTaggart. The seminar discussed the main stages of Wittgenstein’s thought against this background.
+      text: When Wittgenstein came to Cambridge in 1911, analytic philosophy was just emerging, shaped by the debate between his teachers Bertrand Russell and G. E. Moore and the British Hegelians F. H. Bradley and J. M. E. McTaggart. The seminar discussed the main stages of Wittgenstein’s thought against this background. Assessed by essays.
 
 - years: 2013–2014
   title: Seminars on Wittgenstein’s philosophy (teaching assignments, with examinations)

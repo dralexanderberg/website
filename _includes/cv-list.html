@@ -19,7 +19,7 @@
           {%- if c.sessions %}
           <ol>
             {%- for s in c.sessions %}
-            <li>{{ s }}</li>
+            <li>{{ s | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>
             {%- endfor %}
           </ol>
           {%- endif %}
