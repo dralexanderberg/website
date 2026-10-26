@@ -7,7 +7,7 @@ description: >-
 ---
 <h1>Publications</h1>
 <nav class="toc" aria-label="Sections">
-  <a href="#monographs">Monographs</a> · <a href="#edited">Edited volumes</a> · <a href="#articles">Articles</a> · <a href="#translations">Translations</a> · <a href="#online">Online edition</a> · <a href="#reviews">Reviews of my books</a>
+  <a href="#monographs">Monographs</a> · <a href="#edited">Edited volumes</a> · <a href="#articles">Articles</a> · <a href="#translations">Translations</a> · <a href="#online">Online edition</a> · <a href="#reviews">Reviews and endorsements</a>
 </nav>
 <p class="bib-download">All publications as a <a href="{{ '/berg-publications.bib' | relative_url }}" download>BibTeX file</a>, for Zotero, Citavi and other reference managers.</p>
 
@@ -37,22 +37,33 @@ description: >-
 </section>
 
 <section aria-labelledby="reviews">
-  <h2 id="reviews">Reviews of my books</h2>
-  {%- for p in site.data.publications %}{% if p.reviews %}
+  <h2 id="reviews">Reviews and endorsements</h2>
+  {%- for p in site.data.publications %}{% if p.reviews or p.endorsements %}
   <h3 id="reviews-{{ p.id }}"><cite>{{ p.title }}</cite> ({{ p.publisher | split: "," | first }} {{ p.date }})</h3>
+  {%- if p.reviews %}
   <ul class="reviews">
     {%- for r in p.reviews %}
-    <li>
-      {%- if r.by %}
-      {%- if r.quote %}
-      {%- case r.lang %}{% when "de" %}{% assign q1 = "„" %}{% assign q2 = "“" %}{% when "fr" %}{% assign q1 = "«&nbsp;" %}{% assign q2 = "&nbsp;»" %}{% else %}{% assign q1 = "“" %}{% assign q2 = "”" %}{% endcase %}
-      <blockquote{% if r.lang %} lang="{{ r.lang }}"{% endif %}><p>{{ q1 }}{{ r.quote }}{{ q2 }}</p></blockquote>
-      {%- if r.translation %}<p class="review-translation">“{{ r.translation }}” (my translation)</p>{% endif %}
-      {%- endif %}
-      <p class="review-source">{{ r.by }}, {{ r.source }}{% if r.url %} – <a href="{{ r.url }}">{% if r.url contains "doi.org/" %}doi:{{ r.url | split: "doi.org/" | last }}{% else %}Online{% endif %}</a>{% endif %}</p>
-      {%- else %}{{ r }}{% endif %}
-    </li>
+    <li>{% include review-item.html r=r %}</li>
     {%- endfor %}
   </ul>
+  {%- endif %}
+  {%- comment %} passages in these reviews about my own chapter in the volume {% endcomment %}
+  {%- assign chapters = site.data.publications | where: "in", p.title %}
+  {%- for c in chapters %}{% if c.discussed %}
+  <h4 class="reviews-sub" id="reviews-{{ c.id }}">On my chapter “{{ c.title }}”</h4>
+  <ul class="reviews">
+    {%- for r in c.discussed %}
+    <li>{% include review-item.html r=r %}</li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}{% endfor %}
+  {%- if p.endorsements %}
+  <h4 class="reviews-sub">From the back cover</h4>
+  <ul class="reviews">
+    {%- for r in p.endorsements %}
+    <li>{% include review-item.html r=r %}</li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
   {%- endif %}{% endfor %}
 </section>
