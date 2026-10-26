@@ -195,7 +195,7 @@ details.cv-syllabus ol li { margin: 0 0 0.2rem; }
   .site-header nav, .skip, .site-footer, .more, .intro-links { display: none; }
   html { background: #fff; font-size: 11pt; }
   .wrap { max-width: none; padding: 0; }
-  main { padding: 0; }
+  main, main.wrap { padding: 0; }
   a { color: inherit; text-decoration: none; }
   .diary { grid-template-columns: repeat(3, 1fr); }
   .stage, .entry, .biblio li { break-inside: avoid; }
