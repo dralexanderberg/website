@@ -1,0 +1,188 @@
+# CV – shown on /cv/ ("CV" in the menu). Every list: newest first (add new entries at the top).
+# Memberships stay in memberships.yml; publications, talks and conferences are counted
+# from their own files and linked.
+#
+# Fields of an entry (leave out the lines you do not need):
+#   - years: 2021–2023                 # as it should appear; without years the date column stays empty
+#     title: What                      # main line; *italics* with one asterisk on each side
+#     place: Institution
+#     with: Name                       # host or supervisor, shown as "(with Name)"
+#     note: An extra line
+#     url: https://…                   # links the main line
+#
+# Courses (only under teaching) – template for one course, see README section 8:
+#     courses:
+#       - term: Winter semester 2013/14
+#         kind: Seminar                # optional: Seminar, Lecture, …
+#         title: Title of the course   # the official title (shown in quotation marks);
+#                                      # without one, write topic: instead (shown without)
+#         text: One or two sentences on the course.     # optional
+#         sessions:                    # optional: session plan, shown folded
+#           - "§§ 1–25: Topic of the session"
+#         readings:                    # optional, shown with the session plan
+#           - "Author: *Title*, Place Year"
+
+positions:
+
+- years: 2023–2024
+  title: Postdoctoral Fellow of the Alexander von Humboldt Foundation
+  place: University of Konstanz
+  with: Albrecht Koschorke
+
+- years: 2021–2023
+  title: Feodor Lynen Research Fellow of the Alexander von Humboldt Foundation
+  place: Deutsches Seminar, University of Zurich
+  with: Frauke Berndt
+
+- years: 2019–2021
+  title: Research Associate
+  place: Institute of Philosophy, TU Dresden
+  with: Thomas Rentsch
+
+- years: "2020"
+  title: DAAD Postdoctoral Fellow
+  place: Deutsches Seminar, University of Zurich
+  with: Frauke Berndt
+
+- years: 2018–2019
+  title: Research stay and teaching assignments
+  place: Faculty of Humanities, Charles University Prague
+  with: Karel Novotný
+
+education:
+
+- years: in progress
+  title: Habilitation
+  place: University of Zurich
+  note: "Thesis: *Zur literarischen Form von Philosophie – Grundlinien eines Systems der Literatur*"
+  url: /research/#habilitation
+
+- years: "2018"
+  title: Dr. phil., *summa cum laude*
+  place: TU Dresden and Charles University Prague (joint doctorate, cotutelle)
+  note: "Thesis: *Absolutes Wissen und Grundlose Gewissheit – Hegel und Wittgenstein*, published as *Wittgensteins Hegel* (2021). Supervisors: Thomas Rentsch and Hans Rainer Sepp"
+
+- years: "2013"
+  title: Magister Artium in Philosophy
+  place: TU Dresden
+  note: "Thesis: *Transzendenz bei Hegel und Heidegger*, written in the Collaborative Research Centre (SFB) 804 “Transzendenz und Gemeinsinn”"
+
+- years: 2002–2013
+  title: Studies of philosophy, art history and psychology
+  place: TU Dresden, the Sorbonne (Paris) and the University of Florence
+
+research_stays:
+
+- years: "2016"
+  title: University of Chicago
+  with: James Conant
+
+- years: "2016"
+  title: Wren Library, Trinity College Cambridge
+
+- years: 2014–2015
+  title: Research assignment at the Wittgenstein Archives at the University of Bergen
+  with: Alois Pichler
+
+teaching:
+
+- years: "2022"
+  title: Course in the MA module “Cultural Diagnosis”
+  place: University of Zurich
+  courses:
+    - term: Autumn semester 2022
+      title: Literary Thinking – Introduction to the Literary History of Philosophy
+
+- years: 2018–2019
+  title: Courses on philosophy and literature (teaching assignments)
+  place: Faculty of Humanities, Charles University Prague
+  note: Supervision of two MA theses in philosophy; seminars assessed by essays
+  courses:
+    - term: Winter semester 2018/19
+      kind: Seminar
+      topic: Reading Hegel’s *Phenomenology of Spirit*
+      text: The *Phenomenology* is one of the most famous works in the history of philosophy, but its dense style makes it hard to enter. The seminar offered a way in for beginners, with advanced readers welcome.
+    - term: Winter semester 2018/19
+      kind: Seminar
+      topic: Wittgenstein’s philosophical development and its Cambridge background
+      text: When Wittgenstein came to Cambridge in 1911, analytic philosophy was just emerging, shaped by the debate between his teachers Bertrand Russell and G. E. Moore and the British Hegelians F. H. Bradley and J. M. E. McTaggart. The seminar discussed the main stages of Wittgenstein’s thought against this background.
+
+- years: 2013–2014
+  title: Seminars on Wittgenstein’s philosophy (teaching assignments, with examinations)
+  place: Institute of Philosophy, TU Dresden
+  courses:
+    - term: Summer semester 2014
+      kind: Seminar
+      title: "Ludwig Wittgenstein: Über Gewißheit"
+      text: "Written until a few days before his death, *On Certainty* can be read as Wittgenstein’s philosophical testament. The seminar introduced his late thought and its place in the wider discourse of philosophy through a problem-oriented reading of selected sections. Taught in German, for BA and teacher-training modules (philosophy and ethics). Text: Ludwig Wittgenstein, *Über Gewißheit*, Frankfurt am Main: Suhrkamp 1984."
+    - term: Winter semester 2013/14
+      kind: Seminar
+      title: "Ludwig Wittgenstein: Philosophische Untersuchungen"
+      text: An introduction to Wittgenstein’s thought through the reading and discussion of sections of the *Philosophical Investigations*. Taught in German.
+      sessions:
+        - Introductory session
+        - "§§ 1–25: Language games and meaning I"
+        - "§§ 26–43: Language games and meaning II"
+        - "§§ 44–64: Analysis of language"
+        - "§§ 65–88: Family resemblance"
+        - "§§ 89–133: Language and philosophy"
+        - "§§ 134–155: Rule-following I – understanding and knowing"
+        - "§§ 156–178: Rule-following II – reading"
+        - "§§ 179–197: Rule-following III – meaning something (Meinen)"
+        - "§§ 198–242: Rule-following IV – rules and form of life"
+        - "§§ 243–280: Private language I"
+        - "§§ 281–315: Private language II"
+        - "§§ 633–693 and concluding discussion"
+      readings:
+        - "Ludwig Wittgenstein: *Philosophische Untersuchungen*, Frankfurt am Main: Suhrkamp 2003"
+        - "Eike von Savigny (ed.): *Ludwig Wittgenstein: Philosophische Untersuchungen* (Klassiker Auslegen), Berlin: Akademie Verlag 1998"
+        - "Ernst Michael Lange: *Ludwig Wittgenstein: Philosophische Untersuchungen. Eine kommentierende Einführung*, Stuttgart: UTB 1998"
+        - "Wolfgang Kienzler: *Ludwig Wittgensteins „Philosophische Untersuchungen“*, Darmstadt: Wissenschaftliche Buchgesellschaft 2007"
+        - "Peter M. S. Hacker: *Wittgenstein im Kontext der analytischen Philosophie*, Frankfurt am Main: Suhrkamp 1997"
+        - "Thomas Rentsch: *Heidegger und Wittgenstein*, Stuttgart: Klett-Cotta 2003"
+        - "Ray Monk: *Wittgenstein. Das Handwerk des Genies*, Stuttgart 2004"
+
+grants:
+
+- years: 2023–2024
+  title: Postdoctoral fellowship of the Alexander von Humboldt Foundation (University of Konstanz)
+
+- years: 2021–2023
+  title: Feodor Lynen Research Fellowship of the Alexander von Humboldt Foundation (University of Zurich)
+
+- years: "2020"
+  title: Postdoctoral fellowship of the German Academic Exchange Service, DAAD (University of Zurich)
+
+- title: Publication grant from the Förderfonds Wissenschaft of VG Wort for *Wittgensteins Hegel* (2021)
+
+service:
+
+- years: "2023"
+  title: Member of the appointment committee for the Assistant Professorship (Tenure Track) in Quantitative Methods of Intervention and Evaluation
+  place: Department of Psychology, University of Zurich
+  note: Delegate of the Association of Advanced Researchers and Lecturers of the University of Zurich (VFFL)
+
+- years: 2016–2024
+  title: Organization of international conferences and workshops, among them the series “Wittgenstein & Hegel” (2017–2024)
+  url: /conferences/
+
+- title: Peer review for *Topoi* (Springer Nature)
+
+- years: 2002–2005
+  title: Deputy speaker of the student council of the Faculty of Philosophy (three terms)
+  place: TU Dresden
+  note: Student member of the Institute Council of Philosophy, the Study Commission for Philosophy, the Examination Board and the library commission of the Saxon State and University Library
+
+outreach:
+
+- years: "2021"
+  title: Live talk at the Burgtheater Vienna on the premiere of *Alles, was der Fall ist*
+  url: /talks/#y2021
+
+- years: 2012–2013
+  title: Radio show and podcast “Denkzeit, die philosophische Selbsthilfe”
+  url: https://www.freie-radios.net/serie/denkzeitdiephilosophischeselbsthilfe
+
+languages:
+  fluent: German, English, Italian, French
+  basic: Latin, Czech, Norwegian, Russian

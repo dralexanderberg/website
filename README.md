@@ -13,7 +13,8 @@ Diese Website wird von GitHub Pages aus den Dateien in diesem Repository erzeugt
 | `_data/research.yml` | Texte der Forschungsseite (zwei Forschungsfelder, Habilitation) und die dort gezeigte Auswahl | Research |
 | `_data/motto.yml` | Motto (Hegel, Wittgenstein und Schlegel) | Startseite |
 | `_data/selected_texts.yml` | ausgewählte Texte zum Herunterladen (solange leer, ist die Rubrik unsichtbar) | Startseite, Selected Texts |
-| `_data/memberships.yml` | Mitgliedschaften | About |
+| `_data/cv.yml` | Lebenslauf: Stationen, Abschlüsse, Forschungsaufenthalte, Lehre, Förderung, Gremien, Vermittlung, Sprachen (siehe Abschnitt 8) | CV |
+| `_data/memberships.yml` | Mitgliedschaften | CV |
 | `images/portrait.jpg` | Porträtfoto | Startseite |
 | `files/conferences/` | PDFs der Tagungen | Conferences |
 | `images/posters/` | Vorschaubilder der Tagungsplakate | Conferences |
@@ -153,6 +154,15 @@ Diese Felder nutzt vor allem die BibTeX-Datei:
 - **Zotero:** Datei herunterladen, dann in Zotero „Datei → Importieren…“.
 - **ORCID:** im Bereich „Works“ auf „+ Add“: Werke mit DOI am besten über „Add DOI“ (dann kommen die Daten direkt von Crossref), den Rest über „Import BibTeX“. ORCID zeigt vorher eine Liste, aus der man auswählt (forthcoming-Titel besser erst nach Erscheinen). Die Übersetzungen besser von Hand als „Translation“ anlegen.
 - **PhilPapers:** zuerst unter „My works“ prüfen, was PhilPapers schon über den Namen zugeordnet hat, und Fremdes mit „not mine“ markieren; dann „Submit material → Upload a bibliography“ und die Datei hochladen. Vorhandene Einträge werden zugeordnet, nur fehlende neu angelegt.
+
+## 8. Lebenslauf (CV)
+
+Die Seite **CV** (alexanderberg.ch/cv/) entsteht aus **`_data/cv.yml`**; sie ersetzt die frühere Seite „About“ (alte Links auf /about/ führen automatisch zur CV-Seite). Die Zahlen unter „Publications and talks“ zählt die Seite selbst aus `publications.yml` und `talks.yml`, die Mitgliedschaften kommen aus `memberships.yml`.
+
+- **Neuer Eintrag:** in der passenden Liste (`positions`, `education`, `research_stays`, `teaching`, `grants`, `service`, `outreach`) **ganz oben**, nach der Vorlage am Dateianfang. `years:` ist der Zeitraum, wie er erscheinen soll; ohne `years:` bleibt die Datumsspalte leer (so bei der VG-Wort-Förderung und den Gutachten für *Topoi*, deren Jahr noch fehlt).
+- **Lehrveranstaltung ergänzen:** beim Eintrag der Universität unter `courses:` einen Kurs mit `term:` (z. B. `Winter semester 2014/15`), `kind:` (z. B. `Seminar`) und `title:` (offizieller Titel, erscheint in Anführungszeichen; ist er nicht bekannt, stattdessen `topic:` mit einer Beschreibung, ohne Anführungszeichen); optional `text:` (ein, zwei Sätze), `sessions:` (Sitzungsplan) und `readings:` (Literatur). Sitzungsplan und Literatur erscheinen eingeklappt; Beispiel: das Seminar zu den *Philosophischen Untersuchungen* (Winter 2013/14). Für eine neue Universität einen neuen Eintrag unter `teaching:` anlegen.
+- **Nur Berufliches:** keine Geburtsdaten, Adressen, Familienangaben und keine Namen von Studierenden (es genügt z. B. „Supervision of two MA theses“). Seminarpläne vor dem Übernehmen auf private Kontaktdaten prüfen.
+- **Als PDF:** Die Seite ist für den Druck eingerichtet. Im Browser „Drucken“ und dann „Als PDF sichern“ wählen: Es entsteht ein Lebenslauf von etwa drei Seiten mit Webadresse, ORCID und Stand (Monat und Jahr); Menü und Fußzeile fallen weg, bei den Lehrveranstaltungen stehen nur Semester und Titel (Beschreibungen und Sitzungspläne bleiben auf der Website).
 
 ## Technisches (nur zur Information)
 
