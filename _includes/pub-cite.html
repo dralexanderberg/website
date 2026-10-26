@@ -14,4 +14,5 @@
 {%- if p.isbn %}{% if p.type == "monograph" or p.type == "edited" %}{% unless p.url contains "doi.org/" %} – <span class="isbn">ISBN {{ p.isbn }}</span>{% endunless %}{% endif %}{% endif -%}
 {%- if p.url %} – <a href="{{ href }}">{{ link_label }}</a>{% endif -%}
 {%- if p.toc %} – <a href="{{ p.toc | relative_url }}">Table of contents (PDF)</a>{% endif -%}
+{%- if p.reviews %} – <a href="{{ '/publications/' | relative_url }}#reviews-{{ p.id }}">{% if p.reviews.size == 1 %}Review{% else %}Reviews ({{ p.reviews.size }}){% endif %}</a>{% endif -%}
 {%- if site.data.selected_texts %}{% assign st = site.data.selected_texts | where: "pub", p.id | first %}{% if st.file %} – <a href="{{ st.file | relative_url }}">{{ st.version | capitalize }} (PDF)</a>{% endif %}{% if st.open_access %} – <a href="{{ st.open_access }}">Free download at the publisher</a>{% endif %}{% endif -%}

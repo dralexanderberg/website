@@ -94,7 +94,7 @@ Datei `_data/publications.yml` öffnen. Den neuen Eintrag **oben in der passende
 - `type`: `monograph`, `edited`, `article` oder `translation`.
 - Noch nicht erschienen? Zeile `status: forthcoming` hinzufügen.
 - Links nur auf Verlagsseite oder DOI, nicht auf Amazon.
-- Rezension eines Buches: beim Buch unter `reviews:` eine Zeile ergänzen (Beispiel bei „Wittgensteins Hegel“).
+- Rezension eines Buches: beim Buch unter `reviews:` einen Eintrag ergänzen (Beispiele bei „Wittgensteins Hegel“ und „Wittgenstein and Hegel“): `by:` Rezensent (Universität), `source:` Zeitschrift, Jahr, Seiten, optional `url:` (Link zur Rezension) und `quote:` (ein kurzes Zitat). Ist das Zitat nicht englisch, `lang: de` oder `lang: fr` und `translation:` mit der englischen Übersetzung dazuschreiben. Die Rezensionen erscheinen unter „Reviews of my books“ auf der Publications-Seite; beim Buch steht ein Link dorthin. Die PDFs der Rezensionen selbst nicht hochladen: Die Rechte liegen bei den Verlagen.
 - Für die BibTeX-Datei sind außerdem `isbn:`, `doi:` und bei Zeitschriftenaufsätzen `journal:`, `volume:`, `issue:` nützlich (siehe Abschnitt 7).
 
 ## 4. Einen Text mit PDF unter „Selected Texts“ ergänzen

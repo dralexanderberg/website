@@ -39,9 +39,20 @@ description: >-
 <section aria-labelledby="reviews">
   <h2 id="reviews">Reviews of my books</h2>
   {%- for p in site.data.publications %}{% if p.reviews %}
-  <h3><cite>{{ p.title }}</cite> ({{ p.publisher | split: "," | first }} {{ p.date }})</h3>
-  <ul class="biblio">
-    {%- for r in p.reviews %}<li>{{ r }}</li>{% endfor %}
+  <h3 id="reviews-{{ p.id }}"><cite>{{ p.title }}</cite> ({{ p.publisher | split: "," | first }} {{ p.date }})</h3>
+  <ul class="reviews">
+    {%- for r in p.reviews %}
+    <li>
+      {%- if r.by %}
+      {%- if r.quote %}
+      {%- case r.lang %}{% when "de" %}{% assign q1 = "„" %}{% assign q2 = "“" %}{% when "fr" %}{% assign q1 = "«&nbsp;" %}{% assign q2 = "&nbsp;»" %}{% else %}{% assign q1 = "“" %}{% assign q2 = "”" %}{% endcase %}
+      <blockquote{% if r.lang %} lang="{{ r.lang }}"{% endif %}><p>{{ q1 }}{{ r.quote }}{{ q2 }}</p></blockquote>
+      {%- if r.translation %}<p class="review-translation">“{{ r.translation }}” (my translation)</p>{% endif %}
+      {%- endif %}
+      <p class="review-source">{{ r.by }}, {{ r.source }}{% if r.url %} – <a href="{{ r.url }}">{% if r.url contains "doi.org/" %}doi:{{ r.url | split: "doi.org/" | last }}{% else %}Online{% endif %}</a>{% endif %}</p>
+      {%- else %}{{ r }}{% endif %}
+    </li>
+    {%- endfor %}
   </ul>
   {%- endif %}{% endfor %}
 </section>
