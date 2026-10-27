@@ -207,6 +207,7 @@ h4.reviews-sub { margin: 1.3rem 1.2rem 0.8rem; color: var(--steel); font-size: 0
 .cv-list dt:first-child { margin-top: 0; }
 .cv-list dd { margin: 0; }
 .cv-note { display: block; color: var(--muted); font-size: 0.95rem; margin-top: 0.1rem; }
+.cv-section-note { color: var(--muted); font-size: 0.92rem; max-width: 46rem; margin: -0.2rem 0 1rem; }
 .cv-courses { list-style: none; margin: 0.5rem 0 0; padding: 0; }
 .cv-courses > li { margin: 0 0 0.7rem; }
 details.cv-syllabus { margin-top: 0.5rem; font-size: 0.95rem; }
@@ -318,10 +319,12 @@ details.talks { clear: both; }
   .print-only { display: revert; }
   .cv-print-meta { color: var(--muted); margin-top: 0.3rem; }
   .cv h1 { font-size: 2rem; }
-  .cv h2 { font-size: 1.2rem; margin: 1.6rem 0 0.5rem; break-after: avoid; }
+  .cv h2 { font-size: 1.2rem; margin: 1.3rem 0 0.4rem; break-after: avoid; }
   .cv-list { grid-template-columns: 6.5rem 1fr; }
   .cv-list dt { margin-top: 0; }
-  .cv-list dd { margin-bottom: 0.45rem; break-inside: avoid; }
+  .cv-list dd { margin-bottom: 0.35rem; break-inside: avoid; }
   .cv .biblio li { margin-bottom: 0.1rem; }
+  .cv-memberships { columns: 2; column-gap: 1.5rem; max-width: none; }
+  .cv-memberships li { break-inside: avoid; }
   details.cv-syllabus, .cv-courses .cv-note { display: none; }
 }

@@ -3,7 +3,7 @@ layout: default
 title: CV
 description: >-
   Curriculum vitae of Alexander Berg: positions and fellowships, education,
-  teaching, grants, academic service, memberships, publications and languages.
+  teaching, grants and scholarships, academic service, memberships, publications and languages.
 ---
 {%- assign cv = site.data.cv %}
 <div class="cv">
@@ -35,7 +35,10 @@ description: >-
 </section>
 
 <section aria-labelledby="grants">
-  <h2 id="grants">Grants</h2>
+  <h2 id="grants">Grants and scholarships</h2>
+  {%- if cv.grants_note %}
+  <p class="cv-section-note">{{ cv.grants_note | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+  {%- endif %}
   {% include cv-list.html items=cv.grants %}
 </section>
 
@@ -46,7 +49,7 @@ description: >-
 
 <section aria-labelledby="memberships">
   <h2 id="memberships">Memberships</h2>
-  <ul class="biblio">
+  <ul class="biblio cv-memberships">
   {%- for m in site.data.memberships %}<li>{{ m }}</li>{% endfor %}
   </ul>
 </section>
