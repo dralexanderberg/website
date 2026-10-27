@@ -24,7 +24,7 @@ description: >-
   <h3>Selected talks</h3>
   <ul class="biblio">
     {%- for id in f.talks %}{% assign t = site.data.talks | where: "id", id | first %}{% if t %}
-    <li>{{ t.title }} [{{ t.venue }}]</li>{% endif %}{% endfor %}
+    <li><span class="talk-title">{{ t.title }}</span> <span class="talk-venue">[{{ t.venue }}]</span></li>{% endif %}{% endfor %}
   </ul>
   {%- endif %}
   {%- if f.links %}

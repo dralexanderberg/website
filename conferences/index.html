@@ -12,7 +12,8 @@ structured_data: events-jsonld.html
 <h1>Conferences Organized</h1>
 
 <nav class="toc" aria-label="Sections">
-{%- if conf.in_preparation %}<a href="#in-preparation">In preparation</a> · {% endif %}<a href="#series">Series “Wittgenstein &amp; Hegel”</a>: {% for c in conf.series %}<a href="#{{ c.id }}">{{ c.city }} {{ c.start | date: "%Y" }}</a> · {% endfor %}<a href="#volumes">Volumes</a>{% if conf.further %} · <a href="#further">Further conferences and workshops</a>{% endif %}
+  {%- if conf.in_preparation %}<a href="#in-preparation">In preparation</a> {% endif %}<a href="#series">Series “Wittgenstein &amp; Hegel”</a> <a href="#volumes">Volumes from the series</a>{% if conf.further %} <a href="#further">Further conferences and workshops</a>{% endif %}
+  <span class="toc-sub">The series: {% for c in conf.series %}<a href="#{{ c.id }}">{{ c.city }} {{ c.start | date: "%Y" }}</a> {% endfor %}</span>
 </nav>
 
 {%- if conf.in_preparation %}
@@ -59,7 +60,7 @@ structured_data: events-jsonld.html
     {%- if c.url %}<dt>Website</dt><dd><a href="{{ c.url }}">{{ c.url | remove_first: "https://" | remove_first: "http://" | split: "/" | first }}</a></dd>{% endif %}
     {%- if c.files %}<dt>Documents</dt><dd>{% for f in c.files %}<a href="{{ f.file | relative_url }}">{{ f.label }}</a> (PDF){% unless forloop.last %} · {% endunless %}{% endfor %}</dd>{% endif %}
     {%- if videos.size > 0 %}<dt>Recordings</dt><dd>{{ videos.size }} talks on YouTube, linked in the list of talks</dd>{% endif %}
-    {%- if c.volume %}{% assign v = site.data.publications | where: "id", c.volume | first %}<dt>Volume</dt><dd>{% include pub-cite.html pub=v %}</dd>{% endif %}
+    {%- if c.volume %}{% assign v = site.data.publications | where: "id", c.volume | first %}<dt>Volume</dt><dd><a href="{{ '/publications/' | relative_url }}#{{ v.id }}"><cite>{{ v.title }}</cite></a> ({{ v.publisher | split: "," | first }} {{ v.date }}{% if v.status %}, {{ v.status }}{% endif %})</dd>{% endif %}
   </dl>
   {%- include talk-list.html talks=c.talks %}
 </section>

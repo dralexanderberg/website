@@ -1,15 +1,18 @@
-{%- comment -%} One bibliographic entry from publications.yml. Usage: include pub-cite.html pub=p {%- endcomment -%}
+{%- comment -%} One bibliographic entry from publications.yml: the title on the first line, where it was published and the links below it. Usage: include pub-cite.html pub=p {%- endcomment -%}
 {%- assign p = include.pub -%}
-{%- capture bracket -%}{{ p.publisher }}{% if p.date %} {{ p.date }}{% endif %}{% if p.pages %}: {{ p.pages }}{% endif %}{% if p.note %}, {{ p.note }}{% endif %}{% if p.status %}, {{ p.status }}{% endif %}{%- endcapture -%}
+{%- capture bracket -%}{{ p.publisher }}{% if p.date %} {{ p.date }}{% endif %}{% if p.pages %}: {{ p.pages }}{% endif %}{% if p.note %}, {{ p.note }}{% endif %}{%- endcapture -%}
 {%- capture link_label -%}{% if p.url_label %}{{ p.url_label }}{% elsif p.url contains "doi.org/" %}doi:{{ p.url | split: "doi.org/" | last }}{% elsif p.url contains ".pdf" %}PDF{% else %}Publisher{% endif %}{%- endcapture -%}
 {%- assign href = p.url -%}{%- unless p.url contains "://" %}{% assign href = p.url | relative_url %}{% endunless -%}
-{%- if p.type == "translation" %}{{ p.author }}, {% endif -%}
-{%- if p.type == "monograph" or p.type == "edited" %}<cite>{{ p.title }}</cite>{% else %}{{ p.title }}{% endif -%}
-{%- if p.editors %}, {{ p.editors }} (eds.){% endif -%}
-{%- if p.in %}{% if p.type == "edited" %}, {{ p.in }}{% else %}, in: <cite>{{ p.in }}</cite>{% endif %}{% endif -%}
+{%- capture where -%}
+{%- if p.editors %}{{ p.editors }} (eds.){% endif -%}
+{%- if p.in %}{% if p.editors %}, {% endif %}{% if p.type == "edited" %}{{ p.in }}{% else %}in: <cite>{{ p.in }}</cite>{% endif %}{% endif -%}
 {%- if p.in_editors %}, {{ p.in_editors }}{% endif -%}
-{%- if p.series %}, {{ p.series }}{% endif -%}
-{%- if bracket != "" %} [{{ bracket }}]{% endif -%}
+{%- if p.series %}{% if p.editors or p.in %}, {% endif %}{{ p.series }}{% endif -%}
+{%- endcapture -%}
+<span class="pub-title">{% if p.type == "translation" %}{{ p.author }}, {% endif %}{% if p.type == "monograph" or p.type == "edited" %}<cite>{{ p.title }}</cite>{% else %}{{ p.title }}{% endif %}</span>
+{%- if p.status %} <span class="pub-status">{{ p.status }}</span>{% endif %}
+<span class="pub-meta">{{ where }}
+{%- if bracket != "" %}{% if where != "" %} [{{ bracket }}]{% else %}{{ bracket }}{% endif %}{% endif -%}
 {%- comment %} ISBN only for books without DOI; for chapters and DOI books it goes into the BibTeX file alone {% endcomment -%}
 {%- if p.isbn %}{% if p.type == "monograph" or p.type == "edited" %}{% unless p.url contains "doi.org/" %} – <span class="isbn">ISBN {{ p.isbn }}</span>{% endunless %}{% endif %}{% endif -%}
 {%- if p.url %} – <a href="{{ href }}">{{ link_label }}</a>{% endif -%}
@@ -18,3 +21,4 @@
 {%- if p.discussed %} – <a href="{{ '/publications/' | relative_url }}#reviews-{{ p.id }}">Discussed in reviews ({{ p.discussed.size }})</a>{% endif -%}
 {%- if p.endorsements %} – <a href="{{ '/publications/' | relative_url }}#reviews-{{ p.id }}">Endorsements</a>{% endif -%}
 {%- if site.data.selected_texts %}{% assign st = site.data.selected_texts | where: "pub", p.id | first %}{% if st.file %} – <a href="{{ st.file | relative_url }}">{{ st.version | capitalize }} (PDF)</a>{% endif %}{% if st.open_access %} – <a href="{{ st.open_access }}">Free download at the publisher</a>{% endif %}{% endif -%}
+</span>
