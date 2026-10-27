@@ -3,14 +3,14 @@ layout: default
 title: CV
 description: >-
   Curriculum vitae of Alexander Berg: positions and fellowships, education,
-  teaching, grants, academic service, publications, languages and memberships.
+  teaching, grants, academic service, memberships, publications and languages.
 ---
 {%- assign cv = site.data.cv %}
 <div class="cv">
 <h1>Curriculum Vitae</h1>
 <p class="print-only cv-print-meta">{{ site.url | remove: "https://" }} · ORCID {{ site.orcid }} · as of {{ site.time | date: "%B %Y" }}</p>
 <nav class="toc" aria-label="Sections">
-  <a href="#positions">Positions</a> <a href="#education">Education</a> <a href="#stays">Research stays</a> <a href="#teaching">Teaching</a> <a href="#grants">Grants</a> <a href="#service">Academic service</a> <a href="#outreach">Public engagement</a> <a href="#publications">Publications and talks</a> <a href="#languages">Languages and memberships</a>
+  <a href="#positions">Positions</a> <a href="#education">Education</a> <a href="#stays">Research stays</a> <a href="#teaching">Teaching</a> <a href="#grants">Grants</a> <a href="#service">Academic service</a> <a href="#memberships">Memberships</a> <a href="#outreach">Public engagement</a> <a href="#publications">Publications and talks</a> <a href="#languages">Languages</a>
 </nav>
 <p class="bib-download">This page prints as a CV: in the browser, choose Print and then Save as PDF.</p>
 
@@ -35,13 +35,20 @@ description: >-
 </section>
 
 <section aria-labelledby="grants">
-  <h2 id="grants">Grants and fellowships</h2>
+  <h2 id="grants">Grants</h2>
   {% include cv-list.html items=cv.grants %}
 </section>
 
 <section aria-labelledby="service">
   <h2 id="service">Academic service</h2>
   {% include cv-list.html items=cv.service %}
+</section>
+
+<section aria-labelledby="memberships">
+  <h2 id="memberships">Memberships</h2>
+  <ul class="biblio">
+  {%- for m in site.data.memberships %}<li>{{ m }}</li>{% endfor %}
+  </ul>
 </section>
 
 <section aria-labelledby="outreach">
@@ -65,10 +72,7 @@ description: >-
 </section>
 
 <section aria-labelledby="languages">
-  <h2 id="languages">Languages and memberships</h2>
+  <h2 id="languages">Languages</h2>
   <p>Fluent: {{ cv.languages.fluent }}.<br>Basic: {{ cv.languages.basic }}.</p>
-  <ul class="biblio">
-  {%- for m in site.data.memberships %}<li>{{ m }}</li>{% endfor %}
-  </ul>
 </section>
 </div>
