@@ -73,9 +73,11 @@ research_stays:
 - years: "2016"
   title: University of Chicago
   with: James Conant
+  note: Funded by a research grant
 
 - years: "2016"
   title: Wren Library, Trinity College Cambridge
+  note: Funded by a research grant
 
 - years: 2014–2015
   title: Research assignment at the Wittgenstein Archives at the University of Bergen
@@ -212,15 +214,19 @@ teaching:
         - "Thomas Rentsch: *Heidegger und Wittgenstein*, Stuttgart: Klett-Cotta 2003"
         - "Ray Monk: *Wittgenstein. Das Handwerk des Genies*, Stuttgart 2004"
 
-# Grants not already listed as fellowships under "positions" (publication grants, conference
-# funding, travel grants); the Lynen and DAAD fellowships stand there, with host and mentor.
+# Grants not already listed elsewhere (publication grants, conference funding). The Lynen and
+# DAAD fellowships stand under "positions", grants for research stays as a note at the stay.
+# No amounts on the website.
 grants:
+
+- title: Publication funding from Charles University, Faculty of Humanities, for *Studien zur Transzendenz* (Bautz, 2025)
+  note: "Ministry of Education, Youth and Sports of the Czech Republic: Institutional Support for Long-term Development of Research Organizations; programme PROGRES Q21 “Text and Image in Phenomenology and Semiotics”"
 
 - years: "2019"
   title: Publication grant from the Förderungsfonds Wissenschaft of VG Wort for *Wittgensteins Hegel* (Wilhelm Fink, 2021)
 
 - years: "2017"
-  title: Conference grant of the Graduate Academy of TU Dresden (Excellence Initiative), EUR 10,000
+  title: Conference grant of the Graduate Academy of TU Dresden (Excellence Initiative)
   note: "For the conference “Wittgenstein und Hegel: Neubewertung einer Differenz / Reevaluation of Difference”, Dresden 2017, the first of the series “Wittgenstein & Hegel”"
   url: /conferences/#dresden-2017
 

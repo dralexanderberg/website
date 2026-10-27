@@ -318,10 +318,10 @@ details.talks { clear: both; }
   .print-only { display: revert; }
   .cv-print-meta { color: var(--muted); margin-top: 0.3rem; }
   .cv h1 { font-size: 2rem; }
-  .cv h2 { font-size: 1.2rem; margin: 1.6rem 0 0.5rem; break-after: avoid; }
+  .cv h2 { font-size: 1.2rem; margin: 1.3rem 0 0.4rem; break-after: avoid; }
   .cv-list { grid-template-columns: 6.5rem 1fr; }
   .cv-list dt { margin-top: 0; }
-  .cv-list dd { margin-bottom: 0.45rem; break-inside: avoid; }
+  .cv-list dd { margin-bottom: 0.35rem; break-inside: avoid; }
   .cv .biblio li { margin-bottom: 0.1rem; }
   details.cv-syllabus, .cv-courses .cv-note { display: none; }
 }
