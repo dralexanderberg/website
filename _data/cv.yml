@@ -1,4 +1,5 @@
 # CV – shown on /cv/ ("CV" in the menu). Every list: newest first (add new entries at the top).
+# Fellowships stand under "positions", other funding under "grants".
 # Memberships stay in memberships.yml; publications, talks and conferences are counted
 # from their own files and linked.
 #
@@ -211,13 +212,9 @@ teaching:
         - "Thomas Rentsch: *Heidegger und Wittgenstein*, Stuttgart: Klett-Cotta 2003"
         - "Ray Monk: *Wittgenstein. Das Handwerk des Genies*, Stuttgart 2004"
 
+# Grants not already listed as fellowships under "positions" (publication grants, conference
+# funding, travel grants); the Lynen and DAAD fellowships stand there, with host and mentor.
 grants:
-
-- years: 2021–2024
-  title: Feodor Lynen Research Fellowship of the Alexander von Humboldt Foundation (University of Zurich, then University of Konstanz)
-
-- years: "2020"
-  title: Postdoctoral fellowship of the German Academic Exchange Service, DAAD (University of Zurich)
 
 - title: Publication grant from the Förderfonds Wissenschaft of VG Wort for *Wittgensteins Hegel* (2021)
 
