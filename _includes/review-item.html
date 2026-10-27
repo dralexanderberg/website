@@ -6,5 +6,5 @@
 <blockquote{% if r.lang %} lang="{{ r.lang }}"{% endif %}><p>{{ q1 }}{{ r.quote }}{{ q2 }}</p></blockquote>
 {%- if r.translation %}<p class="review-translation">“{{ r.translation }}” (my translation)</p>{% endif %}
 {%- endif %}
-<p class="review-source">{{ r.by }}{% if r.source %}, {{ r.source }}{% endif %}{% if r.url %} – <a href="{{ r.url }}">{% if r.url contains "doi.org/" %}doi:{{ r.url | split: "doi.org/" | last }}{% else %}Online{% endif %}</a>{% endif %}</p>
+<p class="review-source"><span class="review-by">{{ r.by }}</span>{% if r.source %}, {{ r.source }}{% endif %}{% if r.url %} – <a href="{{ r.url }}">{% if r.url contains "doi.org/" %}doi:{{ r.url | split: "doi.org/" | last }}{% else %}Online{% endif %}</a>{% endif %}</p>
 {%- else %}{{ r }}{% endif -%}

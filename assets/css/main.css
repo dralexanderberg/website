@@ -1,4 +1,7 @@
-/* Alexander Berg – site styles. Accent: the night blue of the portrait background. */
+/* Alexander Berg – site styles. The colours come from the portrait and the two book covers:
+   the night blue of the portrait background, the steel blue of the bands on the cover of
+   "Wittgenstein and Classical German Philosophy" and the crimson of the title on the cover
+   of "Wittgensteins Hegel". */
 
 @font-face {
   font-family: "P052";
@@ -17,9 +20,14 @@
 }
 
 :root {
-  --accent: #1b2638;
+  --accent: #1b2638;       /* night blue: headings, titles */
   --accent-soft: #4a5a75;
   --accent-faint: #a9b3c4;
+  --steel: #385880;        /* steel blue: header band, links, rules */
+  --steel-light: #dce4ef;  /* text on the steel blue */
+  --crimson: #b3203f;      /* crimson: small highlights only */
+  --field: #edf1f6;        /* light steel-blue fields */
+  --field-rule: #cfd8e4;
   --text: #22252b;
   --muted: #5a606b;
   --rule: #dcd8cf;
@@ -44,8 +52,8 @@ body { margin: 0; }
 
 .wrap { max-width: var(--wide); margin: 0 auto; padding: 0 1.25rem; }
 
-a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
-a:hover { text-decoration-thickness: 2px; }
+a { color: var(--steel); text-decoration-thickness: 1px; text-underline-offset: 0.18em; text-decoration-color: rgba(56, 88, 128, 0.45); }
+a:hover { color: var(--crimson); text-decoration-color: currentColor; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
 
 h1, h2, h3 { font-weight: 400; color: var(--accent); line-height: 1.2; }
@@ -57,13 +65,15 @@ p { margin: 0 0 0.9rem; }
 .skip { position: absolute; left: -999px; top: 0; background: var(--accent); color: #fff; padding: 0.5rem 1rem; }
 .skip:focus { left: 0.5rem; z-index: 10; }
 
-/* Header */
-.site-header { border-bottom: 1px solid var(--rule); }
+/* Header: a steel-blue band as on the cover of the 2025 volume, with a crimson rule */
+.site-header { background: var(--steel); border-bottom: 3px solid var(--crimson); }
 .header-inner { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.4rem 2rem; padding-top: 1.1rem; padding-bottom: 1.1rem; }
-.site-name { font-size: 1.2rem; color: var(--accent); text-decoration: none; letter-spacing: 0.04em; }
+.site-name { font-size: 1.2rem; color: #fff; text-decoration: none; letter-spacing: 0.04em; }
+.site-name:hover { color: #fff; }
 .site-header ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.2rem 1.2rem; }
-.site-header nav a { text-decoration: none; color: var(--muted); font-size: 0.95rem; }
-.site-header nav a:hover, .site-header nav a[aria-current="page"] { color: var(--accent); text-decoration: underline; }
+.site-header nav a { text-decoration: none; color: var(--steel-light); font-size: 0.95rem; }
+.site-header nav a:hover, .site-header nav a[aria-current="page"] { color: #fff; text-decoration: underline; text-decoration-color: currentColor; }
+.site-header :focus-visible { outline-color: #fff; }
 
 main.wrap { padding-top: 2.5rem; padding-bottom: 4rem; display: flow-root; }
 
@@ -82,17 +92,20 @@ main.wrap { padding-top: 2.5rem; padding-bottom: 4rem; display: flow-root; }
 
 /* Work Diary */
 .diary { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 1.6rem; }
-.stage { border-top: 3px solid var(--accent); padding-top: 0.9rem; }
-.stage-review { border-top-color: var(--accent-soft); }
-.stage-published { border-top-color: var(--accent-faint); }
-.stage h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); }
+.stage { border-top: 3px solid var(--crimson); padding-top: 0.9rem; }
+.stage-review { border-top-color: var(--steel); }
+.stage-published { border-top-color: var(--accent); }
+.stage h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--crimson); }
+.stage-review h3 { color: var(--steel); }
+.stage-published h3 { color: var(--accent); }
 .stage ul { list-style: none; margin: 0; padding: 0; }
 .entry { padding: 0 0 1.1rem; margin: 0 0 1.1rem; border-bottom: 1px solid var(--rule); font-size: 0.95rem; line-height: 1.45; }
 .entry:last-child { border-bottom: 0; margin-bottom: 0; }
 .entry > span { display: block; }
 .entry-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 0.15rem; }
-.entry-title { font-style: italic; color: var(--text); }
+.entry-title { font-style: italic; color: var(--accent); }
 .entry-title a { color: inherit; text-decoration-color: var(--accent-faint); }
+.entry-title a:hover { color: var(--crimson); text-decoration-color: currentColor; }
 .entry-note, .entry-status, .entry-more { color: var(--muted); margin-top: 0.25rem; }
 .entry-status { font-style: italic; }
 .entry-date { color: var(--muted); font-size: 0.8rem; margin-top: 0.35rem; letter-spacing: 0.02em; }
@@ -102,21 +115,33 @@ main.wrap { padding-top: 2.5rem; padding-bottom: 4rem; display: flow-root; }
 .home-series p:first-of-type { font-size: 1rem; }
 
 /* Footer */
-.site-footer { border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.85rem; padding: 1.5rem 0 2.5rem; }
+.site-footer { border-top: 3px solid var(--steel); background: var(--field); color: var(--muted); font-size: 0.85rem; padding: 1.5rem 0 2.5rem; }
 .site-footer p { margin: 0.2rem 0; }
 .site-footer a { color: var(--muted); }
+.site-footer a:hover { color: var(--crimson); }
 
 
 /* Inner pages */
 .lead + .diary { margin-top: 1rem; }
 .prose { max-width: var(--measure); }
-.toc { font-size: 0.9rem; color: var(--muted); margin: 0.5rem 0 1rem; line-height: 1.9; }
+.toc { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 0.9rem 0 1.2rem; font-size: 0.88rem; line-height: 1.3; }
+.toc a { display: inline-block; padding: 0.3rem 0.75rem; border: 1px solid var(--field-rule); border-radius: 999px; background: var(--field); color: var(--steel); text-decoration: none; }
+.toc a:hover, .toc a:focus-visible { background: var(--steel); border-color: var(--steel); color: #fff; }
+.toc-sub { flex-basis: 100%; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.35rem; color: var(--muted); font-size: 0.82rem; }
+.toc-sub a { padding: 0.15rem 0.6rem; background: none; }
 .bib-download { font-size: 0.9rem; color: var(--muted); margin: -0.4rem 0 1rem; }
 .biblio { list-style: none; margin: 0; padding: 0; max-width: 46rem; }
 .biblio li { padding-left: 1.2rem; text-indent: -1.2rem; margin: 0 0 0.7rem; }
 .biblio a { word-break: break-word; }
+.pub-title { color: var(--accent); font-size: 1.06rem; }
+.pub-meta { display: block; text-indent: 0; margin-top: 0.15rem; color: var(--muted); font-size: 0.92rem; line-height: 1.45; }
+.pub-meta cite { color: var(--text); }
+.biblio li:has(.pub-title) { margin-bottom: 1.05rem; }
+.pub-status { display: inline-block; text-indent: 0; margin-left: 0.35rem; padding: 0 0.4rem; border: 1px solid currentColor; border-radius: 2px; color: var(--crimson); font-size: 0.68rem; line-height: 1.5; text-transform: uppercase; letter-spacing: 0.08em; vertical-align: 0.18em; white-space: nowrap; }
+.talk-title { color: var(--accent); }
+.talk-venue { color: var(--muted); font-size: 0.94rem; }
 .isbn { white-space: nowrap; }
-h2.year { font-size: 1.15rem; margin-top: 2.2rem; }
+h2.year { font-size: 1.15rem; margin-top: 2.2rem; color: var(--steel); }
 cite { font-style: italic; }
 .archive { margin-top: 1rem; }
 .archive-list { list-style: none; margin: 0; padding: 0; max-width: var(--measure); }
@@ -126,30 +151,41 @@ cite { font-style: italic; }
 .orcid-icon { width: 1.1em; height: 1.1em; flex: none; }
 
 /* Conferences */
-.conf { margin-top: 3.5rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); max-width: 46rem; display: flow-root; }
+.conf { margin-top: 3.5rem; padding-top: 1.2rem; border-top: 2px solid var(--steel); max-width: 46rem; display: flow-root; }
 .conf h2 { margin-top: 0; }
-.conf-city { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 0.3rem; }
+.conf-city { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--crimson); margin-bottom: 0.3rem; }
 .conf-meta { color: var(--muted); }
 .conf-facts { display: grid; grid-template-columns: 1fr; gap: 0.1rem 1.2rem; margin: 1rem 0; font-size: 0.95rem; }
-.conf-facts dt { color: var(--accent); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.5rem; }
+.conf-facts dt { color: var(--steel); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.5rem; }
 .conf-facts dd { margin: 0; }
-details.talks { border: 1px solid var(--rule); border-radius: 3px; background: var(--bg-tint); }
-details.talks summary { cursor: pointer; padding: 0.6rem 0.9rem; color: var(--accent); }
+details.talks { border: 1px solid var(--field-rule); border-radius: 3px; background: var(--field); }
+details.talks summary { cursor: pointer; padding: 0.6rem 0.9rem; color: var(--steel); }
 details.talks ul { list-style: none; margin: 0; padding: 0.2rem 0.9rem 0.9rem; font-size: 0.95rem; }
 details.talks li { margin: 0 0 0.5rem; }
-.talk-day { color: var(--accent); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1rem !important; }
+.talk-day { color: var(--steel); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1rem !important; }
 .talk-speaker { font-weight: 700; }
 .talk-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
 
-/* Reviews of my books (Publications page) */
-.reviews { list-style: none; margin: 0; padding: 0; max-width: var(--measure); }
-.reviews li { margin: 0 0 1.6rem; }
+/* Reviews of my books (Publications page): one card per book */
+.review-book { max-width: 46rem; margin: 1.6rem 0 2.2rem; border: 1px solid var(--field-rule); border-radius: 4px; background: #fff; }
+.review-book-head { display: flex; align-items: center; gap: 1.1rem; padding: 0.9rem 1.2rem; background: var(--field); border-bottom: 1px solid var(--field-rule); border-radius: 4px 4px 0 0; }
+.review-book-head img { display: block; width: 4.2rem; height: auto; border: 1px solid var(--field-rule); }
+.review-book-head p { margin: 0; }
+.review-book-kind { color: var(--crimson); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; }
+.review-book h3 { margin: 0.15rem 0 0.2rem; font-size: 1.3rem; }
+.review-book h3 a { color: var(--accent); text-decoration: none; }
+.review-book h3 a:hover { text-decoration: underline; }
+.review-book-pub { color: var(--muted); font-size: 0.9rem; }
+h4.reviews-sub { margin: 1.3rem 1.2rem 0.8rem; color: var(--steel); font-size: 0.78rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.1em; }
+.reviews-sub-note { margin-left: 0.3rem; color: var(--muted); font-size: 0.92rem; text-transform: none; letter-spacing: 0; }
+.reviews { list-style: none; margin: 0 1.2rem; padding: 0 0 0.4rem; max-width: var(--measure); }
+.reviews li { margin: 0 0 1.4rem; padding-left: 1rem; border-left: 3px solid var(--field-rule); }
 .reviews blockquote { margin: 0; }
 .reviews blockquote p { margin: 0; font-style: italic; color: var(--accent); }
 .reviews blockquote i { font-style: normal; }
 .review-translation { margin: 0.35rem 0 0; font-size: 0.85rem; color: var(--muted); }
-.review-source { margin: 0.4rem 0 0; font-size: 0.9rem; }
-h4.reviews-sub { font-size: 0.95rem; font-weight: 400; color: var(--muted); margin: 0.4rem 0 1rem; }
+.review-source { margin: 0.45rem 0 0; font-size: 0.88rem; color: var(--muted); }
+.review-by { color: var(--text); }
 
 /* Selected texts */
 .texts { list-style: none; margin: 1rem 0 0; padding: 0; max-width: var(--measure); }
@@ -161,7 +197,7 @@ h4.reviews-sub { font-size: 0.95rem; font-weight: 400; color: var(--muted); marg
 /* CV */
 .print-only { display: none; }
 .cv-list { display: grid; grid-template-columns: 1fr; gap: 0 1.5rem; margin: 0; max-width: 46rem; }
-.cv-list dt { color: var(--muted); font-size: 0.9rem; margin-top: 1rem; }
+.cv-list dt { color: var(--steel); font-size: 0.9rem; margin-top: 1rem; }
 .cv-list dt:first-child { margin-top: 0; }
 .cv-list dd { margin: 0; }
 .cv-note { display: block; color: var(--muted); font-size: 0.95rem; margin-top: 0.1rem; }
@@ -170,7 +206,7 @@ h4.reviews-sub { font-size: 0.95rem; font-weight: 400; color: var(--muted); marg
 details.cv-syllabus { margin-top: 0.5rem; font-size: 0.95rem; }
 details.cv-syllabus ol { margin: 0; padding: 0.2rem 0.9rem 0.5rem 2.6rem; }
 details.cv-syllabus ol li { margin: 0 0 0.2rem; }
-.cv-syllabus-head { color: var(--accent); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; margin: 0.5rem 0.9rem 0.3rem; }
+.cv-syllabus-head { color: var(--steel); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; margin: 0.5rem 0.9rem 0.3rem; }
 
 @media (min-width: 48rem) {
   .conf-facts { grid-template-columns: 9rem 1fr; }
@@ -188,6 +224,9 @@ details.cv-syllabus ol li { margin: 0 0 0.2rem; }
 
 @media (max-width: 30rem) {
   html { font-size: 100%; }
+  .header-inner { padding-top: 0.8rem; padding-bottom: 0.8rem; }
+  .site-header ul { gap: 0.15rem 0.85rem; }
+  .site-header nav a { font-size: 0.9rem; }
   .intro { grid-template-columns: 1fr; }
   .portrait { max-width: 12rem; }
   h1 { font-size: 2.1rem; }
@@ -195,6 +234,13 @@ details.cv-syllabus ol li { margin: 0 0 0.2rem; }
 
 @media print {
   .site-header nav, .skip, .site-footer, .more, .intro-links { display: none; }
+  .site-header { background: none; border-bottom: 1px solid #999; }
+  .site-name { color: #000; }
+  .pub-status { border: 0; padding: 0; color: inherit; }
+  .review-book { border: 0; }
+  .review-book-head { background: none; padding-left: 0; }
+  .review-book-head img { display: none; }
+  h4.reviews-sub, .reviews { margin-left: 0; margin-right: 0; }
   html { background: #fff; font-size: 11pt; }
   .wrap { max-width: none; padding: 0; }
   main, main.wrap { padding: 0; }
@@ -207,7 +253,7 @@ details.cv-syllabus ol li { margin: 0 0 0.2rem; }
 }
 
 /* Motto (home page) */
-.motto { display: grid; grid-template-columns: 1fr; gap: 1.6rem; margin: 3rem 0 0; padding: 1.5rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.motto { display: grid; grid-template-columns: 1fr; gap: 1.6rem; margin: 3rem 0 0; padding: 1.5rem 1.4rem; background: var(--field); border-left: 3px solid var(--steel); border-radius: 0 4px 4px 0; }
 .motto figure { margin: 0; }
 .motto blockquote { margin: 0; }
 .motto blockquote p { margin: 0; font-style: italic; font-size: 1.1rem; line-height: 1.45; color: var(--accent); }
@@ -216,10 +262,10 @@ details.cv-syllabus ol li { margin: 0 0 0.2rem; }
 .motto figcaption cite { font-style: normal; }
 
 /* Research page */
-.field { margin-top: 3rem; padding-top: 1rem; border-top: 3px solid var(--accent); max-width: 46rem; }
+.field { margin-top: 3rem; padding-top: 1rem; border-top: 3px solid var(--steel); max-width: 46rem; }
 .field h2 { margin-top: 0; }
-.field h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; margin: 1.8rem 0 0.8rem; }
-.field-habil { border-top-color: var(--accent-soft); }
+.field h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; margin: 1.8rem 0 0.8rem; color: var(--steel); }
+.field-habil { border-top-color: var(--crimson); }
 .habil-title { margin-bottom: 1rem; }
 .habil-title cite { font-size: 1.1rem; }
 .habil-title span { color: var(--muted); font-size: 0.9rem; }
@@ -261,7 +307,7 @@ details.talks { clear: both; }
 }
 @media print {
   .conf-poster, .pub-cover { display: none; }
-  .motto { break-inside: avoid; }
+  .motto { break-inside: avoid; background: none; }
   .print-only { display: revert; }
   .cv-print-meta { color: var(--muted); margin-top: 0.3rem; }
   .cv h1 { font-size: 2rem; }

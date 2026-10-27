@@ -14,7 +14,7 @@ description: >-
   <h2 id="y{{ y.name }}" class="year">{{ y.name }}</h2>
   <ul class="biblio">
   {%- for t in y.items %}
-    <li>{% if t.url %}<a href="{{ t.url | relative_url }}">{{ t.title }}</a>{% else %}{{ t.title }}{% endif %} [{{ t.venue }}]{% if t.video %} – <a href="{{ t.video }}">Video (YouTube)</a>{% endif %}</li>
+    <li><span class="talk-title">{% if t.url %}<a href="{{ t.url | relative_url }}">{{ t.title }}</a>{% else %}{{ t.title }}{% endif %}</span> <span class="talk-venue">[{{ t.venue }}]</span>{% if t.video %} – <a href="{{ t.video }}">Video (YouTube)</a>{% endif %}</li>
   {%- endfor %}
   </ul>
 </section>
