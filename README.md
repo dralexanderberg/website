@@ -172,5 +172,5 @@ Die Seite **CV** (alexanderberg.ch/cv/) entsteht aus **`_data/cv.yml`**; sie ers
 - Schrift: P052 (URW, Palatino-ähnlich), lokal eingebunden unter `assets/fonts/` (Lizenz: `assets/fonts/LICENSE-URW.txt`; Quelle: github.com/ArtifexSoftware/urw-base35-fonts).
 - Keine Cookies, kein Tracking, keine externen Skripte oder Schriften; Videos nur verlinkt.
 - `CNAME` enthält die Domain alexanderberg.ch; `sitemap.xml` wird automatisch erzeugt.
-- Google Search Console: Der Bestätigungscode steht in `_config.yml` bei `google_site_verification:` (nur der Wert aus `content="…"`). Er fügt ein unsichtbares Meta-Tag ein; Cookies oder Tracking entstehen dadurch nicht. In der Search Console unter „Sitemaps“ die Adresse `sitemap.xml` einreichen.
+- Google Search Console: Die Inhaberschaft ist über die Datei `google1775e1ebabd7fa35.html` im Hauptordner bestätigt. Sie muss **dauerhaft** dort bleiben, sonst erlischt die Bestätigung; in der Sitemap erscheint sie nicht. (Alternativ ginge ein Bestätigungscode in `_config.yml` bei `google_site_verification:`, nur der Wert aus `content="…"`; er fügt ein unsichtbares Meta-Tag ein.) Beides setzt weder Cookies noch Tracking. In der Search Console unter „Sitemaps“ die Adresse `sitemap.xml` einreichen.
 - Lokale Vorschau (optional, am Rechner): `jekyll serve`, dann http://localhost:4000 öffnen.

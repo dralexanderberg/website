@@ -29,6 +29,13 @@ diary_recent_count: 3
 plugins:
   - jekyll-sitemap
 
+# The Google Search Console verification file stays online but out of the sitemap.
+defaults:
+  - scope:
+      path: "google1775e1ebabd7fa35.html"
+    values:
+      sitemap: false
+
 markdown: kramdown
 kramdown:
   input: GFM
