@@ -207,6 +207,7 @@ h4.reviews-sub { margin: 1.3rem 1.2rem 0.8rem; color: var(--steel); font-size: 0
 .cv-list dt:first-child { margin-top: 0; }
 .cv-list dd { margin: 0; }
 .cv-note { display: block; color: var(--muted); font-size: 0.95rem; margin-top: 0.1rem; }
+.cv-section-note { color: var(--muted); font-size: 0.92rem; max-width: 46rem; margin: -0.2rem 0 1rem; }
 .cv-courses { list-style: none; margin: 0.5rem 0 0; padding: 0; }
 .cv-courses > li { margin: 0 0 0.7rem; }
 details.cv-syllabus { margin-top: 0.5rem; font-size: 0.95rem; }
