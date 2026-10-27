@@ -28,7 +28,6 @@ structured_data: person-jsonld.html
     <p class="subtitle">Dr. phil. · Philosopher</p>
     <p>I am a philosopher working in <a href="{{ '/research/' | relative_url }}">two fields</a>. The first, Wittgenstein and Hegel, belongs to philosophy proper: I have written a monograph on it, edited two volumes and a journal special issue, and from 2017 to 2024 initiated and organized, together with colleagues, an international conference series. The second, which I have pursued at the University of Zurich since 2020, is the literary form of philosophy: from the methods of literary studies I develop a method for reading philosophical texts.</p>
     <p>Until recently, I was a Feodor Lynen Research Fellow of the Alexander von Humboldt Foundation at the Universities of Zurich and Konstanz. I am completing my habilitation at the University of Zurich. It brings both fields together by testing this method on the main works of Hegel and Wittgenstein, the <i>Phenomenology of Spirit</i> and the <i>Philosophical Investigations</i>.</p>
-    <p>Next: a conference on the literary form of philosophy, which I am preparing, and an Element on Wittgenstein and Hegel for Cambridge University Press.</p>
     <p class="intro-links"><a href="{{ '/conferences/' | relative_url }}">Conferences</a> · <a href="{{ '/publications/' | relative_url }}">Publications</a> · <a href="{{ '/talks/' | relative_url }}">Talks</a></p>
   </div>
 </section>
@@ -58,6 +57,8 @@ structured_data: person-jsonld.html
   <ul class="texts">
   {%- for t in site.data.selected_texts limit: 3 %}{% include text-entry.html text=t %}{% endfor %}
   </ul>
-  <p class="more"><a href="{{ '/texts/' | relative_url }}">All selected texts</a></p>
+  {%- if site.data.selected_texts.size > 3 %}
+  <p class="more"><a href="{{ '/publications/#texts' | relative_url }}">All selected texts</a></p>
+  {%- endif %}
 </section>
 {%- endif %}

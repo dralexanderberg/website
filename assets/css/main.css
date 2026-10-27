@@ -193,6 +193,11 @@ h4.reviews-sub { margin: 1.3rem 1.2rem 0.8rem; color: var(--steel); font-size: 0
 .text-entry > span { display: block; }
 .text-version, .text-cite { color: var(--muted); font-size: 0.9rem; margin-top: 0.2rem; }
 .text-links { margin-top: 0.3rem; font-size: 0.95rem; }
+.texts-field { max-width: 46rem; margin: 2.5rem 0 0; padding: 1.2rem 1.4rem 0.2rem; background: var(--field); border-left: 3px solid var(--steel); border-radius: 0 4px 4px 0; }
+.texts-field h2 { margin: 0 0 0.2rem; font-size: 1.25rem; }
+.texts-field .texts { margin-top: 0.8rem; }
+.field-planned { margin: 0.2rem 0 0; }
+.field-planned-label { margin-right: 0.4rem; color: var(--crimson); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; }
 
 /* CV */
 .print-only { display: none; }
@@ -308,6 +313,7 @@ details.talks { clear: both; }
 @media print {
   .conf-poster, .pub-cover { display: none; }
   .motto { break-inside: avoid; background: none; }
+  .texts-field { background: none; padding-left: 0; border: 0; }
   .print-only { display: revert; }
   .cv-print-meta { color: var(--muted); margin-top: 0.3rem; }
   .cv h1 { font-size: 2rem; }

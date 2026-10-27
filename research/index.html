@@ -8,11 +8,19 @@ description: >-
 {%- assign r = site.data.research %}
 <h1>Research</h1>
 <p class="lead">{{ r.intro }}</p>
+<nav class="toc" aria-label="Sections">
+  {%- for f in r.fields %}<a href="#{{ f.id }}">{{ f.title }}</a> {% endfor %}{% if r.habilitation %}<a href="#habilitation">Habilitation</a>{% endif %}
+</nav>
 
 {%- for f in r.fields %}
 <section class="field" id="{{ f.id }}" aria-labelledby="{{ f.id }}-h">
   <h2 id="{{ f.id }}-h">{{ f.title }}</h2>
   <div class="prose">{{ f.text | markdownify }}</div>
+  {%- comment %} conferences in preparation in this field, from conferences.yml {% endcomment %}
+  {%- assign planned = site.data.conferences.in_preparation | where: "field", f.id %}
+  {%- for c in planned %}
+  <p class="field-planned"><span class="field-planned-label">In preparation</span> <a href="{{ '/conferences/' | relative_url }}#{{ c.id }}">{{ c.title }}</a>{% if c.dates %}, {{ c.dates }}{% endif %}{% if c.place %}, {{ c.place }}{% endif %}</p>
+  {%- endfor %}
   {%- if f.publications %}
   <h3>Selected publications</h3>
   <ul class="biblio">

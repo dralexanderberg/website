@@ -1,11 +1,9 @@
 # RESEARCH – shown on /research/: the two fields of research and the habilitation that connects them.
 # Texts may use *italics* (one asterisk on each side). Separate paragraphs with an empty line.
 # "publications" and "talks" list ids from publications.yml and talks.yml, in the order shown.
+# A conference in preparation appears in its field by itself (conferences.yml, in_preparation, field:).
 
-intro: >-
-  My research has two fields: Wittgenstein and Hegel, which belongs to philosophy proper,
-  and the literary form of philosophy, which I have pursued at the University of Zurich
-  since 2020. My habilitation brings them together.
+intro: Two fields of research, and the habilitation in which they meet.
 
 fields:
 
@@ -33,8 +31,6 @@ fields:
   title: The Literary Form of Philosophy
   text: |-
     Since 2020, at the University of Zurich, I have been working on the literary form of philosophy. Here I turn to literary studies and develop its methods for the reading of philosophical texts: questions of a literary history of philosophy – constellation, intertextuality, literarity – and the literary form of individual works such as Hegel’s *Phenomenology of Spirit* and Wittgenstein’s *Philosophical Investigations*.
-
-    A conference on the literary form of philosophy is in preparation.
   publications:
     - literarische-form-phaenomenologie
     - goethe-influence-phenomenology

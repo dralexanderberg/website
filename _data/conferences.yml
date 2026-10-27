@@ -11,7 +11,10 @@
 #     - day: Monday, 9 Sept.             # optional heading inside the list
 #
 # Template for a new entry under "in_preparation" or "further":
-# - title: Title of the conference or workshop
+# - id: short-name                       # needed only if the Work Diary refers to it (conf: short-name)
+#   field: literary-form                 # optional: also shown in this field on the Research page
+#                                        # (literary-form or wittgenstein-and-hegel, as in research.yml)
+#   title: Title of the conference or workshop
 #   dates: 1–3 Sept. 2027                # leave out if not yet known
 #   place: University of …               # leave out if not yet known
 #   with: Co-organizer, Co-organizer     # leave out if not yet known
@@ -30,7 +33,11 @@
 
 in_preparation:
 
-- title: A conference on the literary form of philosophy
+# The planned conference is entered only here: the Conferences page, the Work Diary
+# (entry with conf: literary-form-conference) and the Research page take it from here.
+- id: literary-form-conference
+  field: literary-form
+  title: A conference on the literary form of philosophy
 
 series:
 

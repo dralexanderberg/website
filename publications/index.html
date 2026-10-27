@@ -6,10 +6,20 @@ description: >-
   translations on Hegel, Wittgenstein and the literary form of philosophy.
 ---
 <h1>Publications</h1>
+{%- assign texts = site.data.selected_texts %}
 <nav class="toc" aria-label="Sections">
-  <a href="#monographs">Monographs</a> <a href="#edited">Edited volumes</a> <a href="#articles">Articles</a> <a href="#translations">Translations</a> <a href="#online">Online edition</a> <a href="#reviews">Reviews and endorsements</a>
+  {%- if texts and texts.size > 0 %}<a href="#texts">Selected texts</a> {% endif %}<a href="#monographs">Monographs</a> <a href="#edited">Edited volumes</a> <a href="#articles">Articles</a> <a href="#translations">Translations</a> <a href="#online">Online edition</a> <a href="#reviews">Reviews and endorsements</a>
 </nav>
 <p class="bib-download">All publications as a <a href="{{ '/berg-publications.bib' | relative_url }}" download>BibTeX file</a>, for Zotero, Citavi and other reference managers.</p>
+
+{%- if texts and texts.size > 0 %}
+<section class="texts-field" aria-labelledby="texts">
+  <h2 id="texts">Selected texts to read</h2>
+  <ul class="texts">
+  {%- for t in texts %}{% include text-entry.html text=t in_list=true %}{% endfor %}
+  </ul>
+</section>
+{%- endif %}
 
 {%- assign groups = "monograph|monographs|Monographs,edited|edited|Edited volumes,article|articles|Articles,translation|translations|Translations" | split: "," %}
 {%- for group in groups %}
