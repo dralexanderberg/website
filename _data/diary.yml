@@ -14,6 +14,7 @@
 #   date: 2026-11-15               # date of the last change (for "published": date of publication)
 #   label: Up next                 # optional small label before the title
 #   pub: id-from-publications      # EITHER the id of an entry in publications.yml …
+#   conf: id-from-conferences      # … OR the id of a conference in conferences.yml …
 #   title: Title of the work       # … OR a title written here
 #   note: One short sentence.      # shown on the home page
 #   more: A longer description.    # shown only on the Work Diary page
@@ -29,13 +30,7 @@
   date: 2026-10-23
   title: Zur literarischen Form von Philosophie – Grundlinien eines Systems der Literatur
   note: Habilitation thesis, University of Zurich. The part on Hegel’s Phenomenology of Spirit is largely complete; I am now writing the part on the literary form of Wittgenstein’s Philosophical Investigations.
-  more: >-
-    A book that systematizes and integrates the different methods of
-    literary-philosophical research to make them more productive for
-    philosophical inquiry and problem-solving. It is grounded in the idea of a
-    “system of literature” as a methodological foundation for understanding
-    philosophical writings, and demonstrates the method on two exemplary works:
-    Hegel’s Phenomenology of Spirit and Wittgenstein’s Philosophical Investigations.
+  link: /research/#habilitation    # what the thesis is about: on the Research page
 
 - stage: progress
   date: 2026-10-23
@@ -56,7 +51,7 @@
 - stage: progress
   date: 2026-10-23
   label: In preparation
-  title: A conference on the literary form of philosophy
+  conf: literary-form-conference   # title and link from conferences.yml
 
 # ---------------------------------------------------- Under review / in press
 

@@ -1,17 +1,18 @@
 ---
-layout: default
-title: Selected Texts
-description: >-
-  Selected texts by Alexander Berg to read or download, with the version of
-  each text and the reference to the published version.
+layout: null
+permalink: /texts/
+sitemap: false
 ---
-{%- if site.data.selected_texts and site.data.selected_texts.size > 0 %}
-<h1>Selected Texts</h1>
-<p class="lead">A few texts to read or download. Each entry states which version it is; please cite the published version.</p>
-<ul class="texts">
-{%- for t in site.data.selected_texts %}{% include text-entry.html text=t %}{% endfor %}
-</ul>
-{%- else %}
-<h1>Selected Texts</h1>
-<p>This section is being prepared. Please see the <a href="{{ '/publications/' | relative_url }}">list of publications</a>.</p>
-{%- endif %}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Selected Texts – {{ site.title }}</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="{{ '/publications/' | absolute_url }}">
+<meta http-equiv="refresh" content="0; url={{ '/publications/#texts' | relative_url }}">
+</head>
+<body>
+<p>The selected texts are now on the page <a href="{{ '/publications/#texts' | relative_url }}">Publications</a>.</p>
+</body>
+</html>

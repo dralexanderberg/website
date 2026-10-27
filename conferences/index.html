@@ -21,7 +21,7 @@ structured_data: events-jsonld.html
   <h2 id="in-preparation-h">In preparation</h2>
   <ul class="biblio">
   {%- for o in conf.in_preparation %}
-    <li>{% include conf-line.html conf=o %}</li>
+    <li{% if o.id %} id="{{ o.id }}"{% endif %}>{% include conf-line.html conf=o %}</li>
   {%- endfor %}
   </ul>
 </section>
@@ -81,7 +81,7 @@ structured_data: events-jsonld.html
   <h2 id="further-h">Further conferences and workshops</h2>
   <ul class="biblio">
   {%- for o in conf.further %}
-    <li>{% include conf-line.html conf=o %}</li>
+    <li{% if o.id %} id="{{ o.id }}"{% endif %}>{% include conf-line.html conf=o %}</li>
   {%- endfor %}
   </ul>
 </section>

@@ -1,8 +1,11 @@
 {%- assign e = include.entry -%}
 {%- assign p = nil -%}
+{%- assign c = nil -%}
 {%- if e.pub %}{% assign p = site.data.publications | where: "id", e.pub | first %}{% endif -%}
-{%- assign title = e.title | default: p.title -%}
+{%- if e.conf %}{% assign confs = site.data.conferences.in_preparation | concat: site.data.conferences.further | concat: site.data.conferences.series %}{% assign c = confs | where: "id", e.conf | first %}{% endif -%}
+{%- assign title = e.title | default: p.title | default: c.title -%}
 {%- assign link = e.link -%}
+{%- if link == nil and c %}{% capture link %}{{ '/conferences/' | relative_url }}#{{ c.id }}{% endcapture %}{% endif -%}
 {%- if link == nil and p.url %}{% unless p.url contains "PLACEHOLDER" %}{% assign link = p.url %}{% endunless %}{% endif -%}
 <li class="entry" data-date="{{ e.date | date: '%Y-%m-%d' }}">
   {% if e.label %}<span class="entry-label">{{ e.label }}</span>{% endif %}

@@ -1,11 +1,12 @@
-{%- comment -%} One entry from selected_texts.yml {%- endcomment -%}
+{%- comment -%} One entry from selected_texts.yml. include.in_list = true: on the Publications page, where the full reference stands in the list below {%- endcomment -%}
 {%- assign t = include.text -%}
 {%- assign p = site.data.publications | where: "id", t.pub | first -%}
-<li class="text-entry" id="{{ t.pub }}">
+<li class="text-entry" id="{% if include.in_list %}text-{% endif %}{{ t.pub }}">
   <span class="entry-title">{% if p %}{{ p.title }}{% else %}{{ t.title }}{% endif %}</span>
   {% if t.note %}<span class="entry-note">{{ t.note }}</span>{% endif %}
   <span class="text-version">{{ t.version | capitalize }}</span>
-  {% if t.cite %}<span class="text-cite">{% if t.file %}Please cite the published version: {% else %}Published as: {% endif %}{{ t.cite }}</span>{% endif %}
+  {% if include.in_list and p %}<span class="text-cite">{% if t.file %}Please cite the published version: <a href="#{{ p.id }}">full reference</a>.{% else %}<a href="#{{ p.id }}">Full reference</a>{% endif %}</span>
+  {% elsif t.cite %}<span class="text-cite">{% if t.file %}Please cite the published version: {% else %}Published as: {% endif %}{{ t.cite }}</span>{% endif %}
   <span class="text-links">
     {%- if t.file %}<a href="{{ t.file | relative_url }}">Download PDF</a>{% endif %}
     {%- if t.open_access %}{% if t.file %} · {% endif %}<a href="{{ t.open_access }}">Free download at the publisher</a>{% endif %}

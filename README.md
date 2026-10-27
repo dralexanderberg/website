@@ -12,13 +12,13 @@ Diese Website wird von GitHub Pages aus den Dateien in diesem Repository erzeugt
 | `_data/conferences.yml` | Tagungen: in Vorbereitung, die Reihe „Wittgenstein & Hegel“, weitere Tagungen und Workshops | Conferences |
 | `_data/research.yml` | Texte der Forschungsseite (zwei Forschungsfelder, Habilitation) und die dort gezeigte Auswahl | Research |
 | `_data/motto.yml` | Motto (Hegel, Wittgenstein und Schlegel) | Startseite |
-| `_data/selected_texts.yml` | ausgewählte Texte zum Herunterladen (solange leer, ist die Rubrik unsichtbar) | Startseite, Selected Texts |
+| `_data/selected_texts.yml` | ausgewählte Texte zum Herunterladen (solange leer, ist die Rubrik unsichtbar) | Startseite, Publications |
 | `_data/cv.yml` | Lebenslauf: Stationen, Abschlüsse, Forschungsaufenthalte, Lehre, Förderung, Gremien, Vermittlung, Sprachen (siehe Abschnitt 8) | CV |
 | `_data/memberships.yml` | Mitgliedschaften | CV |
 | `images/portrait.jpg` | Porträtfoto | Startseite |
 | `files/conferences/` | PDFs der Tagungen | Conferences |
 | `images/posters/` | Vorschaubilder der Tagungsplakate | Conferences |
-| `texts/` | PDFs der „Selected Texts“ | Selected Texts |
+| `texts/` | PDFs der „Selected texts“ | Startseite, Publications |
 | `berg-publications.bib` | BibTeX-Datei aller Publikationen, wird automatisch aus `publications.yml` erzeugt (siehe Abschnitt 7) | Publications (Download) |
 
 Am Anfang jeder Datei in `_data/` steht eine **Vorlage** für einen neuen Eintrag (die Zeilen mit `#` sind Kommentare und erscheinen nicht auf der Seite).
@@ -59,7 +59,7 @@ Bei Bedarf auch die Zeile `status:` anpassen (z. B. `status: accepted, awaiting 
 
 Unter „Recently published“ zeigt die Startseite immer die **drei neuesten** Einträge; ältere wandern von selbst ins Archiv auf der Seite „Work Diary“. Die Zahl drei lässt sich in `_config.yml` bei `diary_recent_count` ändern.
 
-**Neuer Eintrag:** die Vorlage am Dateianfang kopieren, unter die passende Überschrift setzen, das `# ` am Zeilenanfang entfernen und ausfüllen. Ist die Arbeit schon in `publications.yml` eingetragen, genügt `pub: kennung` statt `title:`; Titel und Link kommen dann von dort.
+**Neuer Eintrag:** die Vorlage am Dateianfang kopieren, unter die passende Überschrift setzen, das `# ` am Zeilenanfang entfernen und ausfüllen. Ist die Arbeit schon in `publications.yml` eingetragen, genügt `pub: kennung` statt `title:`; Titel und Link kommen dann von dort. Ebenso bei einer Tagung aus `conferences.yml`: `conf: kennung` (so beim Eintrag der geplanten Tagung).
 
 **Erscheint eine Arbeit:** in `publications.yml` beim Eintrag die Zeile `status: forthcoming` löschen, Datum, Seitenzahlen und Link (`url:`) ergänzen.
 
@@ -100,7 +100,7 @@ Datei `_data/publications.yml` öffnen. Den neuen Eintrag **oben in der passende
 - Blurbs eines Buches: beim Buch unter `endorsements:` mit `by:` und `quote:` (Beispiel bei „Wittgenstein and Classical German Philosophy“). Stammen sie nicht vom Buchrücken, sondern z. B. von der Verlagsseite, zusätzlich `endorsements_source:` mit `label:` und `url:`; die Überschrift lautet dann „Endorsements, as on the …“ statt „From the back cover“. Nur Fassungen übernehmen, die öffentlich erschienen sind (Buchrücken oder Verlagsseite), keine Entwürfe aus der Korrespondenz.
 - Für die BibTeX-Datei sind außerdem `isbn:`, `doi:` und bei Zeitschriftenaufsätzen `journal:`, `volume:`, `issue:` nützlich (siehe Abschnitt 7).
 
-## 4. Einen Text mit PDF unter „Selected Texts“ ergänzen
+## 4. Einen Text mit PDF unter „Selected texts“ ergänzen
 
 1. Das PDF hochladen: im Repository den Ordner **`texts`** öffnen → **„Add file“** → **„Upload files“** → PDF auswählen → **„Commit changes“**. Dateinamen ohne Leerzeichen und Umlaute, z. B. `berg-2019-identity-in-difference.pdf`.
 2. Datei `_data/selected_texts.yml` öffnen und nach der Vorlage einen Eintrag anlegen:
@@ -117,7 +117,7 @@ Datei `_data/publications.yml` öffnen. Den neuen Eintrag **oben in der passende
 - `version`: `preprint`, `accepted manuscript`, `author’s corrected version` oder `publisher's version` – bitte die Bedingungen des Verlags beachten.
 - `open_access` nur, wenn es eine frei zugängliche Fassung beim Verlag gibt; sonst die Zeile weglassen.
 
-Sobald der erste Eintrag da ist, erscheinen die Rubrik auf der Startseite (die ersten drei Texte) und der Menüpunkt „Selected Texts“ von selbst.
+Die Texte erscheinen oben auf der Seite **Publications** unter „Selected texts to read“ (mit eigenem Reiter), die ersten drei auch auf der Startseite. Einen eigenen Menüpunkt gibt es dafür nicht mehr; die frühere Adresse alexanderberg.ch/texts/ leitet auf die Publications-Seite weiter.
 
 ## 5. Das Porträt austauschen
 
@@ -131,7 +131,7 @@ Die Seite schneidet das Foto dann selbst hochkant zu (Gesicht etwa in der Mitte,
 
 ## 6. Tagungen, Forschungsseite und Motto
 
-- **Geplante Tagung konkretisieren:** In `_data/conferences.yml` unter `in_preparation:` beim Eintrag die Zeilen `dates:`, `place:` und `with:` ergänzen (Vorlage am Dateianfang). Nach der Tagung den Eintrag unter `further:` verschieben.
+- **Geplante Tagung konkretisieren:** In `_data/conferences.yml` unter `in_preparation:` beim Eintrag den Titel ändern und die Zeilen `dates:`, `place:` und `with:` ergänzen (Vorlage am Dateianfang). Die Tagung steht nur dort: Die Seite Conferences, das Work Diary (Eintrag mit `conf: literary-form-conference`) und die Forschungsseite (über `field: literary-form`) übernehmen die Angaben von selbst. Nach der Tagung den Eintrag samt `id:` unter `further:` verschieben und im Work Diary den Eintrag auf `stage: published` setzen.
 - **Weitere Tagung oder Workshop eintragen:** in `_data/conferences.yml` unter `further:` ganz oben, nach der Vorlage am Dateianfang.
 - **Forschungsseite:** Texte und Auswahl stehen in `_data/research.yml`. Eine Publikation erscheint dort, wenn ihre Kennung (`id` aus `publications.yml`) in der Liste `publications:` steht. Ein Vortrag erscheint, wenn er in `talks.yml` eine Zeile `id:` hat und diese Kennung unter `talks:` steht.
 - **Plakat einer Tagung der Reihe:** Vorschaubild (480 Pixel breit) in den Ordner `images/posters/`, das PDF in `files/conferences/`. In `_data/conferences.yml` beim Eintrag `poster:` mit dem Pfad des Bildes ergänzen, unter `files:` das PDF mit `label: Poster` und, wenn jemand anderes das Plakat gestaltet hat, unter `poster_by:` deren oder dessen Namen (erscheint unter dem Plakat); `poster_photo:` nennt bei Bedarf die Fotografin oder den Fotografen. Das geht auch bei einem Eintrag unter `further:`.
