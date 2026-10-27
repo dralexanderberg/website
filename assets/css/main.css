@@ -323,5 +323,7 @@ details.talks { clear: both; }
   .cv-list dt { margin-top: 0; }
   .cv-list dd { margin-bottom: 0.35rem; break-inside: avoid; }
   .cv .biblio li { margin-bottom: 0.1rem; }
+  .cv-memberships { columns: 2; column-gap: 1.5rem; max-width: none; }
+  .cv-memberships li { break-inside: avoid; }
   details.cv-syllabus, .cv-courses .cv-note { display: none; }
 }

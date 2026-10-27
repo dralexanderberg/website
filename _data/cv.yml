@@ -82,6 +82,7 @@ research_stays:
 - years: 2014–2015
   title: Research assignment at the Wittgenstein Archives at the University of Bergen
   with: Alois Pichler
+  note: Funded by a Leonardo da Vinci grant of the European Union (Lifelong Learning Programme)
 
 teaching:
 
@@ -219,16 +220,20 @@ teaching:
 # No amounts on the website.
 grants:
 
-- title: Publication funding from Charles University, Faculty of Humanities, for *Studien zur Transzendenz* (Bautz, 2025)
-  note: "Ministry of Education, Youth and Sports of the Czech Republic: Institutional Support for Long-term Development of Research Organizations; programme PROGRES Q21 “Text and Image in Phenomenology and Semiotics”"
-
 - years: "2019"
   title: Publication grant from the Förderungsfonds Wissenschaft of VG Wort for *Wittgensteins Hegel* (Wilhelm Fink, 2021)
+
+- years: "2018"
+  title: Publication funding from Charles University, Faculty of Humanities, for *Studien zur Transzendenz* (Bautz, 2025)
+  note: "Ministry of Education, Youth and Sports of the Czech Republic: Institutional Support for Long-term Development of Research Organizations; programme PROGRES Q21 “Text and Image in Phenomenology and Semiotics”"
 
 - years: "2017"
   title: Conference grant of the Graduate Academy of TU Dresden (Excellence Initiative)
   note: "For the conference “Wittgenstein und Hegel: Neubewertung einer Differenz / Reevaluation of Difference”, Dresden 2017, the first of the series “Wittgenstein & Hegel”"
   url: /conferences/#dresden-2017
+
+- years: "2015"
+  title: Scholarship of the German Academic Exchange Service (DAAD) for doctoral research at Charles University Prague
 
 service:
 
