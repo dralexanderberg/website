@@ -26,7 +26,8 @@
 #   issue: 1
 #   cover: /images/covers/name.jpg # optional: book cover, 440 px wide, in images/covers/
 #   cover_height: 450              # height of that image in px
-#   cover_credit: "Cover: Name"    # optional: only if someone else made the cover picture
+#   cover_credit: "Cover: Name"    # optional: only if someone else made the cover picture, or a credit
+#                                  # line is required (as for the Wittgenstein manuscript on "Wittgensteins Hegel")
 #   reviews:                       # optional: reviews of this book
 #     - by: Reviewer (University)
 #       source: Journal 12 (1), 2027, pp. 1–5
@@ -80,6 +81,7 @@
   url: https://doi.org/10.30965/9783846765708
   cover: /images/covers/wittgensteins-hegel.jpg
   cover_height: 659
+  cover_credit: "Cover: Wittgenstein, Ms 131, p. 154 – The Master and Fellows of Trinity College Cambridge"
   reviews:
     - by: Peter Eschweiler
       source: Bibliographie zur Symbolik, Ikonographie und Mythologie 54/2021, pp. 22–23
