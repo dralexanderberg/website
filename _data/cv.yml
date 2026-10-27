@@ -1,6 +1,6 @@
 # CV – shown on /cv/ ("CV" in the menu). Every list: newest first (add new entries at the top).
-# Postdoctoral fellowships stand under "positions"; all other grants and scholarships under
-# "grants" (without amounts).
+# Postdoctoral fellowships stand under "positions"; a selection of further grants and
+# scholarships under "grants" (without amounts).
 # Memberships stay in memberships.yml; publications, talks and conferences are counted
 # from their own files and linked.
 #
@@ -62,7 +62,7 @@ education:
 - years: "2018"
   title: Dr. phil., *summa cum laude*
   place: TU Dresden and Charles University Prague (joint doctorate, cotutelle)
-  note: "Thesis: *Absolutes Wissen und Grundlose Gewissheit – Hegel und Wittgenstein*, published as *Wittgensteins Hegel* (2021). Supervisors: Thomas Rentsch and Hans Rainer Sepp. Doctoral scholarship of Charles University, 2015–2018"
+  note: "Thesis: *Absolutes Wissen und Grundlose Gewissheit – Hegel und Wittgenstein*, published as *Wittgensteins Hegel* (2021). Supervisors: Thomas Rentsch and Hans Rainer Sepp"
 
 - years: "2013"
   title: Magister Artium in Philosophy
@@ -215,9 +215,11 @@ teaching:
         - "Thomas Rentsch: *Heidegger und Wittgenstein*, Stuttgart: Klett-Cotta 2003"
         - "Ray Monk: *Wittgenstein. Das Handwerk des Genies*, Stuttgart 2004"
 
-# All grants and scholarships acquired, newest first, without amounts; several grants of one
-# funder in one entry. The postdoctoral fellowships stand under "positions" and are named in
-# grants_note, which appears above this list.
+# A selection: competitive grants and scholarships with a recognizable name, newest first,
+# without amounts; several grants of one funder in one entry. Smaller support (mobility and
+# travel grants, the regular doctoral scholarship) stays off the website; the complete list
+# is kept privately, outside this public repository. The postdoctoral fellowships stand
+# under "positions" and are named in grants_note, which appears above this list.
 grants_note: "The Feodor Lynen Research Fellowship of the Alexander von Humboldt Foundation (2021–2024) and the DAAD postdoctoral fellowship (2020) are listed under [Positions and fellowships](#positions)."
 
 grants:
@@ -225,22 +227,12 @@ grants:
 - years: "2019"
   title: Publication grant from the Förderungsfonds Wissenschaft of VG Wort for *Wittgensteins Hegel* (Wilhelm Fink, 2021)
 
-- years: 2018–2019
-  title: Erasmus+ grant of the European Union for the research stay and teaching at Charles University Prague
-
-- years: 2016–2018
-  title: Two grants of Charles University, Faculty of Humanities
-  note: "For archival research at the Wren Library, Trinity College Cambridge (2016), and for the publication of *Studien zur Transzendenz* (Bautz, 2025) from the programme PROGRES Q21 of the Czech Ministry of Education, Youth and Sports (2018)"
-
-- years: 2015–2017
-  title: Four grants of the Graduate Academy of TU Dresden (Excellence Initiative)
-  note: "Travel award for the 38th International Wittgenstein Symposium, Kirchberg (2015); grant for a research stay at the University of Chicago (2016); conference grant for the first conference of the series “Wittgenstein & Hegel”, [Dresden 2017](/conferences/#dresden-2017); completion scholarship for the final phase of the doctorate (2017)"
+- years: 2016–2017
+  title: Three grants of the Graduate Academy of TU Dresden (Excellence Initiative)
+  note: "For a research stay at the University of Chicago (2016) and for the first conference of the series “Wittgenstein & Hegel”, [Dresden 2017](/conferences/#dresden-2017); completion scholarship for the final phase of the doctorate (2017)"
 
 - years: 2015–2016
   title: Annual scholarship for doctoral candidates of the German Academic Exchange Service (DAAD), at Charles University Prague
-
-- years: 2014–2015
-  title: Leonardo da Vinci grant of the European Union (Lifelong Learning Programme) for the research assignment at the Wittgenstein Archives, University of Bergen
 
 service:
 
