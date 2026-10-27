@@ -6,6 +6,9 @@ email: alexander@alexanderberg.ch
 # Contact page (leave a line empty to hide that link).
 orcid: "0000-0002-3409-0396"
 philpeople: alexander-berg
+# Verification code from Google Search Console (method "HTML tag": only the value of
+# content="…"). Adds an invisible meta tag, no tracking. Leave empty if not used.
+google_site_verification: ""
 description: >-
   Alexander Berg, philosopher: Wittgenstein and Hegel, and the literary form
   of philosophy.

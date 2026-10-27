@@ -19,15 +19,15 @@ structured_data: person-jsonld.html
     {%- endif %}
          alt="Portrait photograph of Alexander Berg">
     </picture>
-    {%- if site.portrait_credit %}
+    {%- if site.portrait_credit and site.portrait_credit != "" %}
     <figcaption>Photo: {{ site.portrait_credit }}</figcaption>
     {%- endif %}
   </figure>
   <div class="intro-text">
     <h1 id="name">Alexander Berg</h1>
-    <p class="subtitle">M.A., Ph.D. · Philosopher</p>
+    <p class="subtitle">Dr. phil. · Philosopher</p>
     <p>I am a philosopher working in <a href="{{ '/research/' | relative_url }}">two fields</a>. The first, Wittgenstein and Hegel, belongs to philosophy proper: I have written a monograph on it, edited two volumes and a journal special issue, and from 2017 to 2024 initiated and organized, together with colleagues, an international conference series. The second, which I have pursued at the University of Zurich since 2020, is the literary form of philosophy: from the methods of literary studies I develop a method for reading philosophical texts.</p>
-    <p>Until recently, I was a Feodor Lynen Research Fellow of the Alexander von Humboldt Foundation at the University of Zurich, where I am completing my habilitation. It brings both fields together by testing this method on the main works of Hegel and Wittgenstein, the <i>Phenomenology of Spirit</i> and the <i>Philosophical Investigations</i>.</p>
+    <p>Until recently, I was a Feodor Lynen Research Fellow of the Alexander von Humboldt Foundation at the Universities of Zurich and Konstanz. I am completing my habilitation at the University of Zurich. It brings both fields together by testing this method on the main works of Hegel and Wittgenstein, the <i>Phenomenology of Spirit</i> and the <i>Philosophical Investigations</i>.</p>
     <p>Next: a conference on the literary form of philosophy, which I am preparing, and an Element on Wittgenstein and Hegel for Cambridge University Press.</p>
     <p class="intro-links"><a href="{{ '/conferences/' | relative_url }}">Conferences</a> · <a href="{{ '/publications/' | relative_url }}">Publications</a> · <a href="{{ '/talks/' | relative_url }}">Talks</a></p>
   </div>
