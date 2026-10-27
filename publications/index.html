@@ -58,7 +58,7 @@ description: >-
   </ul>
   {%- endif %}{% endfor %}
   {%- if p.endorsements %}
-  <h4 class="reviews-sub">From the back cover</h4>
+  <h4 class="reviews-sub">{% if p.endorsements_source %}Endorsements, as on the <a href="{{ p.endorsements_source.url }}">{{ p.endorsements_source.label }}</a>{% else %}From the back cover{% endif %}</h4>
   <ul class="reviews">
     {%- for r in p.endorsements %}
     <li>{% include review-item.html r=r %}</li>
