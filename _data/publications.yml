@@ -36,9 +36,12 @@
 #       translation: "English translation of the quotation"
 #   discussed:                     # optional, for a chapter: passages about it in reviews
 #                                  # of the volume (same fields as reviews; shown with them)
-#   endorsements:                  # optional, for a book: blurbs from the back cover
+#   endorsements:                  # optional, for a book: blurbs (back cover or publisher's page)
 #     - by: Name (University)
 #       quote: "The blurb"
+#   endorsements_source:           # optional: where the blurbs are quoted from, if not the back cover
+#     label: publisher’s page
+#     url: https://…
 #
 # Groups appear on the Publications page in this order: monograph, edited,
 # article, translation, online. Within each group, newest first (top of the list).
@@ -116,11 +119,16 @@
   url: https://doi.org/10.1515/9783110698497
   cover: /images/covers/wittgenstein-classical-german-philosophy.jpg
   cover_height: 654
+  endorsements_source:
+    label: publisher’s page
+    url: https://doi.org/10.1515/9783110698497
   endorsements:
     - by: Michael Beaney (Humboldt University of Berlin, University of Aberdeen)
       quote: "This is a stimulating collection of papers exploring the rich connections between Wittgenstein’s thought and classical German philosophy, especially Hegel’s philosophy. Focusing on the general themes of logic, language, and life, this volume can be recommended."
+    - by: Hans-Johann Glock (University of Zurich)
+      quote: "Although this topic is highly important, it has only recently attracted the attention it deserves. The contributors in this volume are leading experts in the field, and their articles shed novel light not just on fascinating strands in the history of ideas, but also on their continuing philosophical relevance, e.g. in Pittsburgh philosophy, critical theory and aesthetics."
     - by: Jakub Mácha (Masaryk University in Brno)
-      quote: "A seminal publication for anyone interested in the development of analytic philosophy …"
+      quote: "A seminal publication for anyone interested in the development of analytic philosophy, this book is essential reading for understanding the ongoing dialogue between Wittgenstein’s innovations and traditional philosophical frameworks."
 
 - id: wittgenstein-hegel-reevaluation
   type: edited
