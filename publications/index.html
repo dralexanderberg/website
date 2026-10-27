@@ -61,6 +61,9 @@ description: >-
         <p class="review-book-kind">{% if p.type == "edited" %}Edited volume{% else %}Monograph{% endif %}</p>
         <h3 id="reviews-{{ p.id }}-h"><a href="#{{ p.id }}"><cite>{{ p.title }}</cite></a></h3>
         <p class="review-book-pub">{% if p.editors %}{{ p.editors }} (eds.), {% endif %}{{ p.publisher }} {{ p.date }}</p>
+        {%- if p.cover and p.cover_credit %}
+        <p class="review-book-credit">{{ p.cover_credit }}</p>
+        {%- endif %}
       </div>
     </header>
     {%- if p.reviews %}
