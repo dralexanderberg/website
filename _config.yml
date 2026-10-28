@@ -2,10 +2,12 @@
 title: Alexander Berg
 author: Alexander Berg
 email: alexander@alexanderberg.ch
-# ORCID iD and PhilPeople profile name (philpeople.org/profiles/…), linked on the
-# Contact page (leave a line empty to hide that link).
+# ORCID iD, PhilPeople profile name (philpeople.org/profiles/…) and Google Scholar
+# user id (the part after "user=" in the profile address), linked on the Contact page
+# (leave a line empty to hide that link).
 orcid: "0000-0002-3409-0396"
 philpeople: alexander-berg
+google_scholar: U-rylE0AAAAJ
 # Verification code from Google Search Console (method "HTML tag": only the value of
 # content="…"). Adds an invisible meta tag, no tracking. Leave empty if not used.
 google_site_verification: ""
