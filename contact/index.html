@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Contact
-description: Contact Alexander Berg by e-mail; ORCID iD and PhilPeople profile. Imprint and privacy notice.
+description: Contact Alexander Berg by e-mail; ORCID iD, PhilPeople and Google Scholar profiles. Imprint and privacy notice.
 ---
 <h1>Contact</h1>
 <p class="contact-mail"><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
@@ -10,6 +10,9 @@ description: Contact Alexander Berg by e-mail; ORCID iD and PhilPeople profile. 
 {%- endif %}
 {%- if site.philpeople %}
 <p class="contact-profile">PhilPeople: <a href="https://philpeople.org/profiles/{{ site.philpeople }}" rel="me">philpeople.org/profiles/{{ site.philpeople }}</a></p>
+{%- endif %}
+{%- if site.google_scholar %}
+<p class="contact-profile">Google Scholar: <a href="https://scholar.google.com/citations?user={{ site.google_scholar }}" rel="me">profile and citations</a></p>
 {%- endif %}
 
 <section aria-labelledby="imprint">
