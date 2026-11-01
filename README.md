@@ -19,6 +19,7 @@ Diese Website wird von GitHub Pages aus den Dateien in diesem Repository erzeugt
 | `files/conferences/` | PDFs der Tagungen | Conferences |
 | `images/posters/` | Vorschaubilder der Tagungsplakate | Conferences |
 | `texts/` | PDFs der „Selected texts“ | Startseite, Publications |
+| `_tools/texts/` | Quellen und Satzprogramm der drei vorhandenen PDFs in `texts/` (siehe Abschnitt 4); erscheint nicht auf der Website | – |
 | `berg-publications.bib` | BibTeX-Datei aller Publikationen, wird automatisch aus `publications.yml` erzeugt (siehe Abschnitt 7) | Publications (Download) |
 
 Am Anfang jeder Datei in `_data/` steht eine **Vorlage** für einen neuen Eintrag (die Zeilen mit `#` sind Kommentare und erscheinen nicht auf der Seite).
@@ -118,6 +119,14 @@ Datei `_data/publications.yml` öffnen. Den neuen Eintrag **oben in der passende
 - `open_access` nur, wenn es eine frei zugängliche Fassung beim Verlag gibt; sonst die Zeile weglassen.
 
 Die Texte erscheinen oben auf der Seite **Publications** unter „Selected texts to read“ (mit eigenem Reiter), die ersten drei auch auf der Startseite. Einen eigenen Menüpunkt gibt es dafür nicht mehr; die frühere Adresse alexanderberg.ch/texts/ leitet auf die Publications-Seite weiter.
+
+**Die drei vorhandenen PDFs korrigieren oder neu erzeugen.** Die PDFs von *Identity in Difference*, *Wittgenstein und die Begriffe des Psychischen bei Hegel* und *Wittgenstein’s photo album* werden nicht von Hand bearbeitet, sondern aus Quellen im Ordner `_tools/texts/` gesetzt (der Ordner erscheint nicht auf der Website):
+
+- `src/*.html` – der Text jedes Aufsatzes mit Hinweiskasten, Seitenzahlen der Druckfassung `[NNN]` und den Anmerkungen als Liste am Ende. Korrekturen am Text gehören hierher.
+- `build.sh` – setzt daraus die PDFs in `texts/` mit dem Satzprogramm Typst. Dabei wird jede Anmerkung zur Fußnote auf der Seite ihres Verweises; eine lange Fußnote läuft oben auf der nächsten Seite weiter. Ein Prüfprogramm (`fncheck.py`) kontrolliert danach jede Fußnote und bricht mit einer Fehlermeldung ab, wenn eine Note später beginnt als ihr Verweis oder Text fehlt.
+- `html2typ.py` – die Umwandlung; `fonts/` – die Schriften (P052, für griechische Wörter FreeSerif) mit ihren Lizenzen.
+
+Das Neuerzeugen geschieht am Rechner (oder durch Claude in einer neuen Sitzung): `pip install -r _tools/texts/requirements.txt`, dann `sh _tools/texts/build.sh` im Hauptordner des Repositorys; die neuen PDFs danach wie üblich committen. Mit `sh _tools/texts/build.sh /anderer/ordner` lassen sie sich zuerst an anderer Stelle ansehen.
 
 ## 5. Das Porträt austauschen
 
