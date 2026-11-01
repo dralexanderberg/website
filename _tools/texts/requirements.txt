@@ -1,0 +1,3 @@
+# Python packages for build.sh: pip install -r _tools/texts/requirements.txt
+typst==0.15.0     # the Typst compiler (Python bindings); the PDFs of November 2026 were made with it
+pymupdf>=1.24     # only for fncheck.py, the footnote placement check
