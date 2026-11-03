@@ -24,7 +24,7 @@
   --accent-soft: #4a5a75;
   --accent-faint: #a9b3c4;
   --steel: #385880;        /* steel blue: header band, links, rules */
-  --steel-light: #dce4ef;  /* text on the steel blue */
+  --steel-light: #eef2f7;  /* text on the steel blue; 4.5:1 also where the handwriting lies behind it */
   --crimson: #b3203f;      /* crimson: small highlights only */
   --field: #edf1f6;        /* light steel-blue fields */
   --field-rule: #cfd8e4;
@@ -75,6 +75,13 @@ p { margin: 0 0 0.9rem; }
 .site-header nav a:hover, .site-header nav a[aria-current="page"] { color: #fff; text-decoration: underline; text-decoration-color: currentColor; }
 .site-header :focus-visible { outline-color: #fff; }
 
+/* Wittgenstein's handwriting, Ms 131, p. 154 (Trinity College Cambridge, used with permission;
+   credit in the footer and the Imprint): a faint, low-resolution detail behind the header band
+   and behind the mottos on the home page. Only as a CSS background, never as a linked image. */
+.header-inner { position: relative; isolation: isolate; }
+.header-inner::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: url("../images/ms131-154-header.png") right center / 900px auto no-repeat; opacity: 0.14; }
+
 main.wrap { padding-top: 2.5rem; padding-bottom: 4rem; display: flow-root; }
 
 /* Home: intro */
@@ -119,6 +126,7 @@ main.wrap { padding-top: 2.5rem; padding-bottom: 4rem; display: flow-root; }
 .site-footer p { margin: 0.2rem 0; }
 .site-footer a { color: var(--muted); }
 .site-footer a:hover { color: var(--crimson); }
+.site-footer .footer-credit { margin-top: 0.5rem; font-size: 0.75rem; }
 
 
 /* Inner pages */
@@ -260,7 +268,9 @@ details.cv-syllabus ol li { margin: 0 0 0.2rem; }
 }
 
 /* Motto (home page) */
-.motto { display: grid; grid-template-columns: 1fr; gap: 1.6rem; margin: 3rem 0 0; padding: 1.5rem 1.4rem; background: var(--field); border-left: 3px solid var(--steel); border-radius: 0 4px 4px 0; }
+.motto { display: grid; grid-template-columns: 1fr; gap: 1.6rem; margin: 3rem 0 0; padding: 1.5rem 1.4rem; background: var(--field); border-left: 3px solid var(--steel); border-radius: 0 4px 4px 0; position: relative; isolation: isolate; overflow: hidden; }
+.motto::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: url("../images/ms131-154-motto.png") right -3rem center / 52% auto no-repeat; opacity: 0.09; }
 .motto figure { margin: 0; }
 .motto blockquote { margin: 0; }
 .motto blockquote p { margin: 0; font-style: italic; font-size: 1.1rem; line-height: 1.45; color: var(--accent); }
@@ -308,6 +318,9 @@ details.talks { clear: both; }
   .biblio li:has(> .conf-poster, > .pub-cover):has(+ li > .conf-poster, + li > .pub-cover) { display: flow-root; }
   details.talks { clear: none; }
 }
+@media (max-width: 47.99rem) {
+  .motto::before { background-size: 105% auto; background-position: right -4rem center; }
+}
 @media (min-width: 48rem) {
   .motto { grid-template-columns: 1fr 1fr; gap: 3rem; }
   .motto figure:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; max-width: 36rem; }
@@ -315,6 +328,7 @@ details.talks { clear: both; }
 @media print {
   .conf-poster, .pub-cover { display: none; }
   .motto { break-inside: avoid; background: none; }
+  .header-inner::before, .motto::before { display: none; }
   .texts-field { background: none; padding-left: 0; border: 0; }
   .print-only { display: revert; }
   .cv-print-meta { color: var(--muted); margin-top: 0.3rem; }
