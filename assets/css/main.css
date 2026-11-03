@@ -269,8 +269,10 @@ details.cv-syllabus ol li { margin: 0 0 0.2rem; }
 
 /* Motto (home page) */
 .motto { display: grid; grid-template-columns: 1fr; gap: 1.6rem; margin: 3rem 0 0; padding: 1.5rem 1.4rem; background: var(--field); border-left: 3px solid var(--steel); border-radius: 0 4px 4px 0; position: relative; isolation: isolate; overflow: hidden; }
-.motto::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
-  background: url("../images/ms131-154-motto.png") right -3rem center / 52% auto no-repeat; opacity: 0.09; }
+/* The handwriting's left margin lies on the golden section of the field (61.8 % from the left): it
+   covers the smaller part on the right, and its lines run off the right edge. */
+.motto::before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 61.8%; z-index: -1; pointer-events: none;
+  background: url("../images/ms131-154-motto.png") left -6px center / 150% auto no-repeat; opacity: 0.09; }
 .motto figure { margin: 0; }
 .motto blockquote { margin: 0; }
 .motto blockquote p { margin: 0; font-style: italic; font-size: 1.1rem; line-height: 1.45; color: var(--accent); }
@@ -319,7 +321,7 @@ details.talks { clear: both; }
   details.talks { clear: none; }
 }
 @media (max-width: 47.99rem) {
-  .motto::before { background-size: 105% auto; background-position: right -4rem center; }
+  .motto::before { background-size: 260% auto; }
 }
 @media (min-width: 48rem) {
   .motto { grid-template-columns: 1fr 1fr; gap: 3rem; }
