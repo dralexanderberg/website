@@ -1,5 +1,6 @@
-{%- comment -%} The name at the left leads to the home page. {%- endcomment -%}
-{%- capture nav -%}Research|/research/,Work Diary|/diary/,Publications|/publications/,Talks|/talks/,Conferences|/conferences/,CV|/cv/,Contact|/contact/{%- endcapture -%}
+{%- comment -%} The name at the left leads to the home page. "CV" appears only while the CV page is published (cv/index.html). {%- endcomment -%}
+{%- assign cv_page = site.pages | where: "url", "/cv/" | first -%}
+{%- capture nav -%}Research|/research/,Work Diary|/diary/,Publications|/publications/,Talks|/talks/,Conferences|/conferences/,{% if cv_page %}CV|/cv/,{% endif %}Contact|/contact/{%- endcapture -%}
 {%- assign nav = nav | split: "," -%}
 <header class="site-header">
   <div class="wrap header-inner">

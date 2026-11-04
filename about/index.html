@@ -3,16 +3,23 @@ layout: null
 permalink: /about/
 sitemap: false
 ---
+{%- comment -%} The former page "About" forwards to the CV page, or to the home page while the CV is switched off. {%- endcomment -%}
+{%- assign cv_page = site.pages | where: "url", "/cv/" | first -%}
+{%- if cv_page %}{% assign target = '/cv/' %}{% else %}{% assign target = '/' %}{% endif -%}
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>CV – {{ site.title }}</title>
+<title>{% if cv_page %}CV{% else %}Home{% endif %} – {{ site.title }}</title>
 <meta name="robots" content="noindex">
-<link rel="canonical" href="{{ '/cv/' | absolute_url }}">
-<meta http-equiv="refresh" content="0; url={{ '/cv/' | relative_url }}">
+<link rel="canonical" href="{{ target | absolute_url }}">
+<meta http-equiv="refresh" content="0; url={{ target | relative_url }}">
 </head>
 <body>
+{%- if cv_page %}
 <p>The former page “About” is now part of the <a href="{{ '/cv/' | relative_url }}">CV</a>.</p>
+{%- else %}
+<p>The former page “About” is no longer available; please see the <a href="{{ '/' | relative_url }}">home page</a>.</p>
+{%- endif %}
 </body>
 </html>
