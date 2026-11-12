@@ -80,6 +80,6 @@ description: >-
 
 <section aria-labelledby="languages">
   <h2 id="languages">Languages</h2>
-  <p>Fluent: {{ cv.languages.fluent }}.<br>Basic: {{ cv.languages.basic }}.</p>
+  <p>{% if cv.languages.native %}Native: {{ cv.languages.native }}.<br>{% endif %}Fluent: {{ cv.languages.fluent }}.<br>Basic: {{ cv.languages.basic }}.</p>
 </section>
 </div>
