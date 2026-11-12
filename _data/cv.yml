@@ -53,9 +53,12 @@ positions:
 
 education:
 
+# Until the thesis is submitted: "Habilitation project", without a university, since the faculty
+# has not yet opened a procedure. After submission (README section 8):
+#   years: "2027"                  # the year of submission
+#   title: Habilitation thesis submitted to the Faculty of Arts and Social Sciences, University of Zurich
 - years: in progress
-  title: Habilitation
-  place: University of Zurich
+  title: Habilitation project
   note: "Thesis: *Zur Bedeutung der literarischen Form der Philosophie. Hegels Phänomenologie des Geistes, Wittgensteins Philosophische Untersuchungen und das System der Literatur*"
   url: /research/#habilitation
 
@@ -247,10 +250,6 @@ service:
 
 - title: Peer review for *Topoi* (Springer Nature)
 
-- title: Deputy speaker of the student council of the Faculty of Philosophy (three terms)
-  place: TU Dresden
-  note: Student member of the Institute Council of Philosophy, the Study Commission for Philosophy, the Examination Board and the library commission of the Saxon State and University Library
-
 outreach:
 
 - years: "2021"
@@ -258,9 +257,7 @@ outreach:
   note: "#wittgenlive, the Burgtheater’s live talk series on Instagram, 5 June 2021"
   url: https://www.facebook.com/photo/?fbid=10157813105881456&set=a.427137056202148
 
-- years: 2012–2013
-  title: Radio show and podcast “Denkzeit, die philosophische Selbsthilfe”
-
 languages:
-  fluent: German, English, Italian, French
+  native: German
+  fluent: English, Italian, French
   basic: Latin, Czech, Norwegian, Russian

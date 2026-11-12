@@ -4,7 +4,10 @@
   "@type": "Person",
   "name": "Alexander Berg",
   "honorificPrefix": "Dr. phil.",
-  "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Zurich" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Technische Universität Dresden" },
+    { "@type": "CollegeOrUniversity", "name": "Charles University" }
+  ],
   "knowsAbout": ["Ludwig Wittgenstein", "G. W. F. Hegel", "Literary form of philosophy", "German Idealism"],
   "url": "{{ '/' | absolute_url }}",
 {%- capture same_as %}{% if site.orcid %}"https://orcid.org/{{ site.orcid }}"|{% endif %}{% if site.philpeople %}"https://philpeople.org/profiles/{{ site.philpeople }}"|{% endif %}{% if site.google_scholar %}"https://scholar.google.com/citations?user={{ site.google_scholar }}"|{% endif %}{% endcapture %}
