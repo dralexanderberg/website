@@ -144,13 +144,13 @@
   toc: /files/conferences/toc.pdf
   reviews:
     - by: Stany Mazurkiewicz (Université de Liège)
-      source: Bulletin de littérature hégélienne XXX, 2020, pp. 182–183
+      source: Bulletin de littérature hégélienne 30, 2020, pp. 182–183
       url: https://doi.org/10.3917/aphi.834.0149
       lang: fr
       quote: "… ce très riche ouvrage, qui est assurément à inclure parmi les contributions significatives aux études hégéliennes."
       translation: "… this very rich work, which certainly belongs among the significant contributions to Hegel studies."
     - by: Guido Tana (University of Pavia)
-      source: "“Unlikely Bedfellows? On a recent rapprochement between Hegel and Wittgenstein”, Verifiche XLIX (1–2), 2020, pp. 333–346"
+      source: "“Unlikely Bedfellows? On a recent rapprochement between Hegel and Wittgenstein”, Verifiche 49 (1–2), 2020, pp. 333–346"
       quote: "… this collection is the first systematic collective attempt in establishing a background on which future engagement on the topics of idealism and language can be played out, and it should serve as the benchmark for future endeavors on the topic."
     - by: Diogo Ferrer (University of Coimbra)
       source: Wittgenstein-Studien 14 (1), 2023, pp. 277–283
@@ -248,7 +248,7 @@
 - id: absolute-negativity-tractatus
   type: article
   title: The Method of Absolute Negativity and the Tractatus Logico-Philosophicus – Wittgenstein, William James and Hegel
-  in: 100 Years of Tractatus Logico-Philosophicus – 70 Years after Wittgenstein’s Death. A Critical Assessment. Contributions of the 44th International Wittgenstein Symposium, vol. XXIX
+  in: 100 Years of Tractatus Logico-Philosophicus – 70 Years after Wittgenstein’s Death. A Critical Assessment. Contributions of the 44th International Wittgenstein Symposium, vol. 29
   in_editors: Alois Pichler, Esther Heinrich-Ramharter, Friedrich Stadler (eds.)
   publisher: ALWS, Kirchberg a. W.
   date: 2023
@@ -268,7 +268,7 @@
 - id: uebersichtliche-darstellung-2022
   type: article
   title: Wittgensteins Übersichtliche Darstellung und Hegels Spekulative Philosophie
-  in: Wittgenstein and Platonism. Contributions of the 43rd International Wittgenstein Symposium, vol. XXVIII
+  in: Wittgenstein and Platonism. Contributions of the 43rd International Wittgenstein Symposium, vol. 28
   in_editors: Herbert Hrachovec & Jakub Mácha (eds.)
   publisher: ALWS, Kirchberg a. W.
   date: 2022
@@ -315,13 +315,13 @@
       url: https://doi.org/10.1515/witt-2023-0015
       quote: "… the study by Alexander Berg (349–364) is especially significant, as it is the only one to present a factual account of Wittgenstein’s words and writing about Hegel. One main result of Berg’s study (further developed in Berg’s <i>Wittgensteins Hegel</i> […]) is the claim that Wittgenstein’s notion of ‘language game’ was likely inspired by the reception of Hegel’s dialectic by Russell and, more specifically, by C. D. Broad in 1929."
     - by: Guido Tana (University of Pavia)
-      source: "“Unlikely Bedfellows? On a recent rapprochement between Hegel and Wittgenstein”, Verifiche XLIX (1–2), 2020, pp. 340–341"
+      source: "“Unlikely Bedfellows? On a recent rapprochement between Hegel and Wittgenstein”, Verifiche 49 (1–2), 2020, pp. 340–341"
       quote: "Berg tackles the usually casted-aside question of whether Hegelian Idealism might have had an actual influence in shaping Wittgenstein’s thought. […] Berg suggests that Wittgenstein’s concept of Sprachspiele might have been substantially informed by Broad’s contention that Hegelian dialectic is akin to playing a game."
 
 - id: grundlagen-der-mathematik
   type: article
   title: Wittgenstein, die Grundlagen der Mathematik, und Hegel
-  in: Philosophie der Logik und Mathematik. Beiträge zum 41. Internationalen Wittgenstein Symposium, vol. XXVI
+  in: Philosophie der Logik und Mathematik. Beiträge zum 41. Internationalen Wittgenstein Symposium, vol. 26
   in_editors: Gabriele M. Mras, Paul Weingartner, Bernhard Ritter (eds.)
   publisher: ALWS, Kirchberg a. W.
   date: 2018
@@ -330,7 +330,7 @@
 - id: vom-wissen-zum-denken
   type: article
   title: Vom Wissen zum Denken – Wittgensteins dialektische Methode am Beispiel der Seminarnotizen G. E. Moores
-  in: Contributions of the 40th International Wittgenstein Symposium, vol. XXV
+  in: Contributions of the 40th International Wittgenstein Symposium, vol. 25
   in_editors: Christoph Limbeck-Lilienau, Friedrich Stadler (eds.)
   publisher: ALWS, Kirchberg a. W.
   date: 2017
@@ -352,7 +352,7 @@
 - id: vom-pun-zum-sprachspiel
   type: article
   title: Vom „pun“ zum Sprachspiel – Wittgenstein, Russell, Bradley, Hegel und der Streit um das concrete universal
-  in: Contributions of the 39th International Wittgenstein Symposium, vol. XXIV
+  in: Contributions of the 39th International Wittgenstein Symposium, vol. 24
   in_editors: Stefan Majetschak & Anja Weiberg (eds.)
   publisher: ALWS, Kirchberg a. W.
   date: 2016
@@ -362,7 +362,7 @@
 - id: historische-wittgenstein-forschung
   type: article
   title: Probleme in der historischen Wittgenstein-Forschung – Wunsch, Wirklichkeit und Russische Philosophie
-  in: Contributions of the 38th International Wittgenstein Symposium, vol. XXIII
+  in: Contributions of the 38th International Wittgenstein Symposium, vol. 23
   in_editors: Christian Kanzian, Josef Mitterer, Katharina Neges (eds.)
   publisher: ALWS, Kirchberg a. W.
   date: 2015
@@ -372,7 +372,7 @@
 - id: grundlose-gewissheit
   type: article
   title: Grundlose Gewissheit und Absolutes Wissen – Wittgenstein und Hegel
-  in: Contributions of the 37th International Wittgenstein Symposium, vol. XXII
+  in: Contributions of the 37th International Wittgenstein Symposium, vol. 22
   in_editors: Sonja Rinofner-Kreidl, Harald A. Wiltsche (eds.)
   publisher: ALWS, Kirchberg a. W.
   date: 2014
