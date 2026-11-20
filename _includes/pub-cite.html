@@ -22,3 +22,4 @@
 {%- if p.endorsements %} – <a href="{{ '/publications/' | relative_url }}#reviews-{{ p.id }}">Endorsements</a>{% endif -%}
 {%- if site.data.selected_texts %}{% assign st = site.data.selected_texts | where: "pub", p.id | first %}{% if st.file %} – <a href="{{ st.file | relative_url }}">{{ st.version | capitalize }} (PDF)</a>{% endif %}{% if st.open_access %} – <a href="{{ st.open_access }}">Free download at the publisher</a>{% endif %}{% endif -%}
 </span>
+{%- include pub-abstract.html pub=p %}
