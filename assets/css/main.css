@@ -264,6 +264,7 @@ details.cv-syllabus ol li { margin: 0 0 0.2rem; }
   .stage, .entry, .biblio li { break-inside: avoid; }
   details.talks { border: 0; background: none; }
   details.talks summary { padding-left: 0; }
+  details.pub-abstract { display: none; }
   .toc, .bib-download { display: none; }
 }
 
@@ -295,6 +296,14 @@ details.cv-syllabus ol li { margin: 0 0 0.2rem; }
 .biblio details.talks { text-indent: 0; margin: 0.5rem 0 0.4rem; }
 .biblio details.talks li { padding-left: 0; text-indent: 0; }
 details.talks { clear: both; }
+
+/* Abstract of a publication, folded (pub-abstract.html): Publications, Research, Work Diary */
+details.pub-abstract { margin: 0.5rem 0 0.2rem; font-size: 0.92rem; }
+details.pub-abstract summary { padding: 0.35rem 0.75rem; }
+.abstract-text { padding: 0 0.9rem 0.8rem; color: var(--text); line-height: 1.5; }
+.abstract-text p { margin: 0 0 0.6rem; }
+.abstract-text .abstract-keywords { margin-bottom: 0; color: var(--muted); }
+.abstract-keywords span { margin-right: 0.3rem; color: var(--steel); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; }
 
 /* Conference posters and book covers stand at the right of their entry (the figure comes
    first in the HTML); on wide screens in the margin beside the text column, so that the

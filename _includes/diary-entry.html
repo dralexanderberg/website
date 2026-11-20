@@ -14,4 +14,5 @@
   {% if e.status %}<span class="entry-status">{{ e.status | capitalize }}.</span>{% endif %}
   {% if include.more and e.more %}<span class="entry-more">{{ e.more }}</span>{% endif %}
   <span class="entry-date">{% if e.stage == "published" %}{% else %}Updated {% endif %}<time datetime="{{ e.date | date: '%Y-%m-%d' }}">{{ e.date | date: "%b %Y" }}</time></span>
+  {%- if p.abstract %}{% include pub-abstract.html pub=p %}{% endif %}
 </li>

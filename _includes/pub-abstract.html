@@ -1,0 +1,13 @@
+{%- comment -%} The abstract of a publication, folded: abstract: and keywords: in publications.yml. Used by pub-cite.html (Publications, Research) and diary-entry.html (Work Diary). Usage: include pub-abstract.html pub=p {%- endcomment -%}
+{%- assign abs_pub = include.pub -%}
+{%- if abs_pub.abstract %}
+<details class="talks pub-abstract">
+  <summary>Abstract</summary>
+  <div class="abstract-text">
+    {{ abs_pub.abstract | markdownify }}
+    {%- if abs_pub.keywords %}
+    <p class="abstract-keywords"><span>Keywords</span> {{ abs_pub.keywords }}</p>
+    {%- endif %}
+  </div>
+</details>
+{%- endif -%}

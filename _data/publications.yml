@@ -17,6 +17,9 @@
 #   pages: 1–20
 #   status: forthcoming            # forthcoming | planned | (leave out once published)
 #   note: any additional remark
+#   abstract: |-                   # optional: shown folded below the entry (Publications, Research,
+#     The text of the abstract.    # Work Diary); *italics* for titles, an empty line between paragraphs
+#   keywords: One; Two; Three      # optional: shown below the abstract
 #   isbn: "978-3-…"                # optional; shown for books without DOI, also used in the BibTeX file
 #   url: https://doi.org/…         # publisher page or DOI, never Amazon
 #   url_label: Preview (PDF)       # optional: text of the link instead of "doi:…", "PDF" or "Publisher"
@@ -169,14 +172,19 @@
 
 # ------------------------------------------------------------------ Articles
 
-- id: goethe-influence-phenomenology
+- id: goethe-influence-phenomenology   # from an earlier working title; kept so that links stay valid
   type: article
-  title: Goethe’s Influence on Hegel’s Phenomenology of Spirit
+  title: "The Tower and the ‘We’: Goethe’s Wilhelm Meister as a Formal Model for Hegel’s Phenomenology of Spirit"
   in: Goethe and Philosophy
   in_editors: Jan Kerkmann & Moritz Pretzsch (eds.)
   publisher: Springer, Berlin
   date: 2026
   status: forthcoming
+  abstract: |-
+    Goethe’s relationship to speculative philosophy is usually told as a story of growing distance, in which Goethe is the observer who passes judgement on philosophy. This chapter instead asks how Hegel’s *Phenomenology of Spirit* (1807) addresses Goethe. Goethe’s presence in the *Phenomenology* is usually registered at the level of content: the botanical imagery of the Preface, the *Faust* quotations, the appropriation of *Rameau’s Nephew*. I argue that the more consequential debt is formal. *Wilhelm Meister’s Apprenticeship* contains a rare, load-bearing device: a hidden, knowing authority – the Society of the Tower – that orders the hero’s path without being seen, keeps a record of it and finally hands that record over. In the *Phenomenology*, that role is played by the ‘we’ of phenomenological observation, from whose perspective each new object emerges “behind the back of consciousness”.
+
+    The chapter proceeds in four steps. (1) It is shown how in the *Phenomenology*, a work that scarcely names its philosophical opponents, words borrowed from Goethe – in particular, a marked quotation from *Rameau’s Nephew*, a text that in 1807 existed only in Goethe’s German translation – function as markers of an exoteric address. (2) The shared device is reconstructed and distinguished from its genealogy in Fichte’s two series: Fichte provides the asymmetry; Goethe, the scene in which it ends. (3) Hegel’s later verdict on the ending of the *Apprenticeship*, in which *Lehrjahre* becomes a generic concept and the hero ends as a philistine, is read as diagnosing a limit of form that the *Phenomenology* had already crossed: while Wilhelm receives an account of his formation as an external document, absolute knowing recollects it as its own. The *Phenomenology* thus appears as a speculative correction of the Bildungsroman. (4) The reception – Goethe’s objection to the bud-and-blossom passage, his dedication of 1821, Eckermann’s report of 1827 – shows that the address arrived and that its point was noticed. The exoteric address proves to be a double movement: translation into Goethe’s form and translation out of it.
+  keywords: Phenomenology of Spirit; Wilhelm Meister; Bildungsroman; exoteric address; speculative correction
 
 - id: literarische-form-phaenomenologie
   type: article
