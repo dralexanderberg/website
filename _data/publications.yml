@@ -15,7 +15,9 @@
 #   publisher: Publisher, City
 #   date: 2026                     # as it should appear, e.g. 2026 or July 2026
 #   pages: 1–20
-#   status: forthcoming            # forthcoming | planned | (leave out once published)
+#   status: forthcoming            # forthcoming (accepted) | submitted (under review) | planned
+#                                  # | (leave out once published). "submitted" and "planned" are
+#                                  # not counted in the CV and not in the BibTeX file.
 #   note: any additional remark
 #   abstract: |-                   # optional: shown folded below the entry (Publications, Research,
 #     The text of the abstract.    # Work Diary); *italics* for titles, an empty line between paragraphs
@@ -179,7 +181,7 @@
   in_editors: Jan Kerkmann & Moritz Pretzsch (eds.)
   publisher: Springer, Berlin
   date: 2026
-  status: forthcoming
+  status: submitted
   abstract: |-
     Goethe’s relationship to speculative philosophy is usually told as a story of growing distance, in which Goethe is the observer who passes judgement on philosophy. This chapter instead asks how Hegel’s *Phenomenology of Spirit* (1807) addresses Goethe. Goethe’s presence in the *Phenomenology* is usually registered at the level of content: the botanical imagery of the Preface, the *Faust* quotations, the appropriation of *Rameau’s Nephew*. I argue that the more consequential debt is formal. *Wilhelm Meister’s Apprenticeship* contains a rare, load-bearing device: a hidden, knowing authority – the Society of the Tower – that orders the hero’s path without being seen, keeps a record of it and finally hands that record over. In the *Phenomenology*, that role is played by the ‘we’ of phenomenological observation, from whose perspective each new object emerges “behind the back of consciousness”.
 

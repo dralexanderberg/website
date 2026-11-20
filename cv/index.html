@@ -64,7 +64,7 @@ description: >-
 </section>
 
 {%- comment %} counted from publications.yml and talks.yml, so the numbers stay current {% endcomment %}
-{%- assign pubs = site.data.publications | where_exp: "p", "p.status != 'planned'" %}
+{%- assign pubs = site.data.publications | where_exp: "p", "p.status != 'planned'" | where_exp: "p", "p.status != 'submitted'" %}
 {%- assign n_mono = pubs | where: "type", "monograph" | size %}
 {%- assign n_edited = pubs | where: "type", "edited" | size %}
 {%- assign n_edited_f = pubs | where: "type", "edited" | where: "status", "forthcoming" | size %}

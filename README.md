@@ -94,7 +94,7 @@ Datei `_data/publications.yml` öffnen. Den neuen Eintrag **oben in der passende
 
 - `id`: eine kurze, eindeutige Kennung in Kleinbuchstaben ohne Leerzeichen.
 - `type`: `monograph`, `edited`, `article` oder `translation`.
-- Noch nicht erschienen? Zeile `status: forthcoming` hinzufügen.
+- Noch nicht erschienen? Angenommen: Zeile `status: forthcoming` hinzufügen. Eingereicht, aber noch in der Begutachtung: `status: submitted`; der Eintrag erscheint dann mit „submitted“, zählt im Lebenslauf nicht mit und fehlt in der BibTeX-Datei. Nach der Zusage auf `forthcoming` ändern (und im Work Diary den Status anpassen).
 - Abstract: Zeile `abstract: |-` und darunter den Text, eingerückt (Absätze durch eine Leerzeile trennen, Werktitel mit `*…*` kursiv); optional `keywords:` mit Schlagwörtern, durch Semikolon getrennt. Das Abstract erscheint eingeklappt unter dem Eintrag auf „Publications“, auf der Forschungsseite und im Work Diary (Beispiel beim Goethe-Kapitel).
 - Links nur auf Verlagsseite oder DOI, nicht auf Amazon.
 - Rezension eines Buches: beim Buch unter `reviews:` einen Eintrag ergänzen (Beispiele bei „Wittgensteins Hegel“ und „Wittgenstein and Hegel“): `by:` Rezensent (Universität), `source:` Zeitschrift, Jahr, Seiten, optional `url:` (Link zur Rezension) und `quote:` (ein kurzes Zitat). Ist das Zitat nicht englisch, `lang: de` oder `lang: fr` und `translation:` mit der englischen Übersetzung dazuschreiben. Die Rezensionen erscheinen unter „Reviews and endorsements“ auf der Publications-Seite, für jedes Buch in einem eigenen Kasten mit Cover, Titel und Verlag; beim Buch steht ein Link dorthin. Die PDFs der Rezensionen selbst nicht hochladen: Die Rechte liegen bei den Verlagen.
@@ -152,7 +152,7 @@ Die Seite schneidet das Foto dann selbst hochkant zu (Gesicht etwa in der Mitte,
 
 ## 7. Bibliographie-Datei (BibTeX)
 
-Die Datei **`berg-publications.bib`** (online unter alexanderberg.ch/berg-publications.bib, verlinkt oben auf der Seite „Publications“) entsteht bei jedem Bau **automatisch aus `_data/publications.yml`**. Sie wird nie von Hand bearbeitet: Wer eine Publikation in der yml einträgt oder ändert, hat sie auch in der BibTeX-Datei. Geplante Titel (`status: planned`) und die Online-Edition fehlen darin, Titel mit `status: forthcoming` sind als solche markiert.
+Die Datei **`berg-publications.bib`** (online unter alexanderberg.ch/berg-publications.bib, verlinkt oben auf der Seite „Publications“) entsteht bei jedem Bau **automatisch aus `_data/publications.yml`**. Sie wird nie von Hand bearbeitet: Wer eine Publikation in der yml einträgt oder ändert, hat sie auch in der BibTeX-Datei. Geplante und eingereichte Titel (`status: planned`, `status: submitted`) und die Online-Edition fehlen darin, Titel mit `status: forthcoming` sind als solche markiert.
 
 Diese Felder nutzt vor allem die BibTeX-Datei:
 
