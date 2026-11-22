@@ -8,6 +8,7 @@
 #   year: 2026                     # used for the year headings
 #   url: https://…                 # optional: event page
 #   video: https://youtu.be/…      # optional: recording (linked, never embedded)
+#   note: One sentence on the talk # optional: shown below the entry; *italics* possible
 #   id: short-name                 # optional: needed only to show the talk on the Research page
 
 - title: Goethe’s Artistic Influence on the Phenomenology of Spirit
@@ -113,7 +114,8 @@
 - title: "Live Talk, Burgtheater Vienna: On the traces of Ludwig Wittgenstein"
   venue: "#wittgenlive, part II, the Burgtheater’s live talk series on Instagram, on the occasion of the premiere of ALLES, WAS DER FALL IST, with ensemble member Philipp Hauß (as Ludwig Wittgenstein) and dramaturge Andreas Karlaganis; moderated by Anne Aschenbrenner – 5 June 2021"
   year: 2021
-  url: https://www.facebook.com/photo/?fbid=10157813105881456&set=a.427137056202148
+  video: https://youtu.be/CW4igHfgXno
+  note: On the *Tractatus* as a poetic, almost musical work, on the First World War as a turning point in its writing, and on Wittgenstein as a detective who first looks at what is the case.
 
 - title: Hegels Phänomenologie des Geistes in einer Literaturgeschichte der Philosophie
   venue: 33rd International Hegel Congress, Warsaw, panel Contexts and Discussions. Classical German Philosophy – June 2021

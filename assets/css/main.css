@@ -148,6 +148,7 @@ main.wrap { padding-top: 2.5rem; padding-bottom: 4rem; display: flow-root; }
 .pub-status { display: inline-block; text-indent: 0; margin-left: 0.35rem; padding: 0 0.4rem; border: 1px solid currentColor; border-radius: 2px; color: var(--crimson); font-size: 0.68rem; line-height: 1.5; text-transform: uppercase; letter-spacing: 0.08em; vertical-align: 0.18em; white-space: nowrap; }
 .talk-title { color: var(--accent); }
 .talk-venue { color: var(--muted); font-size: 0.94rem; }
+.talk-note { display: block; text-indent: 0; margin-top: 0.15rem; color: var(--muted); font-size: 0.92rem; line-height: 1.45; }
 .isbn { white-space: nowrap; }
 h2.year { font-size: 1.15rem; margin-top: 2.2rem; color: var(--steel); }
 cite { font-style: italic; }

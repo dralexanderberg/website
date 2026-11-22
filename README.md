@@ -74,7 +74,7 @@ Datei `_data/talks.yml` öffnen. Direkt unter dem Kommentarblock (also **ganz ob
   year: 2026
 ```
 
-Optional: `url:` (Link zur Veranstaltung) und `video:` (Link zur Aufzeichnung, z. B. YouTube).
+Optional: `url:` (Link zur Veranstaltung), `video:` (Link zur Aufzeichnung, z. B. YouTube; nur verlinkt, nie eingebettet) und `note:` (ein Satz zum Inhalt, erscheint unter dem Eintrag; Beispiel beim Live Talk des Burgtheaters 2021).
 
 ## 3. Eine neue Publikation eintragen
 
